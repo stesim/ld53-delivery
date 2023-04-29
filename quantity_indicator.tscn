@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://5u3nlyjdrb06"]
+
+[ext_resource type="Script" path="res://quantity_indicator.gd" id="1_ha504"]
+
+[node name="quantity_indicator" type="Label3D"]
+billboard = 1
+text = "0"
+font_size = 64
+script = ExtResource("1_ha504")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://br25j1oumvjbg"]
+
+[ext_resource type="Script" path="res://loading_area.gd" id="1_q6lc6"]
+
+[node name="loading_area" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_q6lc6")
+
+[node name="load_timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[connection signal="timeout" from="load_timer" to="." method="_on_load_timer_timeout"]

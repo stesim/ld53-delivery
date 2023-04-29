@@ -1,14 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtmgvak6ekhi5"]
+[gd_scene load_steps=11 format=3 uid="uid://bosvhjnjwtr7t"]
 
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
 [ext_resource type="ArrayMesh" uid="uid://b1if5d6uis8oj" path="res://assets/cars/wheel_truck.res" id="2_1emut"]
+[ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="4_dysdc"]
+[ext_resource type="Script" path="res://inventory.gd" id="5_dwq2y"]
+[ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="6_fs0gj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84yfh"]
 size = Vector3(1.3, 0.3, 3.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ks0q"]
 size = Vector3(0.9, 0.8, 0.55)
+
+[sub_resource type="Resource" id="Resource_1yf0n"]
+script = ExtResource("5_dwq2y")
+quantity = 50
+max_quantity = 50
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8sjrn"]
+size = Vector3(1.25, 1, 2)
 
 [node name="vehicle" type="VehicleBody3D"]
 mass = 600.0
@@ -79,3 +90,15 @@ damping_relaxation = 1.5
 
 [node name="mesh" type="MeshInstance3D" parent="wheel_rr"]
 mesh = ExtResource("2_1emut")
+
+[node name="inventory" parent="." instance=ExtResource("4_dysdc")]
+unique_name_in_owner = true
+inventory = SubResource("Resource_1yf0n")
+
+[node name="shape" type="CollisionShape3D" parent="inventory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
+shape = SubResource("BoxShape3D_8sjrn")
+
+[node name="inventory_indicator" parent="." instance=ExtResource("6_fs0gj")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.75)

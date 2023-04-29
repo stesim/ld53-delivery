@@ -48,6 +48,11 @@ brake={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Generic Collisions"
+3d_physics/layer_2="Loading"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

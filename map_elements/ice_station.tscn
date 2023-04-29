@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdu7d15q2hbqp"]
+
+[ext_resource type="Script" path="res://map_elements/ice_station.gd" id="1_q8et4"]
+[ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="1_ssjb8"]
+[ext_resource type="PackedScene" uid="uid://br25j1oumvjbg" path="res://loading_area.tscn" id="2_fwrp5"]
+[ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="5_va0jk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p31t4"]
+size = Vector3(5, 5, 5)
+
+[node name="ice_station" type="Node3D"]
+script = ExtResource("1_q8et4")
+
+[node name="dummy_ice_hut" parent="." instance=ExtResource("1_ssjb8")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.0630225, 0)
+
+[node name="loading_area" parent="." instance=ExtResource("2_fwrp5")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -5.5)
+type = 1
+
+[node name="shape" type="CollisionShape3D" parent="loading_area"]
+shape = SubResource("BoxShape3D_p31t4")
+
+[node name="quantity_indicator" parent="." instance=ExtResource("5_va0jk")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -3.77395)
+font_size = 128

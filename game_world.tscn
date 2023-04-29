@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=10 format=3 uid="uid://douesax7qkljh"]
 
-[ext_resource type="PackedScene" uid="uid://dtmgvak6ekhi5" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
 [ext_resource type="PackedScene" uid="uid://x51op8g8yspv" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="4_ryl50"]
+[ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="5_8qlgr"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="5_ygkch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
@@ -47,3 +48,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 0, 50)
 script = ExtResource("5_ygkch")
 customer_scene = ExtResource("4_ryl50")
+
+[node name="headquarters" parent="." instance=ExtResource("5_8qlgr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -5)
