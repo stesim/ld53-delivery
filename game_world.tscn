@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=8 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="PackedScene" uid="uid://dtmgvak6ekhi5" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
 [ext_resource type="PackedScene" uid="uid://x51op8g8yspv" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
+[ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="4_ryl50"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -40,3 +41,7 @@ environment = SubResource("Environment_xaiqv")
 [node name="sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
 shadow_enabled = true
+
+[node name="customer" parent="." instance=ExtResource("4_ryl50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.25, 0, 50)
+target_point = Vector3(-123.25, 0, 0)
