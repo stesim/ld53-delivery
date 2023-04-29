@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://x51op8g8yspv"]
+[gd_scene load_steps=16 format=3 uid="uid://x51op8g8yspv"]
 
+[ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
@@ -12,8 +13,6 @@
 [ext_resource type="Script" path="res://customer_spawner.gd" id="10_i3q55"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="11_7le7x"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
-
 [sub_resource type="Resource" id="Resource_4mcxt"]
 script = ExtResource("9_j7fbw")
 quantity = 0
@@ -24,12 +23,12 @@ script = ExtResource("9_j7fbw")
 quantity = 0
 max_quantity = 25
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
+
 [node name="test_map" type="Node3D"]
 
-[node name="boundary" type="StaticBody3D" parent="."]
-
-[node name="boundary_shape" type="CollisionShape3D" parent="boundary"]
-shape = SubResource("WorldBoundaryShape3D_fsdgu")
+[node name="headquarters" parent="." instance=ExtResource("1_08jjh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -5)
 
 [node name="enemy_lane01" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128, 0, 0)
@@ -381,3 +380,8 @@ inventory = SubResource("Resource_pov51")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 0, 50)
 script = ExtResource("10_i3q55")
 customer_scene = ExtResource("11_7le7x")
+
+[node name="boundary" type="StaticBody3D" parent="."]
+
+[node name="boundary_shape" type="CollisionShape3D" parent="boundary"]
+shape = SubResource("WorldBoundaryShape3D_fsdgu")
