@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_8qk1e"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cobjr"]
-[ext_resource type="PackedScene" uid="uid://dtmgvak6ekhi5" path="res://vehicles/vehicle.tscn" id="3_1ilcq"]
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="3_1ilcq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mhrxk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
