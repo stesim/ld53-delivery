@@ -20,11 +20,14 @@ tonemap_mode = 2
 
 [node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 3)
+mass = 2000.0
+max_engine_force = 3000.0
+max_brake_force = 10.0
 
 [node name="test_map" parent="." instance=ExtResource("2_050wm")]
 
 [node name="vehicle_follower" type="Node3D" parent="." node_paths=PackedStringArray("target")]
-transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, 2, 4, -1)
+transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, 2, 5, -4)
 script = ExtResource("3_p7flm")
 target = NodePath("../vehicle")
 
