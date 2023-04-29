@@ -30,6 +30,7 @@ func _physics_process(delta : float) -> void:
 		_animation_player.play(&"Idle")
 		_animation_player.speed_scale = 1.0
 		_is_walking = false
+		queue_free()
 	elif not _is_walking and has_moved:
 		_animation_player.play(&"Forward")
 		_animation_player.speed_scale = speed * DEFAULT_ANIMATION_SPEED

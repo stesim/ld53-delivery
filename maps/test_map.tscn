@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://x51op8g8yspv"]
+[gd_scene load_steps=10 format=3 uid="uid://x51op8g8yspv"]
 
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/enemy_straight.res" id="4_31ddj"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/curve.res" id="5_10w0g"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/end.res" id="5_s06c3"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
+[ext_resource type="ArrayMesh" uid="uid://sg8wpq88jq3d" path="res://assets/roads/enemy_straight.res" id="4_31ddj"]
+[ext_resource type="ArrayMesh" uid="uid://cl5w3at0vcnyc" path="res://assets/roads/curve.res" id="5_10w0g"]
+[ext_resource type="ArrayMesh" uid="uid://wva27sn8qi8m" path="res://assets/roads/end.res" id="5_s06c3"]
+[ext_resource type="ArrayMesh" uid="uid://dfmmhh0nmayw0" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
+[ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="8_ixjiy"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
 
@@ -354,3 +355,15 @@ mesh = ExtResource("2_cmy2o")
 [node name="road_crossing15" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 23)
 mesh = ExtResource("5_10w0g")
+
+[node name="station01" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -123, 0, 35)
+
+[node name="dummy_ice_hut" parent="station01" instance=ExtResource("8_ixjiy")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="station02" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -123, 0, 9)
+
+[node name="dummy_ice_hut" parent="station02" instance=ExtResource("8_ixjiy")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
