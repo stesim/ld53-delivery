@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdu7d15q2hbqp"]
+[gd_scene load_steps=7 format=3 uid="uid://cdu7d15q2hbqp"]
 
 [ext_resource type="Script" path="res://map_elements/ice_station.gd" id="1_q8et4"]
 [ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="1_ssjb8"]
@@ -7,6 +7,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p31t4"]
 size = Vector3(5, 5, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f73mx"]
 
 [node name="ice_station" type="Node3D"]
 script = ExtResource("1_q8et4")
@@ -26,3 +28,11 @@ shape = SubResource("BoxShape3D_p31t4")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -3.77395)
 font_size = 128
+
+[node name="feeding_area" parent="." instance=ExtResource("2_fwrp5")]
+unique_name_in_owner = true
+collision_mask = 4
+
+[node name="shape" type="CollisionShape3D" parent="feeding_area"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.5, 3)
+shape = SubResource("BoxShape3D_f73mx")

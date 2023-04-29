@@ -51,7 +51,8 @@ brake={
 [layer_names]
 
 3d_physics/layer_1="Generic Collisions"
-3d_physics/layer_2="Loading"
+3d_physics/layer_2="Delivery Loading"
+3d_physics/layer_3="Customer Feeding"
 
 [rendering]
 

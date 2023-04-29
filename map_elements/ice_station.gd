@@ -6,3 +6,4 @@ extends Node3D
 	set(value):
 		%loading_area.backing_inventory = value
 		%quantity_indicator.inventory = value
+		%feeding_area.backing_inventory = value

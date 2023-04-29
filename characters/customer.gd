@@ -5,11 +5,18 @@ const DEFAULT_ANIMATION_SPEED := 1.0
 
 
 @export_range(0.0, 100.0) var speed := 0.5
+
 @export var target_point := Vector3.ZERO :
 	set(value):
 		target_point = value
 		if is_inside_tree():
 			look_at(target_point)
+
+@export var inventory : Inventory :
+	set(value):
+		inventory = value
+		%inventory_area.inventory = inventory
+		%quantity_indicator.inventory = inventory
 
 
 @onready var _animation_player := %AnimationPlayer
