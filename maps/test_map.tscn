@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://x51op8g8yspv"]
+
+[ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
+[ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
+[ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
+[ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="4_8fx17"]
+[ext_resource type="Script" path="res://maps/character.gd" id="4_hpx40"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3syt8"]
+size = Vector3(1, 0.25, 3)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e0y1e"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_80r3o"]
+sky_material = SubResource("ProceduralSkyMaterial_e0y1e")
+
+[sub_resource type="Environment" id="Environment_li5j0"]
+background_mode = 2
+sky = SubResource("Sky_80r3o")
+tonemap_mode = 2
+
+[node name="test_map" type="Node3D"]
+
+[node name="roads" type="Node3D" parent="."]
+
+[node name="road_crossing" parent="roads" instance=ExtResource("1_cs4q5")]
+mesh = ExtResource("1_xdmke")
+
+[node name="road_straight" parent="roads" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_straight2" parent="roads" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_straight3" parent="roads" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+mesh = ExtResource("2_cmy2o")
+
+[node name="character" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("4_hpx40")
+
+[node name="collision_shape" type="CollisionShape3D" parent="character"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+shape = SubResource("BoxShape3D_3syt8")
+
+[node name="mesh" type="MeshInstance3D" parent="character"]
+mesh = ExtResource("4_8fx17")
+
+[node name="camera" type="Camera3D" parent="character"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2, 5)
+current = true
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_li5j0")
+
+[node name="sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 32, 42, 0)
+shadow_enabled = true
