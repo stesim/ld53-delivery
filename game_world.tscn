@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://douesax7qkljh"]
+
+[ext_resource type="PackedScene" uid="uid://dtmgvak6ekhi5" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
+[ext_resource type="PackedScene" uid="uid://x51op8g8yspv" path="res://maps/test_map.tscn" id="2_050wm"]
+[ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_80r3o"]
+sky_material = SubResource("ProceduralSkyMaterial_kjrqk")
+
+[sub_resource type="Environment" id="Environment_xaiqv"]
+background_mode = 2
+sky = SubResource("Sky_80r3o")
+tonemap_mode = 2
+
+[node name="game_world" type="Node3D"]
+
+[node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 3)
+
+[node name="test_map" parent="." instance=ExtResource("2_050wm")]
+
+[node name="vehicle_follower" type="Node3D" parent="." node_paths=PackedStringArray("target")]
+transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, 2, 4, -1)
+script = ExtResource("3_p7flm")
+target = NodePath("../vehicle")
+
+[node name="camera" type="Camera3D" parent="vehicle_follower"]
+current = true
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xaiqv")
+
+[node name="sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
+shadow_enabled = true
