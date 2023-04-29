@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 
-@export_range(0.0, 100.0) var max_engine_force := 50.0
+@export_range(0.0, 500.0, 0.01, "or_greater") var max_engine_force := 50.0
 @export_range(0.0, 100.0) var max_brake_force := 1.0
 @export_range(0.0, 90.0, 0.01, "radians") var max_steering_angle := 0.25 * PI
 
