@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://x51op8g8yspv"]
+[gd_scene load_steps=13 format=3 uid="uid://x51op8g8yspv"]
 
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="4_8fx17"]
+[ext_resource type="ArrayMesh" uid="uid://sg8wpq88jq3d" path="res://assets/roads/enemy_straight.res" id="4_31ddj"]
 [ext_resource type="Script" path="res://maps/character.gd" id="4_hpx40"]
+[ext_resource type="ArrayMesh" uid="uid://cl5w3at0vcnyc" path="res://assets/roads/curve.res" id="5_10w0g"]
+[ext_resource type="ArrayMesh" uid="uid://wva27sn8qi8m" path="res://assets/roads/end.res" id="5_s06c3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3syt8"]
 size = Vector3(1, 0.25, 3)
@@ -23,25 +26,330 @@ tonemap_mode = 2
 
 [node name="test_map" type="Node3D"]
 
-[node name="roads" type="Node3D" parent="."]
+[node name="enemy_lane01" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128, 0, 0)
 
-[node name="road_crossing" parent="roads" instance=ExtResource("1_cs4q5")]
+[node name="road_crossing" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 0)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing2" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 5)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing3" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 10)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing4" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 15)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing5" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 20)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing6" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 25)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing7" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 30)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing8" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 35)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing9" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 40)
+mesh = ExtResource("4_31ddj")
+
+[node name="road_crossing10" parent="enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 0.999999, 0, 1, 0, -4.37114e-08, 5, 0, 45)
+mesh = ExtResource("4_31ddj")
+
+[node name="hq" type="Node3D" parent="."]
+
+[node name="road_crossing" parent="hq" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 5)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing2" parent="hq" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing3" parent="hq" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 15)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing4" parent="hq" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing5" parent="hq" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 25)
+mesh = ExtResource("5_10w0g")
+
+[node name="to_enemy_lane01" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 20)
+
+[node name="road_crossing" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 5)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing2" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing3" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 15)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing4" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing6" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.90735e-06, 0, 30)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing7" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.90735e-06, 0, 35)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing8" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 5, 0, 35)
+mesh = ExtResource("5_s06c3")
+
+[node name="road_crossing5" parent="to_enemy_lane01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 25)
 mesh = ExtResource("1_xdmke")
 
-[node name="road_straight" parent="roads" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+[node name="to_el01_station01" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 25)
+
+[node name="road_crossing" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 5)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_straight2" parent="roads" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+[node name="road_crossing2" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 10)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_straight3" parent="roads" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+[node name="road_crossing3" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 15)
 mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing16" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing17" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45, 0, 15)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing4" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing5" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 25)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing6" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing7" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing8" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing18" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing19" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing20" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing21" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing22" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing23" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing24" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing25" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing26" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing9" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing10" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing11" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing12" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing13" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing14" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 20)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing15" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 20)
+mesh = ExtResource("5_10w0g")
+
+[node name="to_el01_station02" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -8)
+
+[node name="road_crossing" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 18)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing28" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 23)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing2" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 0, 13)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing3" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 0, 18)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing16" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 0, 23)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing17" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45, 0, 18)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing4" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 28)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing5" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, 0, 23)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing6" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 18)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing7" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing8" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing18" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing19" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing20" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing21" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing22" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing23" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing24" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing25" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing26" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 0, 13)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing9" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 8)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing10" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 8)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing11" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 0, 8)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing27" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 28)
+mesh = ExtResource("5_10w0g")
+
+[node name="road_crossing12" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 23)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing13" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 23)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing14" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 23)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing15" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 23)
+mesh = ExtResource("5_10w0g")
 
 [node name="character" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1, 2)
 script = ExtResource("4_hpx40")
 
 [node name="collision_shape" type="CollisionShape3D" parent="character"]
@@ -59,5 +367,5 @@ current = true
 environment = SubResource("Environment_li5j0")
 
 [node name="sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 32, 42, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
 shadow_enabled = true
