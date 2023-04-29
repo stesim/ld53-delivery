@@ -126,8 +126,8 @@ shadow_mesh = SubResource("ArrayMesh_68yul")
 
 [sub_resource type="Resource" id="Resource_v1p1j"]
 script = ExtResource("5_awkgi")
-quantity = 999
-max_quantity = 999
+quantity = 9999
+max_quantity = 9999
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c864"]
 size = Vector3(5, 5, 5)
@@ -163,6 +163,7 @@ mesh = SubResource("ArrayMesh_sfjbl")
 [node name="loading_area" parent="." instance=ExtResource("4_mxkv2")]
 unique_name_in_owner = true
 backing_inventory = SubResource("Resource_v1p1j")
+tick_interval = 0.125
 
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, 2.5)

@@ -9,7 +9,7 @@ monitorable = false
 script = ExtResource("1_q6lc6")
 
 [node name="load_timer" type="Timer" parent="."]
-wait_time = 0.25
+unique_name_in_owner = true
 autostart = true
 
 [connection signal="timeout" from="load_timer" to="." method="_on_load_timer_timeout"]

@@ -9,6 +9,11 @@ enum Type {
 
 @export var type := Type.SOURCE
 @export var backing_inventory : Inventory
+@export var tick_interval := 1.0 :
+	set(value):
+		tick_interval = value
+		%load_timer.wait_time = value
+
 @export var quantity_per_tick := 1
 
 

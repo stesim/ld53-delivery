@@ -15,7 +15,7 @@ size = Vector3(0.9, 0.8, 0.55)
 
 [sub_resource type="Resource" id="Resource_1yf0n"]
 script = ExtResource("5_dwq2y")
-quantity = 50
+quantity = 0
 max_quantity = 50
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sjrn"]

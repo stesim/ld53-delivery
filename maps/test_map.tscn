@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://x51op8g8yspv"]
+[gd_scene load_steps=15 format=3 uid="uid://x51op8g8yspv"]
 
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
@@ -20,11 +20,6 @@ quantity = 0
 max_quantity = 25
 
 [sub_resource type="Resource" id="Resource_pov51"]
-script = ExtResource("9_j7fbw")
-quantity = 0
-max_quantity = 25
-
-[sub_resource type="Resource" id="Resource_3k0f1"]
 script = ExtResource("9_j7fbw")
 quantity = 0
 max_quantity = 25
@@ -381,10 +376,6 @@ inventory = SubResource("Resource_4mcxt")
 [node name="ice_station_2" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -123, 0, 9)
 inventory = SubResource("Resource_pov51")
-
-[node name="ice_station_3" parent="." instance=ExtResource("8_wanx7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 13)
-inventory = SubResource("Resource_3k0f1")
 
 [node name="customer_spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 0, 50)
