@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwjagmncfpjaa"]
+[gd_scene load_steps=15 format=3 uid="uid://bwjagmncfpjaa"]
 
 [ext_resource type="ArrayMesh" uid="uid://bcd1kbcl512oe" path="res://assets/buildings/headquarters.res" id="1_0ya24"]
 [ext_resource type="Script" path="res://map_elements/headquarters.gd" id="1_smhg0"]
@@ -127,6 +127,13 @@ shadow_mesh = SubResource("ArrayMesh_h07qk")
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c864"]
 size = Vector3(5, 5, 5)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_1exjh"]
+top_radius = 0.125
+bottom_radius = 0.125
+height = 1.0
+radial_segments = 16
+rings = 2
+
 [node name="headquarters" type="Node3D"]
 script = ExtResource("1_smhg0")
 
@@ -164,3 +171,11 @@ player_controlled = true
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, 2.5)
 shape = SubResource("BoxShape3D_4c864")
+
+[node name="spawner_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 2.53522, 1.98253, 3)
+mesh = SubResource("CylinderMesh_1exjh")
+
+[node name="spawn_location" type="Marker3D" parent="spawner_mesh"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029933, -0.490177, 0)

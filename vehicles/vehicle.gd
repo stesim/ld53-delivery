@@ -15,14 +15,15 @@ var _previous_speed := 0.0
 var _previous_loss_time := 0
 var move_forward := false
 
-@onready var _inventory_area := %inventory
+@onready var _inventory_area := %inventory_area
 @onready var _crash_sound := %crash_sound
 
 
 func _enter_tree() -> void:
-	var inventories := GameState.create_item_inventories(%inventory.total_capacity)
-	%inventory.inventories = inventories
-	%inventory_indicator.inventories = %inventory.inventories
+	var inventory_area := %inventory_area
+	var inventories := GameState.create_item_inventories(inventory_area.total_capacity)
+	inventory_area.inventories = inventories
+	%inventory_indicator.inventories = inventory_area.inventories
 
 
 func _physics_process(delta : float) -> void:
@@ -64,6 +65,8 @@ func _lose_inventory(quantity : int) -> void:
 			break
 
 
-func _on_body_entered(_body : Node) -> void:
+func _on_body_entered(body : Node) -> void:
+	if body is RigidBody3D:
+		return
 	if _previous_speed >= crash_sound_speed_threshold:
 		_crash_sound.play()

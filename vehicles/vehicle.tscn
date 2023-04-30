@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
 [ext_resource type="ArrayMesh" uid="uid://b1if5d6uis8oj" path="res://assets/cars/wheel_truck.res" id="2_1emut"]
-[ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="4_dysdc"]
+[ext_resource type="PackedScene" uid="uid://cvnsxskahwkk2" path="res://physics_inventory_area.tscn" id="4_lcwta"]
 [ext_resource type="PackedScene" uid="uid://c4lqie0mbh7m6" path="res://inventory_indicator.tscn" id="5_xbh77"]
 [ext_resource type="AudioStream" uid="uid://ck2ejuwn8p08m" path="res://assets/sounds/tires_screech.wav" id="6_wm01k"]
 [ext_resource type="AudioStream" uid="uid://c13qisub7wdhw" path="res://assets/sounds/242740__marlonhj__engine.wav" id="8_sj5ua"]
@@ -93,11 +93,10 @@ damping_relaxation = 1.5
 [node name="mesh" type="MeshInstance3D" parent="wheel_rr"]
 mesh = ExtResource("2_1emut")
 
-[node name="inventory" parent="." instance=ExtResource("4_dysdc")]
+[node name="inventory_area" parent="." instance=ExtResource("4_lcwta")]
 unique_name_in_owner = true
-total_capacity = 50
 
-[node name="shape" type="CollisionShape3D" parent="inventory"]
+[node name="shape" type="CollisionShape3D" parent="inventory_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
 shape = SubResource("BoxShape3D_8sjrn")
 

@@ -80,6 +80,11 @@ transfer_item_4={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":52,"key_label":0,"unicode":52,"echo":false,"script":null)
 ]
 }
+test_input={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -87,6 +92,7 @@ transfer_item_4={
 3d_physics/layer_2="Delivery Loading"
 3d_physics/layer_3="Customer Feeding"
 3d_physics/layer_4="Customer Collision"
+3d_physics/layer_5="Food Items"
 
 [rendering]
 

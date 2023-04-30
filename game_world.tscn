@@ -1,6 +1,5 @@
 [gd_scene load_steps=17 format=3 uid="uid://douesax7qkljh"]
 
-[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="AudioStream" uid="uid://cv12ngfg2vqtx" path="res://assets/music/Cheerful Annoyance.ogg" id="2_wuftt"]
@@ -13,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dsgew3iijckw1" path="res://assets/music/Mishief Stroll.ogg" id="6_d5khg"]
 [ext_resource type="AudioStream" uid="uid://cgjbekrvogi5b" path="res://assets/music/Polka Train.ogg" id="7_7inye"]
 [ext_resource type="AudioStream" uid="uid://dqen0rqp3mdgt" path="res://assets/music/Swinging Pants.ogg" id="8_ypdcj"]
+[ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="9_q7j6y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,7 +30,7 @@ tonemap_mode = 2
 script = ExtResource("1_wxayb")
 background_tracks = Array[AudioStream]([ExtResource("2_wuftt"), ExtResource("3_lhff5"), ExtResource("4_d6s50"), ExtResource("5_pvijm"), ExtResource("6_d5khg"), ExtResource("7_7inye"), ExtResource("8_ypdcj")])
 
-[node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
+[node name="truck" parent="." instance=ExtResource("9_q7j6y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2455, 2.80538, 18.6208)
 mass = 2000.0
 max_engine_force = 3000.0
@@ -39,7 +39,7 @@ max_brake_force = 100.0
 [node name="vehicle_follower" type="Node3D" parent="." node_paths=PackedStringArray("target")]
 transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, -30.2455, 7.3054, 11.6208)
 script = ExtResource("3_p7flm")
-target = NodePath("../vehicle")
+target = NodePath("../truck")
 
 [node name="camera" type="Camera3D" parent="vehicle_follower"]
 current = true

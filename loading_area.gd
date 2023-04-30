@@ -67,13 +67,10 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> void:
 func _transfer_from_inventories(backing_inventory : Inventory) -> void:
 	if backing_inventory.is_full():
 		return
-	for area in get_overlapping_areas():
+	for inventory_area in get_overlapping_areas():
 		var quantity := mini(quantity_per_tick, backing_inventory.remaining_capacity())
-		if quantity == 0:
-			break
-		var target_inventory := _find_item_inventory(area.inventories, backing_inventory.item)
-		if target_inventory:
-			var diff : int = target_inventory.remove(quantity)
+		if quantity > 0:
+			var diff : int = inventory_area.fetch_items(backing_inventory.item, quantity)
 			backing_inventory.add(diff)
 
 		if not concurrent_transfers:

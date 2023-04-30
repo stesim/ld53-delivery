@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://df22loy4nru3l"]
+
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_42dhg"]
+[ext_resource type="ArrayMesh" uid="uid://dkdcxt0n13lux" path="res://assets/cars/truck.res" id="2_gyqnb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1msol"]
+size = Vector3(1.3, 0.4, 2.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77rbr"]
+size = Vector3(1.1, 0.8, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6byta"]
+size = Vector3(0.1, 0.2, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ghb83"]
+size = Vector3(0.9, 0.2, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0h3y0"]
+size = Vector3(1.25, 0.8, 2.9)
+
+[node name="truck" instance=ExtResource("1_42dhg")]
+center_of_mass = Vector3(0, 0.05, -0.13)
+
+[node name="collision_shape" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+shape = SubResource("BoxShape3D_1msol")
+
+[node name="collision_shape2" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, -0.15)
+shape = SubResource("BoxShape3D_77rbr")
+
+[node name="collision_shape3" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1.05)
+shape = SubResource("BoxShape3D_6byta")
+
+[node name="collision_shape4" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -1.05)
+shape = SubResource("BoxShape3D_6byta")
+
+[node name="collision_shape5" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.6)
+shape = SubResource("BoxShape3D_ghb83")
+
+[node name="mesh" parent="." index="5"]
+mesh = ExtResource("2_gyqnb")
+
+[node name="wheel_fl" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, 0.66)
+
+[node name="wheel_fr" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, 0.66)
+
+[node name="wheel_rl" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, -0.95)
+
+[node name="wheel_rr" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, -0.95)
+
+[node name="shape" parent="inventory_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
+shape = SubResource("BoxShape3D_0h3y0")
