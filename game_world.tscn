@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=8 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
+[ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
 
@@ -17,6 +18,7 @@ sky = SubResource("Sky_80r3o")
 tonemap_mode = 2
 
 [node name="game_world" type="Node3D"]
+script = ExtResource("1_wxayb")
 
 [node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 3)
@@ -33,6 +35,39 @@ target = NodePath("../vehicle")
 
 [node name="camera" type="Camera3D" parent="vehicle_follower"]
 current = true
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="score_panel" type="PanelContainer" parent="ui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 32.0
+offset_right = 48.0
+offset_bottom = 104.0
+grow_horizontal = 2
+
+[node name="margin" type="MarginContainer" parent="ui/score_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="vbox" type="VBoxContainer" parent="ui/score_panel/margin"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="ui/score_panel/margin/vbox"]
+layout_mode = 2
+text = "Revenue"
+uppercase = true
+
+[node name="revenue_label" type="Label" parent="ui/score_panel/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$0"
+horizontal_alignment = 1
 
 [node name="environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xaiqv")
