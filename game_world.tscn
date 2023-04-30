@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
-[ext_resource type="PackedScene" uid="uid://x51op8g8yspv" path="res://maps/test_map.tscn" id="2_050wm"]
+[ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
