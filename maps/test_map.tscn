@@ -1,17 +1,18 @@
-[gd_scene load_steps=38 format=3 uid="uid://db8m8ii5ewx0l"]
+[gd_scene load_steps=52 format=3 uid="uid://db8m8ii5ewx0l"]
 
 [ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/enemy_straight.res" id="4_31ddj"]
+[ext_resource type="ArrayMesh" uid="uid://sg8wpq88jq3d" path="res://assets/roads/enemy_straight.res" id="4_31ddj"]
 [ext_resource type="ArrayMesh" uid="uid://dp2xroi70qepa" path="res://assets/roads/curve_pavement.res" id="5_0hful"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/curve.res" id="5_10w0g"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/end.res" id="5_s06c3"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
+[ext_resource type="ArrayMesh" uid="uid://cl5w3at0vcnyc" path="res://assets/roads/curve.res" id="5_10w0g"]
+[ext_resource type="ArrayMesh" uid="uid://wva27sn8qi8m" path="res://assets/roads/end.res" id="5_s06c3"]
+[ext_resource type="ArrayMesh" uid="uid://dfmmhh0nmayw0" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
 [ext_resource type="PackedScene" uid="uid://cdu7d15q2hbqp" path="res://map_elements/ice_station.tscn" id="8_wanx7"]
 [ext_resource type="Script" path="res://inventory.gd" id="9_j7fbw"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="10_i3q55"]
+[ext_resource type="ArrayMesh" uid="uid://br8li8ayl60cn" path="res://assets/roads/curve_square.res" id="10_npb2t"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="11_7le7x"]
 [ext_resource type="PackedScene" uid="uid://cv343cijprfxh" path="res://assets/buildings/house_type01.glb" id="13_uc4j6"]
 [ext_resource type="PackedScene" uid="uid://yp2u0dcp8eee" path="res://assets/buildings/house_type02.glb" id="14_d3xdb"]
@@ -32,6 +33,19 @@
 [ext_resource type="PackedScene" uid="uid://cwimypw3d24d7" path="res://assets/buildings/house_type17.glb" id="29_ye10c"]
 [ext_resource type="PackedScene" uid="uid://bh0nrem56p6nb" path="res://assets/buildings/house_type18.glb" id="30_q6dui"]
 [ext_resource type="ArrayMesh" uid="uid://b6wey0nqh8hfc" path="res://assets/roads/tile_low.res" id="31_csl52"]
+[ext_resource type="PackedScene" uid="uid://cvo7rnw1toefq" path="res://assets/buildings/city/large_buildingA.glb" id="33_e4fqx"]
+[ext_resource type="PackedScene" uid="uid://dxv6356mjjmp" path="res://assets/buildings/city/large_buildingB.glb" id="33_yuyov"]
+[ext_resource type="PackedScene" uid="uid://d1mhkw1r167m4" path="res://assets/buildings/city/large_buildingC.glb" id="35_57lwu"]
+[ext_resource type="PackedScene" uid="uid://b1cs48523cadg" path="res://assets/buildings/city/large_buildingD.glb" id="36_8ovmk"]
+[ext_resource type="PackedScene" uid="uid://6ig73d3cp2f6" path="res://assets/buildings/city/large_buildingE.glb" id="37_vry5x"]
+[ext_resource type="PackedScene" uid="uid://dbi4wdtkefv0i" path="res://assets/buildings/city/large_buildingF.glb" id="38_2nrsd"]
+[ext_resource type="PackedScene" uid="uid://diikq5l87khje" path="res://assets/buildings/city/large_buildingG.glb" id="39_loc12"]
+[ext_resource type="PackedScene" uid="uid://dxfltdbj36hxw" path="res://assets/buildings/city/skyscraperA.glb" id="40_u56my"]
+[ext_resource type="PackedScene" uid="uid://bokfpi54pajhu" path="res://assets/buildings/city/skyscraperB.glb" id="41_whob0"]
+[ext_resource type="PackedScene" uid="uid://dygu78c4dm0fl" path="res://assets/buildings/city/skyscraperC.glb" id="42_0dteh"]
+[ext_resource type="PackedScene" uid="uid://bl1706pbq20pe" path="res://assets/buildings/city/skyscraperD.glb" id="43_1a2d7"]
+[ext_resource type="PackedScene" uid="uid://bdy0owr4cksr2" path="res://assets/buildings/city/skyscraperE.glb" id="44_yfrlp"]
+[ext_resource type="PackedScene" uid="uid://bhsmxrmwfn8lu" path="res://assets/buildings/city/skyscraperF.glb" id="45_bsirs"]
 
 [sub_resource type="Resource" id="Resource_4mcxt"]
 script = ExtResource("9_j7fbw")
@@ -166,7 +180,7 @@ mesh = ExtResource("2_cmy2o")
 
 [node name="road_crossing17" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45, 0, 15)
-mesh = ExtResource("5_10w0g")
+mesh = ExtResource("10_npb2t")
 
 [node name="road_crossing4" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 20)
@@ -208,29 +222,29 @@ mesh = ExtResource("2_cmy2o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 10)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_crossing23" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 10)
-mesh = ExtResource("2_cmy2o")
-
 [node name="road_crossing24" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 10)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_crossing25" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 10)
-mesh = ExtResource("7_qdgwl")
-
 [node name="road_crossing26" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 0, 10)
-mesh = ExtResource("5_10w0g")
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -90, 0, 10)
+mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing25" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -75, 0, 15)
+mesh = ExtResource("7_qdgwl")
 
 [node name="road_crossing27" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -90, 0, 5)
-mesh = ExtResource("5_10w0g")
+mesh = ExtResource("10_npb2t")
 
 [node name="road_crossing28" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-1, -4.37114e-08, 8.74228e-08, -4.37114e-08, 1, -4.37114e-08, -8.74228e-08, -4.37114e-08, -1, -85, 0, 10)
-mesh = ExtResource("5_10w0g")
+mesh = ExtResource("10_npb2t")
+
+[node name="road_crossing29" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 4.37114e-08, -2.13163e-14, -4.37114e-08, 1, -4.37114e-08, 2.13163e-14, 4.37114e-08, 1, -90, 0, 10)
+mesh = ExtResource("10_npb2t")
 
 [node name="road_crossing9" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
@@ -260,6 +274,14 @@ mesh = ExtResource("2_cmy2o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 20)
 mesh = ExtResource("5_10w0g")
 
+[node name="road_crossing36" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -92.5, 0, 17.5)
+mesh = ExtResource("5_0hful")
+
+[node name="road_crossing37" parent="to_el01_station01" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -82.5, 0, 22.5)
+mesh = ExtResource("5_0hful")
+
 [node name="to_el01_station02" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -8)
 
@@ -274,14 +296,6 @@ mesh = ExtResource("2_cmy2o")
 [node name="road_crossing2" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 0, 13)
 mesh = ExtResource("5_10w0g")
-
-[node name="road_crossing3" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 0, 18)
-mesh = ExtResource("2_cmy2o")
-
-[node name="road_crossing16" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 0, 23)
-mesh = ExtResource("2_cmy2o")
 
 [node name="road_crossing17" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45, 0, 18)
@@ -298,14 +312,6 @@ mesh = ExtResource("5_10w0g")
 [node name="road_crossing6" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 18)
 mesh = ExtResource("2_cmy2o")
-
-[node name="road_crossing7" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
-mesh = ExtResource("2_cmy2o")
-
-[node name="road_crossing8" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)
-mesh = ExtResource("5_10w0g")
 
 [node name="road_crossing18" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, 13)
@@ -327,29 +333,17 @@ mesh = ExtResource("2_cmy2o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 13)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_crossing23" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 13)
+[node name="road_crossing25" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -75, 0, 18)
 mesh = ExtResource("2_cmy2o")
+
+[node name="road_crossing23" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -75, 0, 18)
+mesh = ExtResource("7_qdgwl")
 
 [node name="road_crossing24" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 13)
 mesh = ExtResource("2_cmy2o")
-
-[node name="road_crossing25" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(-1, 3.82137e-15, 8.74228e-08, -3.82137e-15, 1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, -85, 0, 18)
-mesh = ExtResource("7_qdgwl")
-
-[node name="road_crossing26" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, -90, 0, 13)
-mesh = ExtResource("5_10w0g")
-
-[node name="road_crossing29" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, -4.37114e-08, 3.55271e-15, 4.37114e-08, 1, -4.37114e-08, 0, 4.37114e-08, 1, -95, 0, 18)
-mesh = ExtResource("5_10w0g")
-
-[node name="road_crossing30" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(-4.37114e-08, 8.74228e-08, 1, 0, 1, -8.74228e-08, -1, -5.4634e-15, -4.37114e-08, -90, 0, 23)
-mesh = ExtResource("5_10w0g")
 
 [node name="road_crossing9" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 8)
@@ -365,7 +359,7 @@ mesh = ExtResource("5_10w0g")
 
 [node name="road_crossing27" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 28)
-mesh = ExtResource("5_10w0g")
+mesh = ExtResource("10_npb2t")
 
 [node name="road_crossing12" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 23)
@@ -375,13 +369,25 @@ mesh = ExtResource("2_cmy2o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 23)
 mesh = ExtResource("2_cmy2o")
 
-[node name="road_crossing14" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 23)
-mesh = ExtResource("2_cmy2o")
+[node name="road_crossing31" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -12.5, 0, 15.5)
+mesh = ExtResource("5_0hful")
 
-[node name="road_crossing15" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 23)
-mesh = ExtResource("5_10w0g")
+[node name="road_crossing32" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -47.5, 0, 20.5)
+mesh = ExtResource("5_0hful")
+
+[node name="road_crossing33" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -87.5, 0, 15.5)
+mesh = ExtResource("5_0hful")
+
+[node name="road_crossing34" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -92.5, 0, 25.5)
+mesh = ExtResource("5_0hful")
+
+[node name="road_crossing35" parent="to_el01_station02" instance=ExtResource("1_cs4q5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -82.5, 0, 30.5)
+mesh = ExtResource("5_0hful")
 
 [node name="ice_station_1" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -121.7, 0, 35)
@@ -407,264 +413,778 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53, -3, 38)
 mesh = SubResource("PlaneMesh_32uk8")
 skeleton = NodePath("../..")
 
-[node name="house_type01" parent="." instance=ExtResource("13_uc4j6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5012, 0, 13.8912)
+[node name="suburb" type="Node3D" parent="."]
 
-[node name="house_type02" parent="." instance=ExtResource("14_d3xdb")]
+[node name="house_type01" parent="suburb" instance=ExtResource("13_uc4j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5012, 0, 14.8912)
+
+[node name="house_type02" parent="suburb" instance=ExtResource("14_d3xdb")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, 30)
 
-[node name="house_type03" parent="." instance=ExtResource("15_flq31")]
+[node name="house_type03" parent="suburb" instance=ExtResource("15_flq31")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 5)
 
-[node name="house_type04" parent="." instance=ExtResource("16_g87h2")]
+[node name="house_type04" parent="suburb" instance=ExtResource("16_g87h2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 0, 8)
 
-[node name="house_type05" parent="." instance=ExtResource("17_tr8u8")]
+[node name="house_type05" parent="suburb" instance=ExtResource("17_tr8u8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 0, 30)
 
-[node name="house_type06" parent="." instance=ExtResource("18_vf3h7")]
+[node name="house_type22" parent="suburb" instance=ExtResource("17_tr8u8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 0, 52)
+
+[node name="house_type06" parent="suburb" instance=ExtResource("18_vf3h7")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 4)
 
-[node name="house_type07" parent="." instance=ExtResource("19_2lgo2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -45, 0, 10)
+[node name="house_type07" parent="suburb" instance=ExtResource("19_2lgo2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -39, 0, 53)
 
-[node name="house_type08" parent="." instance=ExtResource("20_tooyv")]
+[node name="house_type19" parent="suburb" instance=ExtResource("19_2lgo2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -48, 0, 53)
+
+[node name="house_type20" parent="suburb" instance=ExtResource("19_2lgo2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57, 0, 53)
+
+[node name="house_type21" parent="suburb" instance=ExtResource("19_2lgo2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -66, 0, 53)
+
+[node name="house_type08" parent="suburb" instance=ExtResource("20_tooyv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 55)
 
-[node name="house_type09" parent="." instance=ExtResource("21_umxkw")]
+[node name="house_type09" parent="suburb" instance=ExtResource("21_umxkw")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -16, 0, 40)
 
-[node name="house_type10" parent="." instance=ExtResource("22_m1hye")]
+[node name="house_type10" parent="suburb" instance=ExtResource("22_m1hye")]
 transform = Transform3D(-1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, -1, -4, 0, 31)
 
-[node name="house_type11" parent="." instance=ExtResource("23_c5md4")]
+[node name="house_type11" parent="suburb" instance=ExtResource("23_c5md4")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15, 0, 50)
 
-[node name="house_type12" parent="." instance=ExtResource("24_tuqo1")]
+[node name="house_type12" parent="suburb" instance=ExtResource("24_tuqo1")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 39)
 
-[node name="house_type13" parent="." instance=ExtResource("25_mel7u")]
+[node name="house_type13" parent="suburb" instance=ExtResource("25_mel7u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 15)
 
-[node name="house_type14" parent="." instance=ExtResource("26_8h2hh")]
+[node name="house_type14" parent="suburb" instance=ExtResource("26_8h2hh")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39, 0, 20)
 
-[node name="house_type15" parent="." instance=ExtResource("27_31psq")]
+[node name="house_type15" parent="suburb" instance=ExtResource("27_31psq")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -40, 0, 39)
 
-[node name="house_type16" parent="." instance=ExtResource("28_8xao8")]
+[node name="house_type16" parent="suburb" instance=ExtResource("28_8xao8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16, 0, 15)
 
-[node name="house_type17" parent="." instance=ExtResource("29_ye10c")]
+[node name="house_type17" parent="suburb" instance=ExtResource("29_ye10c")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, 17)
 
-[node name="house_type18" parent="." instance=ExtResource("30_q6dui")]
+[node name="house_type18" parent="suburb" instance=ExtResource("30_q6dui")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, 30)
 
-[node name="TileLow" type="MeshInstance3D" parent="."]
+[node name="TileLow" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -27.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow2" type="MeshInstance3D" parent="."]
+[node name="TileLow2" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -32.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow3" type="MeshInstance3D" parent="."]
+[node name="TileLow3" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -27.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow4" type="MeshInstance3D" parent="."]
+[node name="TileLow4" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -32.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow5" type="MeshInstance3D" parent="."]
+[node name="TileLow5" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -27.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow6" type="MeshInstance3D" parent="."]
+[node name="TileLow6" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -32.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow7" type="MeshInstance3D" parent="."]
+[node name="TileLow7" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -27.5, 0, 37.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow8" type="MeshInstance3D" parent="."]
+[node name="TileLow8" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -32.5, 0, 37.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow9" type="MeshInstance3D" parent="."]
+[node name="TileLow9" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -27.5, 0, 42.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow10" type="MeshInstance3D" parent="."]
+[node name="TileLow10" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -32.5, 0, 42.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow11" type="MeshInstance3D" parent="."]
+[node name="TileLow11" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, 2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow12" type="MeshInstance3D" parent="."]
+[node name="TileLow12" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow19" type="MeshInstance3D" parent="."]
+[node name="TileLow19" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, -2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow20" type="MeshInstance3D" parent="."]
+[node name="TileLow20" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, -2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow21" type="MeshInstance3D" parent="."]
+[node name="TileLow21" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, -7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow22" type="MeshInstance3D" parent="."]
+[node name="TileLow22" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, -7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow13" type="MeshInstance3D" parent="."]
+[node name="TileLow13" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, 7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow14" type="MeshInstance3D" parent="."]
+[node name="TileLow14" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow15" type="MeshInstance3D" parent="."]
+[node name="TileLow15" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, 12.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow16" type="MeshInstance3D" parent="."]
+[node name="TileLow16" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 12.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow18" type="MeshInstance3D" parent="."]
+[node name="TileLow18" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow23" type="MeshInstance3D" parent="."]
+[node name="TileLow23" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow24" type="MeshInstance3D" parent="."]
+[node name="TileLow24" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow25" type="MeshInstance3D" parent="."]
+[node name="TileLow25" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, -2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow26" type="MeshInstance3D" parent="."]
+[node name="TileLow26" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, -2.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow27" type="MeshInstance3D" parent="."]
+[node name="TileLow27" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, -7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow28" type="MeshInstance3D" parent="."]
+[node name="TileLow28" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, -7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow35" type="MeshInstance3D" parent="."]
+[node name="TileLow35" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.5, 0, -7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow29" type="MeshInstance3D" parent="."]
+[node name="TileLow29" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow30" type="MeshInstance3D" parent="."]
+[node name="TileLow30" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 7.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow31" type="MeshInstance3D" parent="."]
+[node name="TileLow31" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 12.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow32" type="MeshInstance3D" parent="."]
+[node name="TileLow32" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 12.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow33" type="MeshInstance3D" parent="."]
+[node name="TileLow33" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow34" type="MeshInstance3D" parent="."]
+[node name="TileLow34" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow36" type="MeshInstance3D" parent="."]
+[node name="TileLow36" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 22.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow37" type="MeshInstance3D" parent="."]
+[node name="TileLow37" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 22.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow38" type="MeshInstance3D" parent="."]
+[node name="TileLow38" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow39" type="MeshInstance3D" parent="."]
+[node name="TileLow39" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow40" type="MeshInstance3D" parent="."]
+[node name="TileLow40" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 12.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow41" type="MeshInstance3D" parent="."]
+[node name="TileLow41" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow42" type="MeshInstance3D" parent="."]
+[node name="TileLow42" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow43" type="MeshInstance3D" parent="."]
+[node name="TileLow43" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow44" type="MeshInstance3D" parent="."]
+[node name="TileLow44" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow45" type="MeshInstance3D" parent="."]
+[node name="TileLow45" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow46" type="MeshInstance3D" parent="."]
+[node name="TileLow46" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow47" type="MeshInstance3D" parent="."]
+[node name="TileLow47" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -12.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow48" type="MeshInstance3D" parent="."]
+[node name="TileLow48" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow49" type="MeshInstance3D" parent="."]
+[node name="TileLow49" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -12.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow52" type="MeshInstance3D" parent="."]
+[node name="TileLow52" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -12.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow53" type="MeshInstance3D" parent="."]
+[node name="TileLow53" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.5, 0, 17.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow50" type="MeshInstance3D" parent="."]
+[node name="TileLow50" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.5, 0, 27.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
 
-[node name="TileLow51" type="MeshInstance3D" parent="."]
+[node name="TileLow51" type="MeshInstance3D" parent="suburb"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.5, 0, 32.5)
 mesh = ExtResource("31_csl52")
+skeleton = NodePath("../..")
+
+[node name="city" type="Node3D" parent="."]
+
+[node name="ground" type="Node3D" parent="city"]
+
+[node name="TileLow17" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 7.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow18" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 7.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow19" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow20" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow21" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow22" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow23" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow24" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow25" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow26" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow27" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow28" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow29" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow30" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow31" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow32" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow33" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow34" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow35" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow36" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow37" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow38" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -47.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow39" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow40" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow41" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow42" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow43" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow44" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -57.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow45" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -57.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow46" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -57.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow47" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -57.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow48" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -57.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow49" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow50" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow51" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow52" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow53" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow54" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow55" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow57" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.5, 0, 37.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow58" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.5, 0, 42.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow56" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow59" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -72.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow60" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -72.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow61" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -72.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow62" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -77.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow63" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -77.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow64" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -77.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow66" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -77.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow67" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -77.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow65" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -82.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow68" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -82.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow69" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -82.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow70" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -82.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow71" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -82.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow72" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow73" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow74" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow75" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow76" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow77" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow78" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow79" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow80" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow81" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow82" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.5, 0, 22.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow83" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow84" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow85" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow87" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -107.5, 0, 12.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow86" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.5, 0, 17.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow88" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow89" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow93" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -107.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow94" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -107.5, 0, 32.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow98" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -112.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="TileLow101" type="MeshInstance3D" parent="city/ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.5, 0, 27.5)
+mesh = ExtResource("31_csl52")
+skeleton = NodePath("../../..")
+
+[node name="buildings" type="Node3D" parent="city"]
+
+[node name="large_buildingB" parent="city/buildings" instance=ExtResource("33_yuyov")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27, 0, 17)
+
+[node name="large_buildingA" parent="city/buildings" instance=ExtResource("33_e4fqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 0, 13)
+
+[node name="large_buildingA2" parent="city/buildings" instance=ExtResource("33_e4fqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 0, 13)
+
+[node name="large_buildingA4" parent="city/buildings" instance=ExtResource("33_e4fqx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94, 0, 43)
+
+[node name="large_buildingA5" parent="city/buildings" instance=ExtResource("33_e4fqx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -81, 0, 43)
+
+[node name="large_buildingA3" parent="city/buildings" instance=ExtResource("33_e4fqx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -76, 0, 31)
+
+[node name="large_buildingC" parent="city/buildings" instance=ExtResource("35_57lwu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38, 0, 28)
+
+[node name="large_buildingD" parent="city/buildings" instance=ExtResource("36_8ovmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 42)
+
+[node name="large_buildingE" parent="city/buildings" instance=ExtResource("37_vry5x")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -67, 0, 24)
+
+[node name="large_buildingF" parent="city/buildings" instance=ExtResource("38_2nrsd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -57, 0, 25)
+
+[node name="large_buildingF2" parent="city/buildings" instance=ExtResource("38_2nrsd")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -88, 0, 30)
+
+[node name="large_buildingG" parent="city/buildings" instance=ExtResource("39_loc12")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -50, 0, 37)
+
+[node name="skyscraperA" parent="city/buildings" instance=ExtResource("40_u56my")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -76, 0, 22)
+
+[node name="skyscraperA2" parent="city/buildings" instance=ExtResource("40_u56my")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -108, 0, 13)
+
+[node name="skyscraperB" parent="city/buildings" instance=ExtResource("41_whob0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -46, 0, 17)
+
+[node name="skyscraperC" parent="city/buildings" instance=ExtResource("42_0dteh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 0, 42)
+
+[node name="skyscraperD" parent="city/buildings" instance=ExtResource("43_1a2d7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -45, 0, 9)
+
+[node name="skyscraperE" parent="city/buildings" instance=ExtResource("44_yfrlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 31)
+
+[node name="skyscraperF" parent="city/buildings" instance=ExtResource("45_bsirs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 31)
