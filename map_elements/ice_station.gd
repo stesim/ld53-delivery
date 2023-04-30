@@ -9,7 +9,6 @@ var _inventories : Array[Inventory]
 
 
 @onready var _feeding_area := %feeding_area
-@onready var _serve_location := %serve_location
 
 
 func _ready() -> void:
@@ -21,7 +20,7 @@ func _ready() -> void:
 
 
 func get_serve_location() -> Vector3:
-	return _serve_location.global_position
+	return _feeding_area.global_position
 
 
 func _on_serve_timer_timeout() -> void:

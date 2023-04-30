@@ -20,6 +20,7 @@ const TRANSFER_INPUT_MAPPINGS : Array[StringName]= [
 
 @export var quantity_per_tick := 1
 @export var player_controlled := false
+@export var concurrent_transfers := true
 
 
 func _ready() -> void:
@@ -59,6 +60,9 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> void:
 			var diff : int = target_inventory.add(quantity)
 			backing_inventory.remove(diff)
 
+		if not concurrent_transfers:
+			break
+
 
 func _transfer_from_inventories(backing_inventory : Inventory) -> void:
 	if backing_inventory.is_full():
@@ -71,6 +75,9 @@ func _transfer_from_inventories(backing_inventory : Inventory) -> void:
 		if target_inventory:
 			var diff : int = target_inventory.remove(quantity)
 			backing_inventory.add(diff)
+
+		if not concurrent_transfers:
+			break
 
 
 func _find_item_inventory(inventories : Array[Inventory], item) -> Inventory:

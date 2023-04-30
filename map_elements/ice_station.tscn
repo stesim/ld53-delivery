@@ -12,6 +12,7 @@ size = Vector3(4, 5.6, 3.3)
 size = Vector3(5, 5, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f73mx"]
+size = Vector3(1, 2, 1)
 
 [node name="ice_station" type="StaticBody3D"]
 script = ExtResource("1_q8et4")
@@ -34,11 +35,11 @@ shape = SubResource("BoxShape3D_p31t4")
 
 [node name="feeding_area" parent="." instance=ExtResource("2_fwrp5")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
 collision_mask = 4
 
 [node name="shape" type="CollisionShape3D" parent="feeding_area"]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.5, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_f73mx")
 
 [node name="inventory_indicator" parent="." instance=ExtResource("4_ypo1u")]
@@ -48,9 +49,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -2.47395)
 [node name="serve_timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="serve_location" type="Marker3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
 
 [connection signal="timeout" from="serve_timer" to="." method="_on_serve_timer_timeout"]

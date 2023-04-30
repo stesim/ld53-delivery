@@ -95,6 +95,7 @@ mesh = ExtResource("2_1emut")
 
 [node name="inventory" parent="." instance=ExtResource("4_dysdc")]
 unique_name_in_owner = true
+total_capacity = 50
 
 [node name="shape" type="CollisionShape3D" parent="inventory"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
