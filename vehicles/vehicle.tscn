@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bosvhjnjwtr7t"]
+[gd_scene load_steps=12 format=3 uid="uid://bosvhjnjwtr7t"]
 
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="4_dysdc"]
 [ext_resource type="Script" path="res://inventory.gd" id="5_dwq2y"]
 [ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="6_fs0gj"]
+[ext_resource type="AudioStream" uid="uid://cok8pj4yndhsk" path="res://assets/sounds/Car_impact_6.wav" id="7_hssab"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84yfh"]
 size = Vector3(1.3, 0.3, 3.2)
@@ -24,7 +25,9 @@ size = Vector3(1.25, 1, 2)
 [node name="vehicle" type="VehicleBody3D"]
 mass = 600.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.05, 0)
+center_of_mass = Vector3(0, 0.05, 0.21)
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_x1xpc")
 max_engine_force = 2000.0
 max_steering_angle = 0.523599
@@ -47,7 +50,8 @@ use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.3
 suspension_travel = 0.2
-suspension_stiffness = 50.0
+suspension_stiffness = 75.0
+suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
@@ -61,7 +65,8 @@ use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.3
 suspension_travel = 0.2
-suspension_stiffness = 50.0
+suspension_stiffness = 75.0
+suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
@@ -72,7 +77,8 @@ mesh = ExtResource("2_1emut")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, -0.61)
 wheel_radius = 0.3
 suspension_travel = 0.2
-suspension_stiffness = 50.0
+suspension_stiffness = 75.0
+suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
@@ -84,7 +90,8 @@ mesh = ExtResource("2_1emut")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, -0.61)
 wheel_radius = 0.3
 suspension_travel = 0.2
-suspension_stiffness = 50.0
+suspension_stiffness = 75.0
+suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
@@ -102,3 +109,10 @@ shape = SubResource("BoxShape3D_8sjrn")
 [node name="inventory_indicator" parent="." instance=ExtResource("6_fs0gj")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.75)
+
+[node name="crash_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_hssab")
+max_polyphony = 3
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
