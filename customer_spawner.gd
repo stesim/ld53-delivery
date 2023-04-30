@@ -6,7 +6,7 @@ extends Node3D
 @export var max_capacity := 8
 
 
-var current_spawn_time := spawn_delta
+var current_spawn_time := 0.0
 var rng = RandomNumberGenerator.new()
 
 

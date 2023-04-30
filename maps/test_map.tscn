@@ -386,6 +386,7 @@ inventory = SubResource("Resource_pov51")
 [node name="customer_spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 0, 50)
 script = ExtResource("10_i3q55")
+spawn_delta = 8.0
 customer_scene = ExtResource("11_7le7x")
 
 [node name="ground" type="StaticBody3D" parent="."]

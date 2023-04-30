@@ -38,13 +38,13 @@ func _ready() -> void:
 func _physics_process(delta : float) -> void:
 	var previous_position := global_position
 	global_position = global_position.move_toward(target_point, delta * speed * _speed_rand)
+
 	var scale_factor = _init_scale * (1.0 - float(inventory.quantity) / float(inventory.max_quantity))
 	if scale_factor < 0.01:
 		queue_free()
 	
 	scale = Vector3(scale_factor, scale_factor, scale_factor)
 	
-	print(scale_factor)
 	var has_moved := not global_position.is_equal_approx(previous_position)
 	if _is_walking and not has_moved:
 		_animation_player.play(&"Idle")
