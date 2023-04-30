@@ -2,6 +2,8 @@ class_name Inventory
 extends Resource
 
 
+@export var item : PackedScene = null
+
 @export var quantity := 0 :
 	set(value):
 		quantity = value

@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwjagmncfpjaa"]
+[gd_scene load_steps=14 format=3 uid="uid://bwjagmncfpjaa"]
 
 [ext_resource type="ArrayMesh" uid="uid://bcd1kbcl512oe" path="res://assets/buildings/headquarters.res" id="1_0ya24"]
+[ext_resource type="Script" path="res://map_elements/headquarters.gd" id="1_smhg0"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="2_8yeug"]
 [ext_resource type="PackedScene" uid="uid://br25j1oumvjbg" path="res://loading_area.tscn" id="4_mxkv2"]
-[ext_resource type="Script" path="res://inventory.gd" id="5_awkgi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcft0"]
 
@@ -124,15 +124,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h07qk")
 
-[sub_resource type="Resource" id="Resource_v1p1j"]
-script = ExtResource("5_awkgi")
-quantity = 9999
-max_quantity = 9999
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c864"]
 size = Vector3(5, 5, 5)
 
 [node name="headquarters" type="Node3D"]
+script = ExtResource("1_smhg0")
 
 [node name="collision_main" type="StaticBody3D" parent="."]
 
@@ -163,8 +159,7 @@ mesh = SubResource("ArrayMesh_sfjbl")
 
 [node name="loading_area" parent="." instance=ExtResource("4_mxkv2")]
 unique_name_in_owner = true
-backing_inventory = SubResource("Resource_v1p1j")
-tick_interval = 0.125
+player_controlled = true
 
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, 2.5)

@@ -1,9 +1,23 @@
 extends Node3D
 
 
-@export var inventory : Inventory :
-	get: return %loading_area.backing_inventory
-	set(value):
-		%loading_area.backing_inventory = value
-		%quantity_indicator.inventory = value
-		%feeding_area.backing_inventory = value
+@export var item_capacity := 25
+
+
+var _inventories : Array[Inventory]
+
+
+@onready var _feeding_area := %feeding_area
+
+
+func _ready() -> void:
+	_inventories = GameState.create_item_inventories(item_capacity)
+
+	%loading_area.backing_inventories = _inventories
+	%inventory_indicator.inventories = _inventories
+	_feeding_area.backing_inventories = _inventories
+
+
+func _on_serve_timer_timeout() -> void:
+	for item in GameState.FOOD_ITEMS:
+		_feeding_area.transfer(item)

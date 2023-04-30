@@ -1,16 +1,15 @@
-[gd_scene load_steps=50 format=3 uid="uid://db8m8ii5ewx0l"]
+[gd_scene load_steps=45 format=3 uid="uid://db8m8ii5ewx0l"]
 
 [ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
 [ext_resource type="ArrayMesh" uid="uid://dp2xroi70qepa" path="res://assets/roads/curve_pavement.res" id="5_0hful"]
-[ext_resource type="ArrayMesh" uid="uid://dssn53gi7atru" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
+[ext_resource type="ArrayMesh" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
 [ext_resource type="ArrayMesh" uid="uid://b7yqrpoimt2qm" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
 [ext_resource type="PackedScene" uid="uid://cdu7d15q2hbqp" path="res://map_elements/ice_station.tscn" id="8_wanx7"]
-[ext_resource type="Script" path="res://inventory.gd" id="9_j7fbw"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="10_i3q55"]
-[ext_resource type="ArrayMesh" uid="uid://br8li8ayl60cn" path="res://assets/roads/curve_square.res" id="10_npb2t"]
+[ext_resource type="ArrayMesh" path="res://assets/roads/curve_square.res" id="10_npb2t"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="11_7le7x"]
 [ext_resource type="PackedScene" uid="uid://cv343cijprfxh" path="res://assets/buildings/house_type01.glb" id="13_uc4j6"]
 [ext_resource type="PackedScene" uid="uid://yp2u0dcp8eee" path="res://assets/buildings/house_type02.glb" id="14_d3xdb"]
@@ -44,26 +43,6 @@
 [ext_resource type="PackedScene" uid="uid://bl1706pbq20pe" path="res://assets/buildings/city/skyscraperD.glb" id="43_1a2d7"]
 [ext_resource type="PackedScene" uid="uid://bdy0owr4cksr2" path="res://assets/buildings/city/skyscraperE.glb" id="44_yfrlp"]
 [ext_resource type="PackedScene" uid="uid://bhsmxrmwfn8lu" path="res://assets/buildings/city/skyscraperF.glb" id="45_bsirs"]
-
-[sub_resource type="Resource" id="Resource_4mcxt"]
-script = ExtResource("9_j7fbw")
-quantity = 0
-max_quantity = 25
-
-[sub_resource type="Resource" id="Resource_pov51"]
-script = ExtResource("9_j7fbw")
-quantity = 0
-max_quantity = 25
-
-[sub_resource type="Resource" id="Resource_5r3fp"]
-script = ExtResource("9_j7fbw")
-quantity = 0
-max_quantity = 50
-
-[sub_resource type="Resource" id="Resource_pxarh"]
-script = ExtResource("9_j7fbw")
-quantity = 0
-max_quantity = 50
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
 
@@ -361,19 +340,15 @@ mesh = ExtResource("5_0hful")
 
 [node name="ice_station_1" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -110.7, 0, 41)
-inventory = SubResource("Resource_4mcxt")
 
 [node name="ice_station_2" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, 1, -106.7, 0, 11)
-inventory = SubResource("Resource_pov51")
 
 [node name="ice_station_3" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -69.7, 0, 5)
-inventory = SubResource("Resource_5r3fp")
 
 [node name="ice_station_4" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -2.7, 0, 17)
-inventory = SubResource("Resource_pxarh")
 
 [node name="customer_spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117, 0, 46)

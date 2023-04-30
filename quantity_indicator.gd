@@ -5,6 +5,9 @@ extends Label3D
 
 
 func _ready() -> void:
+	var item := inventory.item.instantiate()
+	%item_location.add_child(item)
+
 	inventory.changed.connect(_on_inventory_changed)
 	_update()
 
@@ -14,4 +17,4 @@ func _on_inventory_changed() -> void:
 
 
 func _update() -> void:
-	text = "%d / %d" % [inventory.quantity, inventory.max_quantity]
+	text = str(inventory.quantity)

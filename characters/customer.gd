@@ -15,7 +15,7 @@ const DEFAULT_ANIMATION_SPEED := 1.0
 @export var inventory : Inventory :
 	set(value):
 		inventory = value
-		%inventory_area.inventory = inventory
+		%inventory_area.inventories = [inventory] as Array[Inventory]
 		%quantity_indicator.inventory = inventory
 
 
@@ -23,30 +23,22 @@ const DEFAULT_ANIMATION_SPEED := 1.0
 
 
 var _is_walking := false
-var _init_scale : float
-var _speed_rand : float
 
 
 func _ready() -> void:
 	look_at(target_point)
-	_init_scale = float(inventory.max_quantity) / 5.0
-	scale = Vector3(_init_scale, _init_scale, _init_scale)
-	_speed_rand = randf_range(0.5, 2.0)
 	
 
 
 func _physics_process(delta : float) -> void:
 	var previous_position := global_position
-	global_position = global_position.move_toward(target_point, delta * speed * _speed_rand)
+	global_position = global_position.move_toward(target_point, delta * speed)
 
-	var scale_factor = _init_scale * (1.0 - float(inventory.quantity) / float(inventory.max_quantity))
-	if is_zero_approx(scale_factor):
+	if inventory.is_full():
 		GameState.add_score(inventory.max_quantity)
 		queue_free()
 		return
-	
-	scale = Vector3(scale_factor, scale_factor, scale_factor)
-	
+
 	var has_moved := not global_position.is_equal_approx(previous_position)
 	if _is_walking and not has_moved:
 		_animation_player.play(&"Idle")

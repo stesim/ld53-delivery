@@ -31,20 +31,20 @@ script = ExtResource("1_wxayb")
 background_tracks = Array[AudioStream]([ExtResource("2_wuftt"), ExtResource("3_lhff5"), ExtResource("4_d6s50"), ExtResource("5_pvijm"), ExtResource("6_d5khg"), ExtResource("7_7inye"), ExtResource("8_ypdcj")])
 
 [node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2455, 9.80538, 18.6208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2455, 2.80538, 18.6208)
 mass = 2000.0
 max_engine_force = 3000.0
 max_brake_force = 10.0
 
-[node name="test_map" parent="." instance=ExtResource("2_050wm")]
-
 [node name="vehicle_follower" type="Node3D" parent="." node_paths=PackedStringArray("target")]
-transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, -30.2455, 14.3054, 11.6208)
+transform = Transform3D(-1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, -30.2455, 7.3054, 11.6208)
 script = ExtResource("3_p7flm")
 target = NodePath("../vehicle")
 
 [node name="camera" type="Camera3D" parent="vehicle_follower"]
 current = true
+
+[node name="test_map" parent="." instance=ExtResource("2_050wm")]
 
 [node name="ui" type="CanvasLayer" parent="."]
 

@@ -1,15 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqlvra1wwcr67"]
+[gd_scene load_steps=6 format=3 uid="uid://bqlvra1wwcr67"]
 
 [ext_resource type="PackedScene" uid="uid://bv34umydtdhbu" path="res://assets/characters/dummy_customer.glb" id="1_4i1jg"]
 [ext_resource type="Script" path="res://characters/customer.gd" id="2_em66f"]
 [ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="3_kss5y"]
-[ext_resource type="Script" path="res://inventory.gd" id="4_t3lbw"]
 [ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="5_vxqgd"]
-
-[sub_resource type="Resource" id="Resource_hg5s8"]
-script = ExtResource("4_t3lbw")
-quantity = 0
-max_quantity = 5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ci6fx"]
 radius = 0.25
@@ -34,7 +28,6 @@ autoplay = "Idle"
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 collision_layer = 4
-inventory = SubResource("Resource_hg5s8")
 
 [node name="shape" type="CollisionShape3D" parent="inventory_area" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)

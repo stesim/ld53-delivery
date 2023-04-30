@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://map_elements/ice_station.gd" id="1_q8et4"]
 [ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="1_ssjb8"]
 [ext_resource type="PackedScene" uid="uid://br25j1oumvjbg" path="res://loading_area.tscn" id="2_fwrp5"]
-[ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="5_va0jk"]
+[ext_resource type="PackedScene" uid="uid://c4lqie0mbh7m6" path="res://inventory_indicator.tscn" id="4_ypo1u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxifb"]
 size = Vector3(4, 5.6, 3.3)
@@ -27,22 +27,26 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.26, -0.063, 1.18)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -4.2)
 type = 1
-tick_interval = 0.125
+player_controlled = true
 
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 shape = SubResource("BoxShape3D_p31t4")
-
-[node name="quantity_indicator" parent="." instance=ExtResource("5_va0jk")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -2.47395)
-font_size = 128
 
 [node name="feeding_area" parent="." instance=ExtResource("2_fwrp5")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3)
 collision_mask = 4
-tick_interval = 2.0
 
 [node name="shape" type="CollisionShape3D" parent="feeding_area"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.5, 3)
 shape = SubResource("BoxShape3D_f73mx")
+
+[node name="inventory_indicator" parent="." instance=ExtResource("4_ypo1u")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -2.47395)
+
+[node name="serve_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="serve_timer" to="." method="_on_serve_timer_timeout"]
