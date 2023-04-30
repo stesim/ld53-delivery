@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://db8m8ii5ewx0l"]
+[gd_scene load_steps=50 format=3 uid="uid://db8m8ii5ewx0l"]
 
 [ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
@@ -66,13 +66,6 @@ quantity = 0
 max_quantity = 50
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1dvd"]
-albedo_color = Color(0.129412, 0.0627451, 0.0313726, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_32uk8"]
-material = SubResource("StandardMaterial3D_h1dvd")
-size = Vector2(200, 200)
 
 [node name="test_map" type="Node3D"]
 
@@ -404,11 +397,6 @@ customer_scene = ExtResource("11_7le7x")
 
 [node name="collision_shape" type="CollisionShape3D" parent="ground"]
 shape = SubResource("WorldBoundaryShape3D_fsdgu")
-
-[node name="mesh" type="MeshInstance3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53, -3, 38)
-mesh = SubResource("PlaneMesh_32uk8")
-skeleton = NodePath("../..")
 
 [node name="suburb" type="Node3D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bosvhjnjwtr7t"]
+[gd_scene load_steps=13 format=3 uid="uid://bosvhjnjwtr7t"]
 
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://inventory.gd" id="5_dwq2y"]
 [ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="6_fs0gj"]
 [ext_resource type="AudioStream" uid="uid://cok8pj4yndhsk" path="res://assets/sounds/Car_impact_6.wav" id="7_hssab"]
+[ext_resource type="AudioStream" uid="uid://c13qisub7wdhw" path="res://assets/sounds/242740__marlonhj__engine.wav" id="8_sj5ua"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84yfh"]
 size = Vector3(1.3, 0.3, 3.2)
@@ -114,5 +115,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.75)
 unique_name_in_owner = true
 stream = ExtResource("7_hssab")
 max_polyphony = 3
+
+[node name="sound_engine" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_sj5ua")
+volume_db = -6.0
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

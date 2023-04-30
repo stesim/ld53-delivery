@@ -30,6 +30,9 @@ func _physics_process(delta : float) -> void:
 	
 	var current_speed := linear_velocity.length()
 	var acceleration := (current_speed - _previous_speed) / delta
+	
+	$sound_engine.pitch_scale = 0.5 + current_speed / 10.0
+	
 	if abs(acceleration) > inventory_loss_acceleration_threshold:
 		var now := Time.get_ticks_msec()
 		var time_since_previous_loss := (now - _previous_loss_time) / 1000.0
