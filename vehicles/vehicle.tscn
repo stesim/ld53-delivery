@@ -5,7 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b1if5d6uis8oj" path="res://assets/cars/wheel_truck.res" id="2_1emut"]
 [ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="4_dysdc"]
 [ext_resource type="PackedScene" uid="uid://c4lqie0mbh7m6" path="res://inventory_indicator.tscn" id="5_xbh77"]
-[ext_resource type="AudioStream" uid="uid://cok8pj4yndhsk" path="res://assets/sounds/Car_impact_6.wav" id="7_hssab"]
+[ext_resource type="AudioStream" uid="uid://ck2ejuwn8p08m" path="res://assets/sounds/tires_screech.wav" id="6_wm01k"]
 [ext_resource type="AudioStream" uid="uid://c13qisub7wdhw" path="res://assets/sounds/242740__marlonhj__engine.wav" id="8_sj5ua"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84yfh"]
@@ -106,7 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.75)
 
 [node name="crash_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("7_hssab")
+stream = ExtResource("6_wm01k")
 max_polyphony = 3
 
 [node name="sound_engine" type="AudioStreamPlayer" parent="."]

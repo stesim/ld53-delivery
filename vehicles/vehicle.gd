@@ -13,7 +13,7 @@ extends VehicleBody3D
 
 var _previous_speed := 0.0
 var _previous_loss_time := 0
-
+var move_forward := false
 
 @onready var _inventory_area := %inventory
 @onready var _crash_sound := %crash_sound
@@ -30,10 +30,22 @@ func _physics_process(delta : float) -> void:
 	brake = max_brake_force * Input.get_action_strength("brake")
 	steering = max_steering_angle * Input.get_axis("steer_right", "steer_left")
 	
+	if engine_force > 0.0:
+		move_forward = true
+	
+	if move_forward and Input.get_axis("reverse", "accelerate") < 0.0:
+		brake = max_brake_force * -1.0 * Input.get_axis("reverse", "accelerate")
+		
+	
 	var current_speed := linear_velocity.length()
 	var acceleration := (current_speed - _previous_speed) / delta
 	
+	if current_speed < 0.5:
+		move_forward = false
+
+	
 	$sound_engine.pitch_scale = 0.5 + current_speed / 10.0
+	$sound_engine.volume_db = -6.0 + 10.0 * current_speed / 10.0
 	
 	if abs(acceleration) > inventory_loss_acceleration_threshold:
 		var now := Time.get_ticks_msec()
