@@ -49,4 +49,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -2.47395)
 wait_time = 2.0
 autostart = true
 
+[node name="serve_location" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
+
 [connection signal="timeout" from="serve_timer" to="." method="_on_serve_timer_timeout"]

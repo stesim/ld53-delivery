@@ -1,3 +1,4 @@
+class_name IceStation
 extends Node3D
 
 
@@ -8,6 +9,7 @@ var _inventories : Array[Inventory]
 
 
 @onready var _feeding_area := %feeding_area
+@onready var _serve_location := %serve_location
 
 
 func _ready() -> void:
@@ -16,6 +18,10 @@ func _ready() -> void:
 	%loading_area.backing_inventories = _inventories
 	%inventory_indicator.inventories = _inventories
 	_feeding_area.backing_inventories = _inventories
+
+
+func get_serve_location() -> Vector3:
+	return _serve_location.global_position
 
 
 func _on_serve_timer_timeout() -> void:
