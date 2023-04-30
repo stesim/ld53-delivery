@@ -1,11 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=17 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
+[ext_resource type="AudioStream" uid="uid://cv12ngfg2vqtx" path="res://assets/music/Cheerful Annoyance.ogg" id="2_wuftt"]
+[ext_resource type="AudioStream" uid="uid://cuy6cbssa4ss4" path="res://assets/music/Farm Frolics.ogg" id="3_lhff5"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
+[ext_resource type="AudioStream" uid="uid://cgejiskvw3lyn" path="res://assets/music/Flowing Rocks.ogg" id="4_d6s50"]
 [ext_resource type="AudioStream" uid="uid://bapcvn8cugbkv" path="res://assets/sounds/coin2.ogg" id="5_26d21"]
 [ext_resource type="PackedScene" uid="uid://dy71lmaltr0c2" path="res://menus/overlay_menu.tscn" id="5_pb0xt"]
+[ext_resource type="AudioStream" uid="uid://bqk3t22grum2k" path="res://assets/music/Italian Mom.ogg" id="5_pvijm"]
+[ext_resource type="AudioStream" uid="uid://dsgew3iijckw1" path="res://assets/music/Mishief Stroll.ogg" id="6_d5khg"]
+[ext_resource type="AudioStream" uid="uid://cgjbekrvogi5b" path="res://assets/music/Polka Train.ogg" id="7_7inye"]
+[ext_resource type="AudioStream" uid="uid://dqen0rqp3mdgt" path="res://assets/music/Swinging Pants.ogg" id="8_ypdcj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,6 +28,7 @@ tonemap_mode = 2
 
 [node name="game_world" type="Node3D"]
 script = ExtResource("1_wxayb")
+background_tracks = Array[AudioStream]([ExtResource("2_wuftt"), ExtResource("3_lhff5"), ExtResource("4_d6s50"), ExtResource("5_pvijm"), ExtResource("6_d5khg"), ExtResource("7_7inye"), ExtResource("8_ypdcj")])
 
 [node name="vehicle" parent="." instance=ExtResource("1_lmy6a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 3)
@@ -91,6 +99,9 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 stream = ExtResource("5_26d21")
 pitch_scale = 0.85
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 
 [node name="environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xaiqv")
