@@ -17,7 +17,8 @@ func _physics_process(delta):
 		var new_customer = customer_scene.instantiate()
 		new_customer.position.x += rng.randf_range(-2.0, 2.0)
 		new_customer.target_point = global_position
-		new_customer.target_point.z = 0.0
+		new_customer.target_point.x += 20.0
+		new_customer.target_point.z += 20.0
 		var inventory := Inventory.new()
 		inventory.max_quantity = randi_range(min_capacity, max_capacity)
 		new_customer.inventory = inventory

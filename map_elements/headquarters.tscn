@@ -158,6 +158,7 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.2, 0, 2.5)
 mesh = ExtResource("1_0ya24")
 
 [node name="road" parent="." instance=ExtResource("2_8yeug")]
+visible = false
 mesh = SubResource("ArrayMesh_sfjbl")
 
 [node name="loading_area" parent="." instance=ExtResource("4_mxkv2")]
