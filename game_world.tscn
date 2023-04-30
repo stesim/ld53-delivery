@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=10 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_lmy6a"]
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
 [ext_resource type="Script" path="res://smoothed_follower.gd" id="3_p7flm"]
 [ext_resource type="AudioStream" uid="uid://bapcvn8cugbkv" path="res://assets/sounds/coin2.ogg" id="5_26d21"]
+[ext_resource type="PackedScene" uid="uid://dy71lmaltr0c2" path="res://menus/overlay_menu.tscn" id="5_pb0xt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -38,6 +39,22 @@ target = NodePath("../vehicle")
 current = true
 
 [node name="ui" type="CanvasLayer" parent="."]
+
+[node name="overlay_menu" parent="ui" instance=ExtResource("5_pb0xt")]
+visible = false
+
+[node name="play_button" parent="ui/overlay_menu/button_list" index="0"]
+visible = false
+
+[node name="background" type="Panel" parent="ui/overlay_menu"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="score_panel" type="PanelContainer" parent="ui"]
 anchors_preset = 5
@@ -81,3 +98,5 @@ environment = SubResource("Environment_xaiqv")
 [node name="sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
 shadow_enabled = true
+
+[editable path="ui/overlay_menu"]
