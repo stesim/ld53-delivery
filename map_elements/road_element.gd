@@ -1,5 +1,5 @@
 @tool
-extends StaticBody3D
+extends Node3D
 
 
 @export var mesh : Mesh :
