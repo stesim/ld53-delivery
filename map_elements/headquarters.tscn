@@ -226,6 +226,7 @@ text = "Select food item to be loaded"
 [node name="ice_cream_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_e6gbe")
+volume_db = 8.0
 max_polyphony = 3
 
 [node name="hot_dog_sound" type="AudioStreamPlayer" parent="."]
@@ -236,11 +237,13 @@ max_polyphony = 3
 [node name="burger_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("7_fik8u")
+volume_db = -6.0
 max_polyphony = 3
 
 [node name="drink_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("8_yewbo")
+volume_db = 8.0
 max_polyphony = 3
 
 [node name="cash_loading_area" parent="." instance=ExtResource("9_4xo7r")]

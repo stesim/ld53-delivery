@@ -63,7 +63,7 @@ func _physics_process(_delta : float) -> void:
 		move_forward = false
 
 	_sound_engine.pitch_scale = 0.5 + speed / 10.0
-	_sound_engine.volume_db = -6.0 + 10.0 * speed / 10.0
+	_sound_engine.volume_db = -8.0 + 10.0 * speed / 10.0
 
 
 func _unhandled_input(event : InputEvent) -> void:
