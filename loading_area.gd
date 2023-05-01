@@ -25,6 +25,7 @@ const TRANSFER_INPUT_MAPPINGS : Array[StringName]= [
 @export var player_controlled := false
 @export var concurrent_transfers := true
 
+
 @onready var _ice_cream_sound := %ice_cream_sound
 @onready var _hotdog_sound := %hot_dog_sound
 @onready var _burger_sound := %burger_sound
@@ -36,35 +37,33 @@ func _ready() -> void:
 
 
 func _unhandled_input(event : InputEvent) -> void:
-	if event.is_echo():
-		return
 	for i in TRANSFER_INPUT_MAPPINGS.size():
 		if event.is_action_pressed(TRANSFER_INPUT_MAPPINGS[i]):
-			match i:
-				0:
-					_ice_cream_sound.play()
-				1:
-					_hotdog_sound.play()
-				2:
-					_burger_sound.play()
-				3:
-					_drink_sound.play()
 			var item := GameState.FOOD_ITEMS[i]
-			transfer(item)
+			var transferred_quantity := transfer(item)
+			print(transferred_quantity)
+			if transferred_quantity > 0:
+				match i:
+					0: _ice_cream_sound.play()
+					1: _hotdog_sound.play()
+					2: _burger_sound.play()
+					3: _drink_sound.play()
 
 
-func transfer(item) -> void:
+func transfer(item) -> int:
 	if not has_overlapping_areas():
-		return
+		return 0
 	var backing_inventory := _find_item_inventory(backing_inventories, item)
 	match type:
-		Type.SOURCE: _transfer_to_inventories(backing_inventory)
-		Type.SINK: _transfer_from_inventories(backing_inventory)
+		Type.SOURCE: return _transfer_to_inventories(backing_inventory)
+		Type.SINK: return _transfer_from_inventories(backing_inventory)
+	return 0
 
 
-func _transfer_to_inventories(backing_inventory : Inventory) -> void:
+func _transfer_to_inventories(backing_inventory : Inventory) -> int:
+	var transferred_quantity := 0
 	if backing_inventory.is_empty():
-		return
+		return transferred_quantity
 	for area in get_overlapping_areas():
 		var quantity := mini(
 			mini(quantity_per_tick, backing_inventory.quantity),
@@ -76,23 +75,30 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> void:
 		if target_inventory:
 			var diff : int = target_inventory.add(quantity)
 			backing_inventory.remove(diff)
+			transferred_quantity += diff
 			items_transferred.emit(backing_inventory.item, diff)
 
 		if not concurrent_transfers:
 			break
 
+	return transferred_quantity
 
-func _transfer_from_inventories(backing_inventory : Inventory) -> void:
+
+func _transfer_from_inventories(backing_inventory : Inventory) -> int:
+	var transferred_quantity := 0
 	if backing_inventory.is_full():
-		return
+		return transferred_quantity
 	for inventory_area in get_overlapping_areas():
 		var quantity := mini(quantity_per_tick, backing_inventory.remaining_capacity())
 		if quantity > 0:
 			var diff : int = inventory_area.fetch_items(backing_inventory.item, quantity)
 			backing_inventory.add(diff)
+			transferred_quantity += diff
 
 		if not concurrent_transfers:
 			break
+
+	return transferred_quantity
 
 
 func _find_item_inventory(inventories : Array[Inventory], item) -> Inventory:
