@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=25 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
@@ -13,6 +13,20 @@
 [ext_resource type="AudioStream" uid="uid://cgjbekrvogi5b" path="res://assets/music/Polka Train.ogg" id="7_7inye"]
 [ext_resource type="AudioStream" uid="uid://dqen0rqp3mdgt" path="res://assets/music/Swinging Pants.ogg" id="8_ypdcj"]
 [ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="9_q7j6y"]
+[ext_resource type="Texture2D" uid="uid://dwph88u5iktro" path="res://assets/gui/key.png" id="13_fm3m8"]
+[ext_resource type="Texture2D" uid="uid://nimgbl8bd61x" path="res://assets/gui/burger.png" id="13_m67nx"]
+[ext_resource type="Texture2D" uid="uid://bmg67rsc8kulp" path="res://assets/gui/hotDog.png" id="14_nhfpt"]
+[ext_resource type="Texture2D" uid="uid://2ruhwfg33dxk" path="res://assets/gui/iceCream.png" id="15_hwpw8"]
+[ext_resource type="Texture2D" uid="uid://c0kauixpa02qd" path="res://assets/gui/soda.png" id="16_oy4jj"]
+[ext_resource type="Texture2D" uid="uid://nmfj8b6qoy5w" path="res://assets/gui/steering_wheel.png" id="18_nvpur"]
+
+[sub_resource type="Theme" id="Theme_s80ik"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 32
+
+[sub_resource type="Theme" id="Theme_cfbem"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 23
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -93,6 +107,209 @@ uppercase = true
 unique_name_in_owner = true
 layout_mode = 2
 text = "$0"
+horizontal_alignment = 1
+
+[node name="FoodButtonHelp" type="PanelContainer" parent="ui"]
+offset_left = 4.0
+offset_top = 653.0
+offset_right = 576.0
+offset_bottom = 717.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/FoodButtonHelp"]
+layout_mode = 2
+
+[node name="Burger Button" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="ui/FoodButtonHelp/HBoxContainer/Burger Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_s80ik")
+text = "1"
+horizontal_alignment = 1
+
+[node name="Burger Icon" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_m67nx")
+stretch_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+
+[node name="HotDog Button" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="ui/FoodButtonHelp/HBoxContainer/HotDog Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_s80ik")
+text = "2"
+horizontal_alignment = 1
+
+[node name="HotDog Icon" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_nhfpt")
+stretch_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+
+[node name="IceCream Button2" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="ui/FoodButtonHelp/HBoxContainer/IceCream Button2"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_s80ik")
+text = "3"
+horizontal_alignment = 1
+
+[node name="IceCream Icon" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("15_hwpw8")
+stretch_mode = 2
+
+[node name="VSeparator3" type="VSeparator" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+
+[node name="Drink Button" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="ui/FoodButtonHelp/HBoxContainer/Drink Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_s80ik")
+text = "4
+"
+horizontal_alignment = 1
+
+[node name="Drink Icon" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("16_oy4jj")
+stretch_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="Panel" parent="ui"]
+offset_left = 1081.0
+offset_top = 531.0
+offset_right = 1273.0
+offset_bottom = 714.0
+
+[node name="Up" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 73.0
+offset_top = 6.0
+offset_right = 253.0
+offset_bottom = 55.0
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="ui/PanelContainer/Up"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_cfbem")
+text = "⬆"
+horizontal_alignment = 1
+
+[node name="Left" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 71.0
+offset_right = 188.0
+offset_bottom = 120.0
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="ui/PanelContainer/Left"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_cfbem")
+text = "⬅"
+horizontal_alignment = 1
+
+[node name="Right" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 140.0
+offset_top = 74.0
+offset_right = 320.0
+offset_bottom = 123.0
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="ui/PanelContainer/Right"]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 71.0
+offset_bottom = 53.0
+rotation = 1.5708
+theme = SubResource("Theme_cfbem")
+text = "⬆"
+horizontal_alignment = 1
+
+[node name="Dpad" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 69.0
+offset_top = 63.0
+offset_right = 176.0
+offset_bottom = 122.0
+texture = ExtResource("18_nvpur")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Down" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 73.0
+offset_top = 132.0
+offset_right = 253.0
+offset_bottom = 181.0
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="ui/PanelContainer/Down"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_cfbem")
+text = "⬇"
 horizontal_alignment = 1
 
 [node name="score_sound" type="AudioStreamPlayer" parent="."]
