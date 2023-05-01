@@ -1638,3 +1638,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124, 0, 15)
 
 [node name="skyscraperF" parent="city/buildings" instance=ExtResource("45_bsirs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103, 0, 31)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 1, 37)
+billboard = 1
+modulate = Color(1, 0, 0, 1)
+text = "Press TAB for fun & profit!"
