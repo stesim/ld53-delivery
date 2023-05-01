@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://28xx3p2gq784"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpu81p1t3xrjp" path="res://assets/items/cash.res" id="1_huuxt"]
+
+[node name="cash" type="MeshInstance3D"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = ExtResource("1_huuxt")
