@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=29 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://2ruhwfg33dxk" path="res://assets/gui/iceCream.png" id="15_hwpw8"]
 [ext_resource type="Texture2D" uid="uid://c0kauixpa02qd" path="res://assets/gui/soda.png" id="16_oy4jj"]
 [ext_resource type="Texture2D" uid="uid://nmfj8b6qoy5w" path="res://assets/gui/steering_wheel.png" id="18_nvpur"]
+[ext_resource type="Texture2D" uid="uid://cphtd0be0vcd4" path="res://assets/gui/cash.png" id="20_6eu0r"]
+[ext_resource type="Texture2D" uid="uid://bn3rcvb5ihgkk" path="res://assets/gui/reset.png" id="21_c3jf2"]
 
 [sub_resource type="Theme" id="Theme_s80ik"]
 Label/colors/font_color = Color(0, 0, 0, 1)
@@ -256,23 +258,43 @@ stretch_mode = 2
 [node name="VSeparator4" type="VSeparator" parent="ui/FoodButtonHelp/HBoxContainer"]
 layout_mode = 2
 
+[node name="Cash Button" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="ui/FoodButtonHelp/HBoxContainer/Cash Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_s80ik")
+text = "E"
+horizontal_alignment = 1
+
+[node name="Cash Icon" type="TextureRect" parent="ui/FoodButtonHelp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("20_6eu0r")
+expand_mode = 2
+stretch_mode = 4
+
 [node name="PanelContainer" type="Panel" parent="ui"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -128.0
+offset_left = -162.0
 offset_top = 8.0
-offset_right = 63.9999
+offset_right = 84.9999
 offset_bottom = 191.0
 grow_horizontal = 0
 scale = Vector2(0.621437, 0.621437)
-metadata/_edit_group_ = true
 
 [node name="Up" type="TextureRect" parent="ui/PanelContainer"]
 layout_mode = 2
-offset_left = 73.0
+offset_left = 122.93
 offset_top = 6.0
-offset_right = 253.0
+offset_right = 302.93
 offset_bottom = 55.0
 texture = ExtResource("13_fm3m8")
 expand_mode = 2
@@ -291,9 +313,9 @@ horizontal_alignment = 1
 
 [node name="Left" type="TextureRect" parent="ui/PanelContainer"]
 layout_mode = 2
-offset_left = 8.0
+offset_left = 57.9304
 offset_top = 71.0
-offset_right = 188.0
+offset_right = 237.93
 offset_bottom = 120.0
 texture = ExtResource("13_fm3m8")
 expand_mode = 2
@@ -312,9 +334,9 @@ horizontal_alignment = 1
 
 [node name="Right" type="TextureRect" parent="ui/PanelContainer"]
 layout_mode = 2
-offset_left = 140.0
+offset_left = 189.93
 offset_top = 74.0
-offset_right = 320.0
+offset_right = 369.93
 offset_bottom = 123.0
 texture = ExtResource("13_fm3m8")
 expand_mode = 2
@@ -334,9 +356,9 @@ horizontal_alignment = 1
 
 [node name="Dpad" type="TextureRect" parent="ui/PanelContainer"]
 layout_mode = 2
-offset_left = 69.0
+offset_left = 118.93
 offset_top = 63.0
-offset_right = 176.0
+offset_right = 225.93
 offset_bottom = 122.0
 texture = ExtResource("18_nvpur")
 expand_mode = 2
@@ -344,9 +366,9 @@ stretch_mode = 4
 
 [node name="Down" type="TextureRect" parent="ui/PanelContainer"]
 layout_mode = 2
-offset_left = 73.0
+offset_left = 122.93
 offset_top = 132.0
-offset_right = 253.0
+offset_right = 302.93
 offset_bottom = 181.0
 texture = ExtResource("13_fm3m8")
 expand_mode = 2
@@ -362,6 +384,35 @@ offset_bottom = 51.0
 theme = SubResource("Theme_cfbem")
 text = "⬇"
 horizontal_alignment = 1
+
+[node name="Reset" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 2
+offset_left = 59.5393
+offset_top = 4.82751
+offset_right = 239.539
+offset_bottom = 53.8275
+texture = ExtResource("13_fm3m8")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="ui/PanelContainer/Reset"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_cfbem")
+text = "R"
+horizontal_alignment = 1
+
+[node name="Reset Icon" type="TextureRect" parent="ui/PanelContainer"]
+layout_mode = 0
+offset_right = 159.0
+offset_bottom = 55.0
+texture = ExtResource("21_c3jf2")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="score_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
