@@ -1,15 +1,15 @@
-[gd_scene load_steps=45 format=3 uid="uid://db8m8ii5ewx0l"]
+[gd_scene load_steps=44 format=3 uid="uid://db8m8ii5ewx0l"]
 
 [ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
 [ext_resource type="ArrayMesh" uid="uid://dp2xroi70qepa" path="res://assets/roads/curve_pavement.res" id="5_0hful"]
-[ext_resource type="ArrayMesh" uid="uid://dssn53gi7atru" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
+[ext_resource type="ArrayMesh" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
 [ext_resource type="ArrayMesh" uid="uid://b7yqrpoimt2qm" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
 [ext_resource type="PackedScene" uid="uid://cdu7d15q2hbqp" path="res://map_elements/ice_station.tscn" id="8_wanx7"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="10_i3q55"]
-[ext_resource type="ArrayMesh" uid="uid://br8li8ayl60cn" path="res://assets/roads/curve_square.res" id="10_npb2t"]
+[ext_resource type="ArrayMesh" path="res://assets/roads/curve_square.res" id="10_npb2t"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="11_7le7x"]
 [ext_resource type="PackedScene" uid="uid://cv343cijprfxh" path="res://assets/buildings/house_type01.glb" id="13_uc4j6"]
 [ext_resource type="PackedScene" uid="uid://yp2u0dcp8eee" path="res://assets/buildings/house_type02.glb" id="14_d3xdb"]
@@ -31,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://bh0nrem56p6nb" path="res://assets/buildings/house_type18.glb" id="30_q6dui"]
 [ext_resource type="ArrayMesh" uid="uid://b6wey0nqh8hfc" path="res://assets/roads/tile_low.res" id="31_csl52"]
 [ext_resource type="PackedScene" uid="uid://cvo7rnw1toefq" path="res://assets/buildings/city/large_buildingA.glb" id="33_e4fqx"]
-[ext_resource type="PackedScene" uid="uid://dxv6356mjjmp" path="res://assets/buildings/city/large_buildingB.glb" id="33_yuyov"]
 [ext_resource type="PackedScene" uid="uid://d1mhkw1r167m4" path="res://assets/buildings/city/large_buildingC.glb" id="35_57lwu"]
 [ext_resource type="PackedScene" uid="uid://b1cs48523cadg" path="res://assets/buildings/city/large_buildingD.glb" id="36_8ovmk"]
 [ext_resource type="PackedScene" uid="uid://6ig73d3cp2f6" path="res://assets/buildings/city/large_buildingE.glb" id="37_vry5x"]
@@ -1538,9 +1537,6 @@ mesh = ExtResource("31_csl52")
 skeleton = NodePath("../../..")
 
 [node name="buildings" type="Node3D" parent="city"]
-
-[node name="large_buildingB" parent="city/buildings" instance=ExtResource("33_yuyov")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 0, 28)
 
 [node name="large_buildingA" parent="city/buildings" instance=ExtResource("33_e4fqx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 0, 13)

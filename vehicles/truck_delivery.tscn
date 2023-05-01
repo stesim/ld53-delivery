@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbqpkukigstd7"]
+
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_4o630"]
+[ext_resource type="ArrayMesh" uid="uid://bp7as382d1x25" path="res://assets/cars/delivery.res" id="2_k88b4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vbqh"]
+size = Vector3(0.1, 1, 1.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qwuq0"]
+size = Vector3(1.3, 1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oyqig"]
+size = Vector3(1.3, 0.1, 2.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxd4t"]
+size = Vector3(0.275, 0.199786, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqt0c"]
+size = Vector3(1.25, 1.40313, 3.2)
+
+[node name="truck_delivery" instance=ExtResource("1_4o630")]
+mass = 3000.0
+center_of_mass = Vector3(0, 0.2, 0.21)
+
+[node name="collision_shape3" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.8, -0.699974)
+shape = SubResource("BoxShape3D_7vbqh")
+
+[node name="collision_shape4" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.8, -0.7)
+shape = SubResource("BoxShape3D_7vbqh")
+
+[node name="collision_shape5" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0.25)
+shape = SubResource("BoxShape3D_qwuq0")
+
+[node name="collision_shape6" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, -0.575)
+shape = SubResource("BoxShape3D_oyqig")
+
+[node name="collision_shape7" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413, 0.4, -0.35)
+shape = SubResource("BoxShape3D_dxd4t")
+
+[node name="collision_shape8" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.413, 0.4, -0.35)
+shape = SubResource("BoxShape3D_dxd4t")
+
+[node name="mesh" parent="." index="8"]
+mesh = ExtResource("2_k88b4")
+
+[node name="shape" parent="inventory_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_bqt0c")
