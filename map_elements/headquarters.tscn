@@ -3,12 +3,10 @@
 [ext_resource type="ArrayMesh" uid="uid://bcd1kbcl512oe" path="res://assets/buildings/headquarters.res" id="1_0ya24"]
 [ext_resource type="Script" path="res://map_elements/headquarters.gd" id="1_smhg0"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="2_8yeug"]
+[ext_resource type="PackedScene" uid="uid://chfnc7kby80qp" path="res://assets/buildings/low_poly_store_building.glb" id="2_uiyfg"]
 [ext_resource type="Material" uid="uid://bd8yuekioc8n" path="res://map_elements/highlight_material.tres" id="4_0jj30"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcft0"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_5kimd"]
-size = Vector3(0.18, 2, 0.18)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qoarc"]
 resource_name = "pavement"
@@ -140,28 +138,20 @@ size = Vector2(6, 5)
 
 [node name="headquarters" type="Node3D"]
 script = ExtResource("1_smhg0")
+ejection_force = 5.0
 
 [node name="collision_main" type="StaticBody3D" parent="."]
 
 [node name="shape" type="CollisionShape3D" parent="collision_main"]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.5, 2.5, 2.5)
+transform = Transform3D(4.75, 0, 0, 0, 5, 0, 0, 0, 4.8875, -2.6, 2.5, 2.5)
 shape = SubResource("BoxShape3D_hcft0")
 
-[node name="collision_pillar1" type="StaticBody3D" parent="."]
-
-[node name="shape" type="CollisionShape3D" parent="collision_pillar1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19, 1.1, 0.28)
-shape = SubResource("BoxShape3D_5kimd")
-
-[node name="collision_pillar2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.38)
-
-[node name="shape" type="CollisionShape3D" parent="collision_pillar2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19, 1.1, 0.28)
-shape = SubResource("BoxShape3D_5kimd")
+[node name="low_poly_store_building" parent="." instance=ExtResource("2_uiyfg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.6, 0, 2.5)
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.2, 0, 2.5)
+visible = false
 mesh = ExtResource("1_0ya24")
 
 [node name="road" parent="." instance=ExtResource("2_8yeug")]
@@ -170,7 +160,7 @@ mesh = SubResource("ArrayMesh_sfjbl")
 
 [node name="item_spawn_locations" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 2.2)
 
 [node name="0" type="Marker3D" parent="item_spawn_locations"]
 unique_name_in_owner = true
@@ -178,6 +168,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.375)
 
 [node name="spawner_mesh" type="MeshInstance3D" parent="item_spawn_locations/0"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0.125, 0)
+visible = false
 mesh = SubResource("CylinderMesh_1exjh")
 skeleton = NodePath("../../..")
 
@@ -187,6 +178,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.125)
 
 [node name="spawner_mesh" type="MeshInstance3D" parent="item_spawn_locations/1"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0.125, 0)
+visible = false
 mesh = SubResource("CylinderMesh_1exjh")
 skeleton = NodePath("../../..")
 
@@ -196,6 +188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.125)
 
 [node name="spawner_mesh" type="MeshInstance3D" parent="item_spawn_locations/2"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0.125, 0)
+visible = false
 mesh = SubResource("CylinderMesh_1exjh")
 skeleton = NodePath("../../..")
 
@@ -205,6 +198,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.375)
 
 [node name="spawner_mesh" type="MeshInstance3D" parent="item_spawn_locations/3"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0.125, 0)
+visible = false
 mesh = SubResource("CylinderMesh_1exjh")
 skeleton = NodePath("../../..")
 
