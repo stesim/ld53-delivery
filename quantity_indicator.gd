@@ -3,11 +3,15 @@ extends Node3D
 
 @export var inventory : Inventory
 @export var spacing := 0.5
+@export var placeholder := false
 
 
 func _ready() -> void:
-	_update_items()
-	inventory.changed.connect(_update_items)
+	if placeholder:
+		add_child(inventory.item.instantiate())
+	else:
+		_update_items()
+		inventory.changed.connect(_update_items)
 
 
 func _update_items() -> void:
