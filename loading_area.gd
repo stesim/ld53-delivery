@@ -1,6 +1,9 @@
 extends Area3D
 
 
+signal items_transferred(item, quantity : int)
+
+
 enum Type {
 	SOURCE,
 	SINK,
@@ -73,6 +76,7 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> void:
 		if target_inventory:
 			var diff : int = target_inventory.add(quantity)
 			backing_inventory.remove(diff)
+			items_transferred.emit(backing_inventory.item, diff)
 
 		if not concurrent_transfers:
 			break

@@ -353,7 +353,6 @@ transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 32)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
-spawn_area = 3.892
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_1")
 
@@ -361,25 +360,15 @@ target_shop = NodePath("../ice_station_1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 25)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
-spawn_area = 3.712
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_2")
 
 [node name="customer_spawner3" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 0, 4.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, -2)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
-spawn_area = 0.0
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_3")
-
-[node name="customer_spawner4" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 6.6)
-script = ExtResource("10_i3q55")
-spawn_delta = 8.0
-spawn_area = 3.153
-customer_scene = ExtResource("11_7le7x")
-target_shop = NodePath("../ice_station_4")
 
 [node name="ground" type="StaticBody3D" parent="."]
 

@@ -5,6 +5,8 @@ const START_CAPITAL := 100
 const RENT_AMOUNT := 10
 const RENT_INTERVAL := 10.0
 
+const CASH_BUNDLE_SIZE := 10
+
 
 const FOOD_ITEMS : Array[PackedScene] = [
 	preload("res://assets/foods/iceCream.glb"),
@@ -75,6 +77,10 @@ func resume() -> void:
 
 func add_score(amount : int) -> void:
 	score += amount
+
+
+func get_item_price(item) -> int:
+	return item.get_meta(&"price")
 
 
 func create_item_inventories(capacity : int, quantity := 0) -> Array[Inventory]:
