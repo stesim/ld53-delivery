@@ -878,3 +878,4 @@ shape = SubResource("SphereShape3D_ci6fx")
 [node name="quantity_indicator" parent="." instance=ExtResource("5_vxqgd")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13681, 0)
+placeholder = true

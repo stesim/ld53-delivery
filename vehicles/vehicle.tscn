@@ -14,17 +14,18 @@ size = Vector3(1.3, 0.3, 3.2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ks0q"]
 size = Vector3(0.9, 0.8, 0.55)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8sjrn"]
-size = Vector3(1.25, 1, 2)
+[sub_resource type="BoxShape3D" id="BoxShape3D_x36pu"]
+size = Vector3(1.25, 1, 3.2)
 
-[node name="vehicle" type="VehicleBody3D"]
-mass = 600.0
+[node name="vehicle" type="VehicleBody3D" groups=["vehicles"]]
+mass = 2000.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.05, 0.21)
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_x1xpc")
-max_engine_force = 2000.0
+max_engine_force = 3000.0
+max_brake_force = 100.0
 max_steering_angle = 0.523599
 
 [node name="collision_shape" type="CollisionShape3D" parent="."]
@@ -97,8 +98,8 @@ mesh = ExtResource("2_1emut")
 unique_name_in_owner = true
 
 [node name="shape" type="CollisionShape3D" parent="inventory_area"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
-shape = SubResource("BoxShape3D_8sjrn")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700209, 0)
+shape = SubResource("BoxShape3D_x36pu")
 
 [node name="inventory_indicator" parent="." instance=ExtResource("5_xbh77")]
 unique_name_in_owner = true
@@ -110,8 +111,8 @@ stream = ExtResource("6_wm01k")
 max_polyphony = 3
 
 [node name="sound_engine" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("8_sj5ua")
 volume_db = -6.0
-autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
