@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwjagmncfpjaa"]
+[gd_scene load_steps=16 format=3 uid="uid://bwjagmncfpjaa"]
 
 [ext_resource type="ArrayMesh" uid="uid://bcd1kbcl512oe" path="res://assets/buildings/headquarters.res" id="1_0ya24"]
 [ext_resource type="Script" path="res://map_elements/headquarters.gd" id="1_smhg0"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="2_8yeug"]
+[ext_resource type="Material" uid="uid://bd8yuekioc8n" path="res://map_elements/highlight_material.tres" id="4_0jj30"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcft0"]
 
@@ -133,6 +134,10 @@ rings = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_f0j8l"]
 size = Vector3(6, 2, 5)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_7qpjj"]
+material = ExtResource("4_0jj30")
+size = Vector2(6, 5)
+
 [node name="headquarters" type="Node3D"]
 script = ExtResource("1_smhg0")
 
@@ -212,3 +217,13 @@ monitorable = false
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 2.5)
 shape = SubResource("BoxShape3D_f0j8l")
+
+[node name="highlight_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.988, 0.102, 2.5)
+mesh = SubResource("PlaneMesh_7qpjj")
+
+[node name="hint_label" type="Label3D" parent="highlight_mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 1
+double_sided = false
+text = "Select food item to be loaded"

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bd8yuekioc8n"]
+
+[ext_resource type="Shader" path="res://map_elements/highlight_shader.gdshader" id="1_fc7hq"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fc7hq")
+shader_parameter/color = Color(0.36, 1, 0.36, 0.25098)
+shader_parameter/pulse_speed = 4.0
+shader_parameter/pulse_variance = 0.08
