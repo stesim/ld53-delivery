@@ -11,6 +11,9 @@ const TRANSFER_INPUT_MAPPINGS : Array[StringName]= [
 ]
 
 
+@export var ejection_force := 2.0
+
+
 @onready var _item_spawn_locations := %item_spawn_locations
 @onready var _loading_area := %loading_area
 
@@ -25,7 +28,8 @@ func _unhandled_input(event : InputEvent) -> void:
 
 func _spawn_item(index : int) -> void:
 	var item := GameState.FOOD_ITEMS[index]
-	var instance : Node3D = FoodItem.instantiate()
+	var instance : RigidBody3D = FoodItem.instantiate()
 	instance.item_scene = item
+	instance.apply_central_impulse(ejection_force * Vector3.RIGHT)
 	get_tree().current_scene.add_child(instance)
 	instance.global_position = _item_spawn_locations.get_child(index).global_position
