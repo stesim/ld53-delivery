@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdu7d15q2hbqp"]
+[gd_scene load_steps=10 format=3 uid="uid://cdu7d15q2hbqp"]
 
 [ext_resource type="Script" path="res://map_elements/ice_station.gd" id="1_q8et4"]
 [ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="1_ssjb8"]
 [ext_resource type="PackedScene" uid="uid://br25j1oumvjbg" path="res://loading_area.tscn" id="2_fwrp5"]
+[ext_resource type="Material" uid="uid://bd8yuekioc8n" path="res://map_elements/highlight_material.tres" id="4_i3hsj"]
 [ext_resource type="PackedScene" uid="uid://c4lqie0mbh7m6" path="res://inventory_indicator.tscn" id="4_ypo1u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxifb"]
@@ -10,6 +11,10 @@ size = Vector3(4, 5.6, 3.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p31t4"]
 size = Vector3(16, 2, 16)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_akl5l"]
+material = ExtResource("4_i3hsj")
+size = Vector2(16, 16)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f73mx"]
 size = Vector3(1, 2, 1)
@@ -32,6 +37,17 @@ player_controlled = true
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_p31t4")
+
+[node name="highlight_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.102, 0)
+mesh = SubResource("PlaneMesh_akl5l")
+skeleton = NodePath("../loading_area/shape")
+
+[node name="hint_label" type="Label3D" parent="highlight_mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+billboard = 1
+double_sided = false
+text = "Select food item to be delivered"
 
 [node name="feeding_area" parent="." instance=ExtResource("2_fwrp5")]
 unique_name_in_owner = true
