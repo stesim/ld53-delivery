@@ -42,6 +42,11 @@ text = "Resume"
 layout_mode = 2
 text = "Restart"
 
+[node name="credits_button" type="Button" parent="button_list"]
+layout_mode = 2
+toggle_mode = true
+text = "Credits"
+
 [node name="quit_button" type="Button" parent="button_list"]
 layout_mode = 2
 text = "Quit"
@@ -93,9 +98,30 @@ text = "Fullscreen"
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="credits_text_box" type="TextEdit" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = 88.0
+offset_right = 384.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game by MAR & stesim
+
+"
+editable = false
+
 [connection signal="pressed" from="button_list/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="button_list/resume_button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="button_list/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="toggled" from="button_list/credits_button" to="." method="_on_credits_button_toggled"]
 [connection signal="pressed" from="button_list/quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/settings/volume_slider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/settings/fullscreen_checkbox" to="." method="_on_fullscreen_checkbox_toggled"]

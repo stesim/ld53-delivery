@@ -10,6 +10,7 @@ var _audio_bus_index := AudioServer.get_bus_index(&"Master")
 
 @onready var _volume_slider : Slider = %volume_slider
 @onready var _fullscreen_checkbox : CheckBox = %fullscreen_checkbox
+@onready var _credits_text_box : TextEdit = %credits_text_box
 
 
 func _ready() -> void:
@@ -20,6 +21,8 @@ func _ready() -> void:
 
 	_fullscreen_checkbox.button_pressed = get_window().mode == Window.MODE_FULLSCREEN
 	_volume_slider.value = 100.0 * db_to_linear(AudioServer.get_bus_volume_db(_audio_bus_index))
+
+	_load_credits()
 
 
 func _notification(what : int) -> void:
@@ -73,3 +76,12 @@ func _on_volume_slider_value_changed(value : float) -> void:
 
 func _on_fullscreen_checkbox_toggled(button_pressed : bool) -> void:
 	get_window().mode = Window.MODE_FULLSCREEN if button_pressed else Window.MODE_WINDOWED
+
+
+func _on_credits_button_toggled(button_pressed : bool) -> void:
+	_credits_text_box.visible = button_pressed
+
+
+func _load_credits() -> void:
+	var license_text = FileAccess.get_file_as_string("res://license/license.txt")
+	_credits_text_box.text += license_text

@@ -1,4 +1,3 @@
---------------------------------------------
 Models and Graphics:
 
 Food Stations - "Low-Poly Cafe" (https://skfb.ly/6TF8R) by Emma-Lie Kamping is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
@@ -19,7 +18,8 @@ Car Kit by Kenney (www.kenney.nl)
 City Kit Commercial by Kenney (www.kenney.nl)
 City Kit Suburban by Kenney (www.kenney.nl)
 
---------------------------------------------
+
+
 Sound and Music:
 
 Ice Cream Sound - based on "Sniff mmmm" (https://freesound.org/s/161004/) by TheAtomicBrain is licensed under CC0 1.0 Universal (CC0 1.0)
@@ -41,7 +41,3 @@ Engine Sound - based on "Engine » ENGINE.WAV" (https://freesound.org/s/242740/)
 Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/).
 
 Music Loops by Kenney (www.kenney.nl)
-
-
-
-

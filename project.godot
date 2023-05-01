@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="ld53-delivery"
+config/name="FoodEx"
 run/main_scene="res://menus/main_menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
