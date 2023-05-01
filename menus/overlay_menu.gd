@@ -5,6 +5,11 @@ extends Control
 
 
 var _is_ready := false
+var _audio_bus_index := AudioServer.get_bus_index(&"Master")
+
+
+@onready var _volume_slider : Slider = %volume_slider
+@onready var _fullscreen_checkbox : CheckBox = %fullscreen_checkbox
 
 
 func _ready() -> void:
@@ -12,6 +17,9 @@ func _ready() -> void:
 	_focus_first_visible_button()
 	if pause and visible:
 		GameState.pause()
+
+	_fullscreen_checkbox.button_pressed = get_window().mode == Window.MODE_FULLSCREEN
+	_volume_slider.value = 100.0 * db_to_linear(AudioServer.get_bus_volume_db(_audio_bus_index))
 
 
 func _notification(what : int) -> void:
@@ -52,3 +60,16 @@ func _on_restart_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_volume_slider_value_changed(value : float) -> void:
+	if is_zero_approx(value):
+		AudioServer.set_bus_mute(_audio_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(_audio_bus_index, false)
+		var linear := value / 100.0
+		AudioServer.set_bus_volume_db(_audio_bus_index, linear_to_db(linear))
+
+
+func _on_fullscreen_checkbox_toggled(button_pressed : bool) -> void:
+	get_window().mode = Window.MODE_FULLSCREEN if button_pressed else Window.MODE_WINDOWED

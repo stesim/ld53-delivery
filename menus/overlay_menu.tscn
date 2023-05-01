@@ -16,13 +16,16 @@ script = ExtResource("1_f2xkk")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 256.0
+offset_left = -384.0
 offset_top = -74.0
-offset_right = 384.0
+offset_right = -256.0
 offset_bottom = 74.0
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 alignment = 1
@@ -43,7 +46,56 @@ text = "Restart"
 layout_mode = 2
 text = "Quit"
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -38.0
+offset_right = 383.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="settings" type="GridContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/settings"]
+layout_mode = 2
+text = "Volume"
+
+[node name="volume_slider" type="HSlider" parent="PanelContainer/MarginContainer/settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 4
+value = 50.0
+rounded = true
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/settings"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="fullscreen_checkbox" type="CheckBox" parent="PanelContainer/MarginContainer/settings"]
+unique_name_in_owner = true
+layout_mode = 2
+
 [connection signal="pressed" from="button_list/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="button_list/resume_button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="button_list/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="button_list/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="PanelContainer/MarginContainer/settings/volume_slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/settings/fullscreen_checkbox" to="." method="_on_fullscreen_checkbox_toggled"]
