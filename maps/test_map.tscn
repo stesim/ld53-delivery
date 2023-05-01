@@ -5,11 +5,11 @@
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
 [ext_resource type="ArrayMesh" uid="uid://dp2xroi70qepa" path="res://assets/roads/curve_pavement.res" id="5_0hful"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
+[ext_resource type="ArrayMesh" uid="uid://dssn53gi7atru" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
 [ext_resource type="ArrayMesh" uid="uid://b7yqrpoimt2qm" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
 [ext_resource type="PackedScene" uid="uid://cdu7d15q2hbqp" path="res://map_elements/ice_station.tscn" id="8_wanx7"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="10_i3q55"]
-[ext_resource type="ArrayMesh" path="res://assets/roads/curve_square.res" id="10_npb2t"]
+[ext_resource type="ArrayMesh" uid="uid://br8li8ayl60cn" path="res://assets/roads/curve_square.res" id="10_npb2t"]
 [ext_resource type="PackedScene" uid="uid://bqlvra1wwcr67" path="res://characters/customer.tscn" id="11_7le7x"]
 [ext_resource type="PackedScene" uid="uid://cv343cijprfxh" path="res://assets/buildings/house_type01.glb" id="13_uc4j6"]
 [ext_resource type="PackedScene" uid="uid://yp2u0dcp8eee" path="res://assets/buildings/house_type02.glb" id="14_d3xdb"]
@@ -353,6 +353,7 @@ transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 32)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
+spawn_area = 3.892
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_1")
 
@@ -360,15 +361,25 @@ target_shop = NodePath("../ice_station_1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 25)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
+spawn_area = 3.712
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_2")
 
 [node name="customer_spawner3" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 0, 4.6)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
+spawn_area = 0.0
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_3")
+
+[node name="customer_spawner4" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 6.6)
+script = ExtResource("10_i3q55")
+spawn_delta = 8.0
+spawn_area = 3.153
+customer_scene = ExtResource("11_7le7x")
+target_shop = NodePath("../ice_station_4")
 
 [node name="ground" type="StaticBody3D" parent="."]
 
