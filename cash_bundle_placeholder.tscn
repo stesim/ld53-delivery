@@ -1,19 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cucogsjhxprop"]
+[gd_scene load_steps=3 format=3 uid="uid://cucogsjhxprop"]
+
+[ext_resource type="PackedScene" uid="uid://28xx3p2gq784" path="res://assets/items/cash.tscn" id="1_f3sgq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t1jf0"]
-size = Vector3(0.1, 0.05, 0.2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qe5vn"]
-albedo_color = Color(0.0627451, 0.388235, 0.027451, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_5dbti"]
-material = SubResource("StandardMaterial3D_qe5vn")
-size = Vector3(0.1, 0.05, 0.2)
+size = Vector3(0.0994809, 0.0712541, 0.239719)
 
 [node name="cash_bundle_placeholder" type="RigidBody3D"]
 
 [node name="collision_shape" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_t1jf0")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_5dbti")
+[node name="cash" parent="." instance=ExtResource("1_f3sgq")]
