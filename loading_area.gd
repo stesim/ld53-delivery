@@ -41,7 +41,6 @@ func _unhandled_input(event : InputEvent) -> void:
 		if event.is_action_pressed(TRANSFER_INPUT_MAPPINGS[i]):
 			var item := GameState.FOOD_ITEMS[i]
 			var transferred_quantity := transfer(item)
-			print(transferred_quantity)
 			if transferred_quantity > 0:
 				match i:
 					0: _ice_cream_sound.play()
@@ -54,6 +53,8 @@ func transfer(item) -> int:
 	if not has_overlapping_areas():
 		return 0
 	var backing_inventory := _find_item_inventory(backing_inventories, item)
+	if not backing_inventory:
+		return 0
 	match type:
 		Type.SOURCE: return _transfer_to_inventories(backing_inventory)
 		Type.SINK: return _transfer_from_inventories(backing_inventory)
@@ -61,9 +62,10 @@ func transfer(item) -> int:
 
 
 func _transfer_to_inventories(backing_inventory : Inventory) -> int:
-	var transferred_quantity := 0
 	if backing_inventory.is_empty():
-		return transferred_quantity
+		return 0
+
+	var transferred_quantity := 0
 	for area in get_overlapping_areas():
 		var quantity := mini(
 			mini(quantity_per_tick, backing_inventory.quantity),
@@ -85,9 +87,10 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> int:
 
 
 func _transfer_from_inventories(backing_inventory : Inventory) -> int:
-	var transferred_quantity := 0
 	if backing_inventory.is_full():
-		return transferred_quantity
+		return 0
+
+	var transferred_quantity := 0
 	for inventory_area in get_overlapping_areas():
 		var quantity := mini(quantity_per_tick, backing_inventory.remaining_capacity())
 		if quantity > 0:

@@ -26,12 +26,9 @@ extends VehicleBody3D
 @export_range(0.0, 20.0, 0.01, "or_greater") var brake_sound_speed_threshold := 3.0
 
 
-var _previous_speed := 0.0
-var _previous_loss_time := 0
 var move_forward := false
 
 
-@onready var _inventory_area := %inventory_area
 @onready var _crash_sound := %crash_sound
 @onready var _sound_engine := %sound_engine
 
@@ -43,14 +40,7 @@ func _ready() -> void:
 		brake = max_brake_force
 
 
-func _enter_tree() -> void:
-	var inventory_area := %inventory_area
-	var inventories := GameState.create_item_inventories(inventory_area.total_capacity)
-	inventory_area.inventories = inventories
-	%inventory_indicator.inventories = inventory_area.inventories
-
-
-func _physics_process(delta : float) -> void:
+func _physics_process(_delta : float) -> void:
 	var was_braking := brake > 0.0
 
 	engine_force = max_engine_force * Input.get_axis("reverse", "accelerate")
@@ -63,26 +53,17 @@ func _physics_process(delta : float) -> void:
 	if move_forward and Input.get_axis("reverse", "accelerate") < 0.0:
 		brake = max_brake_force * -1.0 * Input.get_axis("reverse", "accelerate")
 
+	var speed := linear_velocity.length()
+
 	var is_braking := brake > 0.0
-	if not was_braking and is_braking and _previous_speed >= brake_sound_speed_threshold:
+	if not was_braking and is_braking and speed >= brake_sound_speed_threshold:
 		_crash_sound.play()
 
-	var current_speed := linear_velocity.length()
-	var acceleration := (current_speed - _previous_speed) / delta
-
-	if current_speed < 0.5:
+	if speed < 0.5:
 		move_forward = false
 
-	_sound_engine.pitch_scale = 0.5 + current_speed / 10.0
-	_sound_engine.volume_db = -6.0 + 10.0 * current_speed / 10.0
-
-	if abs(acceleration) > inventory_loss_acceleration_threshold:
-		var now := Time.get_ticks_msec()
-		var time_since_previous_loss := (now - _previous_loss_time) / 1000.0
-		if time_since_previous_loss >= inventory_loss_cooldown:
-			_lose_inventory(inventory_loss_amount)
-			_previous_loss_time = now
-	_previous_speed = current_speed
+	_sound_engine.pitch_scale = 0.5 + speed / 10.0
+	_sound_engine.volume_db = -6.0 + 10.0 * speed / 10.0
 
 
 func _unhandled_input(event : InputEvent) -> void:
@@ -97,16 +78,8 @@ func _reset() -> void:
 	angular_velocity = Vector3.ZERO
 
 
-func _lose_inventory(quantity : int) -> void:
-	var inventories : Array[Inventory] = _inventory_area.inventories
-	for inventory in inventories:
-		quantity -= inventory.remove(quantity)
-		if quantity == 0:
-			break
-
-
 func _on_body_entered(body : Node) -> void:
 	if not active or body is RigidBody3D:
 		return
-	if _previous_speed >= crash_sound_speed_threshold:
+	if linear_velocity.length() >= crash_sound_speed_threshold:
 		_crash_sound.play()

@@ -1,6 +1,8 @@
 extends Node
 
 
+
+
 const START_CAPITAL := 100
 const RENT_AMOUNT := 10
 const RENT_INTERVAL := 10.0
@@ -22,6 +24,8 @@ const FOOD_PRICES : Array[int] = [
 	4,
 ]
 
+const CASH_ITEM := preload("res://assets/items/cash.tscn")
+
 
 signal score_changed()
 signal went_broke()
@@ -29,6 +33,8 @@ signal went_broke()
 
 var score := 0 :
 	set(value):
+		if value == score:
+			return
 		score = value
 		var just_went_broke := score <= 0 and not is_broke
 		if just_went_broke:
@@ -92,6 +98,14 @@ func create_item_inventories(capacity : int, quantity := 0) -> Array[Inventory]:
 		item_inventory.quantity = quantity
 		inventories.push_back(item_inventory)
 	return inventories
+
+
+func create_cash_inventory(capacity := 999999, quantity := 0) -> Inventory:
+	var inventory := Inventory.new()
+	inventory.item = CASH_ITEM
+	inventory.max_quantity = capacity
+	inventory.quantity = quantity
+	return inventory
 
 
 func _pay_rent() -> void:

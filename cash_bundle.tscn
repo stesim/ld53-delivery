@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cucogsjhxprop"]
+
+[ext_resource type="Script" path="res://cash_bundle.gd" id="1_k31nl"]
+[ext_resource type="PackedScene" uid="uid://28xx3p2gq784" path="res://assets/items/cash.tscn" id="2_nd654"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t1jf0"]
+size = Vector3(0.0994809, 0.0712541, 0.239719)
+
+[node name="cash_bundle" type="RigidBody3D"]
+collision_layer = 17
+script = ExtResource("1_k31nl")
+
+[node name="collision_shape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_t1jf0")
+
+[node name="cash" parent="." instance=ExtResource("2_nd654")]
