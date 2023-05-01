@@ -1,9 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://br25j1oumvjbg"]
+[gd_scene load_steps=6 format=3 uid="uid://br25j1oumvjbg"]
 
 [ext_resource type="Script" path="res://loading_area.gd" id="1_q6lc6"]
+[ext_resource type="AudioStream" uid="uid://y7cds7qtmplg" path="res://assets/sounds/mhmm.mp3" id="2_cw73l"]
+[ext_resource type="AudioStream" uid="uid://cvpjvvmpqq117" path="res://assets/sounds/dog.mp3" id="3_14jyr"]
+[ext_resource type="AudioStream" uid="uid://dsu4y8otybgw4" path="res://assets/sounds/burger.mp3" id="4_x5u1g"]
+[ext_resource type="AudioStream" uid="uid://by2h1thdiwupy" path="res://assets/sounds/drink_fill.mp3" id="5_jwv67"]
 
 [node name="loading_area" type="Area3D"]
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_q6lc6")
+
+[node name="ice_cream_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_cw73l")
+max_polyphony = 3
+
+[node name="hot_dog_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_14jyr")
+max_polyphony = 3
+
+[node name="burger_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_x5u1g")
+max_polyphony = 3
+
+[node name="drink_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_jwv67")
+max_polyphony = 3

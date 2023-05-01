@@ -22,6 +22,11 @@ const TRANSFER_INPUT_MAPPINGS : Array[StringName]= [
 @export var player_controlled := false
 @export var concurrent_transfers := true
 
+@onready var _ice_cream_sound := %ice_cream_sound
+@onready var _hotdog_sound := %hot_dog_sound
+@onready var _burger_sound := %burger_sound
+@onready var _drink_sound := %drink_sound
+
 
 func _ready() -> void:
 	set_process_unhandled_input(player_controlled)
@@ -32,6 +37,15 @@ func _unhandled_input(event : InputEvent) -> void:
 		return
 	for i in TRANSFER_INPUT_MAPPINGS.size():
 		if event.is_action_pressed(TRANSFER_INPUT_MAPPINGS[i]):
+			match i:
+				0:
+					_ice_cream_sound.play()
+				1:
+					_hotdog_sound.play()
+				2:
+					_burger_sound.play()
+				3:
+					_drink_sound.play()
 			var item := GameState.FOOD_ITEMS[i]
 			transfer(item)
 
