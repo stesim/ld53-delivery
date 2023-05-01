@@ -22,6 +22,7 @@ size = Vector3(1, 2, 1)
 
 [node name="ice_station" type="StaticBody3D"]
 script = ExtResource("1_q8et4")
+cash_ejection_force = 0.0
 
 [node name="collision_shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://28xx3p2gq784" path="res://assets/items/cash.tscn" id="2_nd654"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t1jf0"]
-size = Vector3(0.0994809, 0.0712541, 0.239719)
+size = Vector3(0.198, 0.142, 0.48)
 
 [node name="cash_bundle" type="RigidBody3D"]
 collision_layer = 17
