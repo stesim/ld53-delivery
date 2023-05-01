@@ -37,6 +37,7 @@ func _unhandled_input(event : InputEvent) -> void:
 		for i in TRANSFER_INPUT_MAPPINGS.size():
 			if event.is_action_pressed(TRANSFER_INPUT_MAPPINGS[i]):
 				_spawn_item(i)
+				GameState.progress_tutorial(GameState.TutorialStep.DELIVER_ITEMS)
 				match i:
 					0: _ice_cream_sound.play()
 					1: _hotdog_sound.play()
@@ -46,6 +47,8 @@ func _unhandled_input(event : InputEvent) -> void:
 	if _cash_loading_area.has_overlapping_areas() and event.is_action_pressed(&"transfer_cash"):
 		var transferred_quantity : int = _cash_loading_area.transfer(CashItem)
 		GameState.add_score(transferred_quantity * GameState.CASH_BUNDLE_SIZE)
+
+		GameState.progress_tutorial(GameState.TutorialStep.COMPLETED)
 
 
 func _spawn_item(index : int) -> void:

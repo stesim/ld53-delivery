@@ -1,8 +1,6 @@
 extends Node
 
 
-
-
 const START_CAPITAL := 100
 const RENT_AMOUNT := 10
 const RENT_INTERVAL := 10.0
@@ -27,8 +25,18 @@ const FOOD_PRICES : Array[int] = [
 const CASH_ITEM := preload("res://assets/items/cash.tscn")
 
 
+enum TutorialStep {
+	GET_ITEMS,
+	DELIVER_ITEMS,
+	GET_CASH,
+	DELIVER_CASH,
+	COMPLETED,
+}
+
+
 signal score_changed()
 signal went_broke()
+signal tutorial_progressed()
 
 
 var score := 0 :
@@ -46,6 +54,8 @@ var score := 0 :
 var is_broke := false
 
 var game_time := 0.0
+
+var tutorial_progress := TutorialStep.GET_ITEMS
 
 
 var _rent_timer := Timer.new()
@@ -106,6 +116,12 @@ func create_cash_inventory(capacity := 999999, quantity := 0) -> Inventory:
 	inventory.max_quantity = capacity
 	inventory.quantity = quantity
 	return inventory
+
+
+func progress_tutorial(step : TutorialStep) -> void:
+	if int(step) > int(tutorial_progress) and tutorial_progress != TutorialStep.COMPLETED:
+		tutorial_progress = step
+		tutorial_progressed.emit()
 
 
 func _pay_rent() -> void:

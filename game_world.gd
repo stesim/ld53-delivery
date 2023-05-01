@@ -7,12 +7,14 @@ extends Node3D
 @onready var _revenue_label := %revenue_label
 @onready var _score_sound := %score_sound
 @onready var _vehicle_follower := %vehicle_follower
+@onready var _tutorial_panels := %tutorial_panels
 
 
 func _ready() -> void:
 	GameState.restart()
 	GameState.score_changed.connect(_on_score_changed)
 	GameState.went_broke.connect(_on_broke)
+	GameState.tutorial_progressed.connect(_on_tutorial_progressed)
 
 	if not background_tracks.is_empty():
 		var background_music = %background_music
@@ -22,6 +24,8 @@ func _ready() -> void:
 	_swap_to_vehicle(get_tree().get_first_node_in_group(&"vehicles"))
 
 	_on_score_changed(false)
+
+	_on_tutorial_progressed()
 
 
 func _unhandled_input(event : InputEvent) -> void:
@@ -59,3 +63,9 @@ func _on_broke() -> void:
 	var seconds := broke_time % 60
 	%broke_time_label.text = "%d:%d" % [minutes, seconds]
 	%broke_panel.show()
+
+
+func _on_tutorial_progressed() -> void:
+	var step_index := int(GameState.tutorial_progress)
+	for i in _tutorial_panels.get_child_count():
+		_tutorial_panels.get_child(i).visible = i == step_index

@@ -31,6 +31,8 @@ func _ready() -> void:
 	%cash_indicator.bundle_size = GameState.CASH_BUNDLE_SIZE
 	%cash_indicator.inventory = _cash_inventory
 
+	_loading_area.items_transferred.connect(_on_food_items_delivered)
+
 
 func get_serve_location() -> Vector3:
 	return _feeding_area.global_position
@@ -49,6 +51,8 @@ func _extract_cash() -> void:
 	_cash_inventory.remove(GameState.CASH_BUNDLE_SIZE)
 	_spawn_cash()
 
+	GameState.progress_tutorial(GameState.TutorialStep.DELIVER_CASH)
+
 
 func _spawn_cash() -> void:
 	var instance : RigidBody3D = CashBundle.instantiate()
@@ -64,3 +68,8 @@ func _on_serve_timer_timeout() -> void:
 
 func _on_feeding_area_items_transferred(item, quantity : int) -> void:
 	_cash_inventory.add(quantity * GameState.get_item_price(item))
+
+
+func _on_food_items_delivered(_item, _quantity) -> void:
+	GameState.progress_tutorial(GameState.TutorialStep.GET_CASH)
+	_loading_area.items_transferred.disconnect(_on_food_items_delivered)

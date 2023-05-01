@@ -78,11 +78,11 @@ func _transfer_to_inventories(backing_inventory : Inventory) -> int:
 			var diff : int = target_inventory.add(quantity)
 			backing_inventory.remove(diff)
 			transferred_quantity += diff
-			items_transferred.emit(backing_inventory.item, diff)
 
 		if not concurrent_transfers:
 			break
 
+	items_transferred.emit(backing_inventory.item, transferred_quantity)
 	return transferred_quantity
 
 
@@ -101,6 +101,7 @@ func _transfer_from_inventories(backing_inventory : Inventory) -> int:
 		if not concurrent_transfers:
 			break
 
+	items_transferred.emit(backing_inventory.item, transferred_quantity)
 	return transferred_quantity
 
 
