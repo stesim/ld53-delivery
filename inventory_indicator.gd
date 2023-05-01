@@ -10,7 +10,7 @@ const QuantityIndicator := preload("res://quantity_indicator.tscn")
 		if is_inside_tree():
 			_recreate_indicators()
 
-@export_range(0.0, 1.0) var spacing := 0.5
+@export_range(0.0, 1.0) var spacing := 1.0
 
 
 func _ready() -> void:

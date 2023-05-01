@@ -338,33 +338,33 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -82.5,
 mesh = ExtResource("5_0hful")
 
 [node name="ice_station_1" parent="." instance=ExtResource("8_wanx7")]
-transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -110.7, 0, 41)
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -109.7, 0, 42)
 
 [node name="ice_station_2" parent="." instance=ExtResource("8_wanx7")]
-transform = Transform3D(1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, 1, -106.7, 0, 11)
+transform = Transform3D(7.54976e-08, 0, 1, 0, 1, 0, -1, 0, 7.54976e-08, -109.7, 0, 14)
 
 [node name="ice_station_3" parent="." instance=ExtResource("8_wanx7")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -69.7, 0, 5)
+transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, -67.7, 0, 4)
 
 [node name="ice_station_4" parent="." instance=ExtResource("8_wanx7")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -2.7, 0, 17)
 
 [node name="customer_spawner" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117, 0, 46)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 32)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_1")
 
 [node name="customer_spawner2" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 25)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
 customer_scene = ExtResource("11_7le7x")
 target_shop = NodePath("../ice_station_2")
 
 [node name="customer_spawner3" type="Node3D" parent="." node_paths=PackedStringArray("target_shop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, -2)
 script = ExtResource("10_i3q55")
 spawn_delta = 8.0
 customer_scene = ExtResource("11_7le7x")

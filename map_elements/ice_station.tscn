@@ -9,7 +9,7 @@
 size = Vector3(4, 5.6, 3.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p31t4"]
-size = Vector3(5, 5, 5)
+size = Vector3(16, 2, 16)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f73mx"]
 size = Vector3(1, 2, 1)
@@ -26,11 +26,11 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.26, -0.063, 1.18)
 
 [node name="loading_area" parent="." instance=ExtResource("2_fwrp5")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -4.2)
 type = 1
 player_controlled = true
 
 [node name="shape" type="CollisionShape3D" parent="loading_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_p31t4")
 
 [node name="feeding_area" parent="." instance=ExtResource("2_fwrp5")]
@@ -44,7 +44,7 @@ shape = SubResource("BoxShape3D_f73mx")
 
 [node name="inventory_indicator" parent="." instance=ExtResource("4_ypo1u")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36814, -2.47395)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36814, 3.52605)
 
 [node name="serve_timer" type="Timer" parent="."]
 wait_time = 2.0
