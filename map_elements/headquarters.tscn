@@ -221,7 +221,7 @@ mesh = SubResource("PlaneMesh_7qpjj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 billboard = 1
 double_sided = false
-text = "Select food item to be loaded"
+text = "Food loading zone"
 
 [node name="ice_cream_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true

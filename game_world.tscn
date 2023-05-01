@@ -469,7 +469,6 @@ and deliver the supplies.
 press keys 1 - 4)"
 
 [node name="tutorial_panel3" type="PanelContainer" parent="ui/tutorial_panels"]
-visible = false
 layout_mode = 2
 metadata/_edit_group_ = true
 
@@ -483,9 +482,10 @@ theme_override_constants/margin_bottom = 8
 [node name="tutorial3" type="Label" parent="ui/tutorial_panels/tutorial_panel3/margin"]
 layout_mode = 2
 text = "You can also get your
-earnings there.
-(inside green zones,
-press key E)"
+earnings there - after
+selling enough food.
+(below cash stack next
+to the diner, press key E)"
 
 [node name="tutorial_panel4" type="PanelContainer" parent="ui/tutorial_panels"]
 visible = false
