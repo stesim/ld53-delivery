@@ -5,6 +5,7 @@ extends VehicleBody3D
 	set(value):
 		active = value
 		set_physics_process(active)
+		set_process_unhandled_input(active)
 		if not active:
 			_sound_engine.stop()
 			engine_force = 0.0
@@ -37,6 +38,7 @@ var move_forward := false
 
 func _ready() -> void:
 	set_physics_process(false)
+	set_process_unhandled_input(false)
 	if not active:
 		brake = max_brake_force
 
@@ -54,26 +56,26 @@ func _physics_process(delta : float) -> void:
 	engine_force = max_engine_force * Input.get_axis("reverse", "accelerate")
 	brake = max_brake_force * Input.get_action_strength("brake")
 	steering = max_steering_angle * Input.get_axis("steer_right", "steer_left")
-	
+
 	if engine_force > 0.0:
 		move_forward = true
-	
+
 	if move_forward and Input.get_axis("reverse", "accelerate") < 0.0:
 		brake = max_brake_force * -1.0 * Input.get_axis("reverse", "accelerate")
-	
+
 	var is_braking := brake > 0.0
 	if not was_braking and is_braking and _previous_speed >= brake_sound_speed_threshold:
 		_crash_sound.play()
 
 	var current_speed := linear_velocity.length()
 	var acceleration := (current_speed - _previous_speed) / delta
-	
+
 	if current_speed < 0.5:
 		move_forward = false
 
 	_sound_engine.pitch_scale = 0.5 + current_speed / 10.0
 	_sound_engine.volume_db = -6.0 + 10.0 * current_speed / 10.0
-	
+
 	if abs(acceleration) > inventory_loss_acceleration_threshold:
 		var now := Time.get_ticks_msec()
 		var time_since_previous_loss := (now - _previous_loss_time) / 1000.0
@@ -81,6 +83,18 @@ func _physics_process(delta : float) -> void:
 			_lose_inventory(inventory_loss_amount)
 			_previous_loss_time = now
 	_previous_speed = current_speed
+
+
+func _unhandled_input(event : InputEvent) -> void:
+	if event.is_action_pressed(&"reset_vehicle"):
+		_reset()
+
+
+func _reset() -> void:
+	rotation = Vector3.ZERO
+	global_position.y = 2.0
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
 
 
 func _lose_inventory(quantity : int) -> void:
