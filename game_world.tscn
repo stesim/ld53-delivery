@@ -414,6 +414,59 @@ texture = ExtResource("21_c3jf2")
 expand_mode = 2
 stretch_mode = 4
 
+[node name="tutorial_panel" type="PanelContainer" parent="ui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 441.0
+offset_top = 574.0
+offset_right = 633.0
+offset_bottom = 708.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+
+[node name="margin" type="MarginContainer" parent="ui/tutorial_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="hbox" type="HBoxContainer" parent="ui/tutorial_panel/margin"]
+layout_mode = 2
+
+[node name="tutorial1" type="Label" parent="ui/tutorial_panel/margin/hbox"]
+layout_mode = 2
+text = "Drive to your store and 
+get your food delivery. 
+(inside green zone,
+press keys 1 - 4)"
+
+[node name="tutorial2" type="Label" parent="ui/tutorial_panel/margin/hbox"]
+visible = false
+layout_mode = 2
+text = "Now drive to your diners
+and deliver the supplies.
+(inside green zones,
+press keys 1 - 4)"
+
+[node name="tutorial3" type="Label" parent="ui/tutorial_panel/margin/hbox"]
+visible = false
+layout_mode = 2
+text = "You can also get your
+earnings there.
+(inside green zones,
+press key E)"
+
+[node name="tutorial4" type="Label" parent="ui/tutorial_panel/margin/hbox"]
+visible = false
+layout_mode = 2
+text = "Bring your cash back
+to your store to increase 
+your funds.
+(inside green zone,
+press key E)"
+
 [node name="score_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_26d21")
