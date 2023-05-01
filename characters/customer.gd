@@ -52,5 +52,5 @@ func _physics_process(delta : float) -> void:
 
 func _on_inventory_changed() -> void:
 	if inventory.is_full():
-		GameState.add_score(inventory.max_quantity)
+		GameState.add_score(inventory.max_quantity * inventory.item.get_meta(&"price"))
 		queue_free()

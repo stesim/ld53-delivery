@@ -1,6 +1,11 @@
 extends Node
 
 
+const START_CAPITAL := 100
+const RENT_AMOUNT := 10
+const RENT_INTERVAL := 10.0
+
+
 const FOOD_ITEMS : Array[PackedScene] = [
 	preload("res://assets/foods/iceCream.glb"),
 	preload("res://assets/foods/hotDog.glb"),
@@ -8,20 +13,56 @@ const FOOD_ITEMS : Array[PackedScene] = [
 	preload("res://assets/foods/soda.glb"),
 ]
 
+const FOOD_PRICES : Array[int] = [
+	3,
+	5,
+	8,
+	4,
+]
+
 
 signal score_changed()
+signal went_broke()
 
 
 var score := 0 :
 	set(value):
 		score = value
+		var just_went_broke := score <= 0 and not is_broke
+		if just_went_broke:
+			is_broke = true
 		score_changed.emit()
+		if just_went_broke:
+			went_broke.emit()
+
+var is_broke := false
+
+var game_time := 0.0
+
+
+var _rent_timer := Timer.new()
+
+
+func _ready() -> void:
+	for i in FOOD_ITEMS.size():
+		FOOD_ITEMS[i].set_meta(&"price", FOOD_PRICES[i])
+
+	_rent_timer.wait_time = RENT_INTERVAL
+	_rent_timer.timeout.connect(_pay_rent)
+	add_child(_rent_timer)
+
+
+func _physics_process(delta : float) -> void:
+	game_time += delta
 
 
 func restart() -> void:
 	GameState.resume()
-	score = 0
-	get_tree().change_scene_to_file("res://game_world.tscn")
+	score = START_CAPITAL
+	game_time = 0
+	is_broke = false
+	_rent_timer.stop()
+	_rent_timer.start()
 
 
 func pause() -> void:
@@ -45,3 +86,7 @@ func create_item_inventories(capacity : int, quantity := 0) -> Array[Inventory]:
 		item_inventory.quantity = quantity
 		inventories.push_back(item_inventory)
 	return inventories
+
+
+func _pay_rent() -> void:
+	score -= RENT_AMOUNT

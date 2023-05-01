@@ -89,10 +89,10 @@ mouse_filter = 2
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -64.0
-offset_top = 11.0
-offset_right = 24.0
-offset_bottom = 83.0
+offset_left = -44.0
+offset_top = 16.0
+offset_right = 44.0
+offset_bottom = 88.0
 grow_horizontal = 2
 
 [node name="margin" type="MarginContainer" parent="ui/score_panel"]
@@ -107,13 +107,49 @@ layout_mode = 2
 
 [node name="label" type="Label" parent="ui/score_panel/margin/vbox"]
 layout_mode = 2
-text = "Revenue"
+text = "Capital"
+horizontal_alignment = 1
 uppercase = true
 
 [node name="revenue_label" type="Label" parent="ui/score_panel/margin/vbox"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "$0"
+horizontal_alignment = 1
+
+[node name="broke_panel" type="PanelContainer" parent="ui"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 112.0
+offset_right = 94.0
+offset_bottom = 184.0
+grow_horizontal = 2
+
+[node name="margin" type="MarginContainer" parent="ui/broke_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/broke_panel/margin"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ui/broke_panel/margin/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.360784, 0.360784, 1)
+text = "You went bankrupt in"
+horizontal_alignment = 1
+
+[node name="broke_time_label" type="Label" parent="ui/broke_panel/margin/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.360784, 0.360784, 1)
+text = "0:00"
 horizontal_alignment = 1
 
 [node name="FoodButtonHelp" type="PanelContainer" parent="ui"]

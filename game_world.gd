@@ -10,14 +10,18 @@ extends Node3D
 
 
 func _ready() -> void:
+	GameState.restart()
 	GameState.score_changed.connect(_on_score_changed)
-	
+	GameState.went_broke.connect(_on_broke)
+
 	if not background_tracks.is_empty():
 		var background_music = %background_music
 		background_music.stream = background_tracks.pick_random()
 		background_music.play()
-	
+
 	_swap_to_vehicle(get_tree().get_first_node_in_group(&"vehicles"))
+
+	_on_score_changed(false)
 
 
 func _unhandled_input(event : InputEvent) -> void:
@@ -39,10 +43,19 @@ func _swap_to_vehicle(new_vehicle) -> void:
 		current_vehicle.active = false
 	new_vehicle.active = true
 	_vehicle_follower.target = new_vehicle
-	
 
 
-func _on_score_changed() -> void:
-	_revenue_label.text = "$%d" % GameState.score
-	_score_sound.stop()
-	_score_sound.play()
+func _on_score_changed(play_sound := true) -> void:
+	var score := GameState.score
+	_revenue_label.text = "$%d" % score if score >= 0 else "-$%d" % -score
+	if play_sound:
+		_score_sound.play()
+
+
+func _on_broke() -> void:
+	var broke_time := roundi(GameState.game_time)
+	@warning_ignore("integer_division")
+	var minutes := broke_time / 60
+	var seconds := broke_time % 60
+	%broke_time_label.text = "%d:%d" % [minutes, seconds]
+	%broke_panel.show()
