@@ -68,11 +68,11 @@ func _physics_process(_delta : float) -> void:
 
 func _unhandled_input(event : InputEvent) -> void:
 	if event.is_action_pressed(&"reset_vehicle"):
-		_reset()
+		_reset.call_deferred()
 
 
 func _reset() -> void:
-	rotation = Vector3.ZERO
+	global_rotation.z = 0.0
 	global_position.y = 2.0
 	linear_velocity = Vector3.ZERO
 	angular_velocity = Vector3.ZERO
