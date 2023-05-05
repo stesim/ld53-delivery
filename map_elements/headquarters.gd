@@ -38,16 +38,10 @@ func _unhandled_input(event : InputEvent) -> void:
 			if event.is_action_pressed(TRANSFER_INPUT_MAPPINGS[i]):
 				_spawn_item(i)
 				GameState.progress_tutorial(GameState.TutorialStep.DELIVER_ITEMS)
-				match i:
-					0: _ice_cream_sound.play()
-					1: _hotdog_sound.play()
-					2: _burger_sound.play()
-					3: _drink_sound.play()
 
 	if _cash_loading_area.has_overlapping_areas() and event.is_action_pressed(&"transfer_cash"):
 		var transferred_quantity : int = _cash_loading_area.transfer(CashItem)
 		GameState.add_score(transferred_quantity * GameState.CASH_BUNDLE_SIZE)
-
 		GameState.progress_tutorial(GameState.TutorialStep.COMPLETED)
 
 
@@ -57,4 +51,11 @@ func _spawn_item(index : int) -> void:
 	instance.item_scene = item
 	instance.apply_central_impulse(ejection_force * Vector3.RIGHT)
 	get_tree().current_scene.add_child(instance)
+	instance.rotation = TAU * Vector3(randf(), randf(), randf())
 	instance.global_position = _item_spawn_locations.get_child(index).global_position
+
+	match index:
+		0: _ice_cream_sound.play()
+		1: _hotdog_sound.play()
+		2: _burger_sound.play()
+		3: _drink_sound.play()
