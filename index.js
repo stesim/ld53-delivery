@@ -10355,14 +10355,14 @@ var GodotPWA = {
 };
 
 function _godot_js_pwa_cb(p_update_cb) {
- if (false) {
+ if ("serviceWorker" in navigator) {
   const cb = GodotRuntime.get_func(p_update_cb);
   navigator.serviceWorker.getRegistration().then(GodotPWA.updateState.bind(null, cb));
  }
 }
 
 function _godot_js_pwa_update() {
- if (false && GodotPWA.hasUpdate) {
+ if ("serviceWorker" in navigator && GodotPWA.hasUpdate) {
   navigator.serviceWorker.getRegistration().then(function(reg) {
    if (!reg || !reg.waiting) {
     return;
@@ -14332,7 +14332,7 @@ const Engine = (function () {
 							preloader.preloadedFiles.length = 0; // Clear memory
 							me.rtenv['callMain'](me.config.args);
 							initPromise = null;
-							if (me.config.serviceWorker && false) {
+							if (me.config.serviceWorker && 'serviceWorker' in navigator) {
 								navigator.serviceWorker.register(me.config.serviceWorker);
 							}
 							resolve();
