@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_h22oh"]
+[ext_resource type="PackedScene" uid="uid://5rc26rh6worb" path="res://assets/cars/construction_vehicle.glb" id="2_tohfy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0tn4"]
+size = Vector3(1.2615, 0.325, 1.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7tx6"]
+size = Vector3(0.9, 1.21323, 0.107502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xj7vv"]
+size = Vector3(1.26288, 0.440853, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cqieh"]
+size = Vector3(1.321, 0.140159, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nht07"]
+size = Vector3(0.0302058, 0.422348, 1.16629)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cs7qq"]
+size = Vector3(1.26288, 0.570422, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_025r7"]
+size = Vector3(1.36017, 1.76223, 2.06282)
+
+[node name="construction_vehicle" instance=ExtResource("1_h22oh")]
+max_steering_angle = 0.349066
+
+[node name="construction_vehicle" parent="." index="0" instance=ExtResource("2_tohfy")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.0730144, 0.440157)
+
+[node name="collision_shape" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20683, 0.0612952)
+shape = SubResource("BoxShape3D_y0tn4")
+
+[node name="collision_shape2" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.994669, 0.103122, 0, -0.103122, 0.994669, 0, 0.966186, -0.587765)
+shape = SubResource("BoxShape3D_k7tx6")
+
+[node name="collision_shape_tub_back" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.981286, 0.192556, 0, -0.192556, 0.981286, 0, 0.568831, 0.0411528)
+shape = SubResource("BoxShape3D_xj7vv")
+
+[node name="collision_shape_tub_back_upper" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850348, 0.000461593)
+shape = SubResource("BoxShape3D_cqieh")
+
+[node name="collision_shape_tub_left" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645667, 0.567632, 0.607166)
+shape = SubResource("BoxShape3D_nht07")
+
+[node name="collision_shape_tub_right" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.646, 0.568, 0.607)
+shape = SubResource("BoxShape3D_nht07")
+
+[node name="collision_shape_tub_front" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 0.766213, -0.642587, 0, 0.642587, 0.766213, 0, 0.548688, 0.982968)
+shape = SubResource("BoxShape3D_cs7qq")
+
+[node name="mesh" parent="." index="8"]
+visible = false
+mesh = null
+
+[node name="wheel_fr" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.125, 0.66)
+
+[node name="wheel_fl" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.125, 0.66)
+
+[node name="wheel_rr" parent="." index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.125, -0.34)
+
+[node name="wheel_rl" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.125, -0.34)
+
+[node name="shape" parent="inventory_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.950571, 0.178048)
+shape = SubResource("BoxShape3D_025r7")

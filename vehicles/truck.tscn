@@ -44,16 +44,16 @@ shape = SubResource("BoxShape3D_ghb83")
 [node name="mesh" parent="." index="5"]
 mesh = ExtResource("2_gyqnb")
 
-[node name="wheel_fl" parent="." index="6"]
+[node name="wheel_fr" parent="." index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, 0.66)
 
-[node name="wheel_fr" parent="." index="7"]
+[node name="wheel_fl" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, 0.66)
 
-[node name="wheel_rl" parent="." index="8"]
+[node name="wheel_rr" parent="." index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, -0.95)
 
-[node name="wheel_rr" parent="." index="9"]
+[node name="wheel_rl" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, -0.95)
 
 [node name="shape" parent="inventory_area" index="0"]

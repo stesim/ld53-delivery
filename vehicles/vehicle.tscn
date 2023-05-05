@@ -39,7 +39,7 @@ shape = SubResource("BoxShape3D_7ks0q")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("1_hvre7")
 
-[node name="wheel_fl" type="VehicleWheel3D" parent="."]
+[node name="wheel_fr" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, 1)
 use_as_traction = true
 use_as_steering = true
@@ -50,11 +50,11 @@ suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
-[node name="mesh" type="MeshInstance3D" parent="wheel_fl"]
+[node name="mesh" type="MeshInstance3D" parent="wheel_fr"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("2_1emut")
 
-[node name="wheel_fr" type="VehicleWheel3D" parent="."]
+[node name="wheel_fl" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, 1)
 use_as_traction = true
 use_as_steering = true
@@ -65,10 +65,10 @@ suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
-[node name="mesh" type="MeshInstance3D" parent="wheel_fr"]
+[node name="mesh" type="MeshInstance3D" parent="wheel_fl"]
 mesh = ExtResource("2_1emut")
 
-[node name="wheel_rl" type="VehicleWheel3D" parent="."]
+[node name="wheel_rr" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, -0.61)
 wheel_radius = 0.3
 suspension_travel = 0.2
@@ -77,11 +77,11 @@ suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
-[node name="mesh" type="MeshInstance3D" parent="wheel_rl"]
+[node name="mesh" type="MeshInstance3D" parent="wheel_rr"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("2_1emut")
 
-[node name="wheel_rr" type="VehicleWheel3D" parent="."]
+[node name="wheel_rl" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, -0.61)
 wheel_radius = 0.3
 suspension_travel = 0.2
@@ -90,7 +90,7 @@ suspension_max_force = 20000.0
 damping_compression = 1.5
 damping_relaxation = 1.5
 
-[node name="mesh" type="MeshInstance3D" parent="wheel_rr"]
+[node name="mesh" type="MeshInstance3D" parent="wheel_rl"]
 mesh = ExtResource("2_1emut")
 
 [node name="inventory_area" parent="." instance=ExtResource("4_lcwta")]
