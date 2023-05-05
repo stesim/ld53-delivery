@@ -61,7 +61,7 @@ func _on_broke() -> void:
 	@warning_ignore("integer_division")
 	var minutes := broke_time / 60
 	var seconds := broke_time % 60
-	%broke_time_label.text = "%d:%d" % [minutes, seconds]
+	%broke_time_label.text = "%02d:%02d" % [minutes, seconds]
 	%broke_panel.show()
 
 
