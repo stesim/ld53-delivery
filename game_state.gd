@@ -1,7 +1,7 @@
 extends Node
 
 
-const START_CAPITAL := 100
+const INITIAL_FUNDS := 250
 const RENT_AMOUNT := 10
 const RENT_INTERVAL := 10.0
 
@@ -76,7 +76,7 @@ func _physics_process(delta : float) -> void:
 
 func restart() -> void:
 	GameState.resume()
-	score = START_CAPITAL
+	score = INITIAL_FUNDS
 	game_time = 0
 	is_broke = false
 	_rent_timer.stop()
