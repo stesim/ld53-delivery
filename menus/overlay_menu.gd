@@ -20,7 +20,11 @@ func _ready() -> void:
 		GameState.pause()
 
 	_fullscreen_checkbox.button_pressed = get_window().mode == Window.MODE_FULLSCREEN
-	_volume_slider.value = 100.0 * db_to_linear(AudioServer.get_bus_volume_db(_audio_bus_index))
+	_volume_slider.value = (
+		100.0 * db_to_linear(AudioServer.get_bus_volume_db(_audio_bus_index))
+		if not AudioServer.is_bus_mute(_audio_bus_index) else
+		0.0
+	)
 
 	_load_credits()
 

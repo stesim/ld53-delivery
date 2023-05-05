@@ -6,7 +6,7 @@ extends Node3D
 
 @onready var _revenue_label := %revenue_label
 @onready var _score_sound := %score_sound
-@onready var _vehicle_follower := %vehicle_follower
+@onready var _camera := %camera
 @onready var _tutorial_panels := %tutorial_panels
 
 
@@ -21,32 +21,30 @@ func _ready() -> void:
 		background_music.stream = background_tracks.pick_random()
 		background_music.play()
 
-	_swap_to_vehicle(get_tree().get_first_node_in_group(&"vehicles"))
-
 	_on_score_changed(false)
-
 	_on_tutorial_progressed()
+	_swap_to_vehicle(get_tree().get_first_node_in_group(&"vehicles"))
 
 
 func _unhandled_input(event : InputEvent) -> void:
-	if event.is_action_pressed(&"swap_vehicle") and not event.is_echo():
+	if event.is_action_pressed(&"swap_vehicle"):
 		_swap_vehicle()
 
 
 func _swap_vehicle() -> void:
 	var vehicles := get_tree().get_nodes_in_group(&"vehicles")
 	if vehicles.size() > 1:
-		var current_vehicle : Node3D = _vehicle_follower.target
+		var current_vehicle : Node3D = _camera.target
 		var next_vehicle := vehicles[(vehicles.find(current_vehicle) + 1) % vehicles.size()]
 		_swap_to_vehicle(next_vehicle)
 
 
 func _swap_to_vehicle(new_vehicle) -> void:
-	var current_vehicle = _vehicle_follower.target
+	var current_vehicle = _camera.target
 	if current_vehicle:
 		current_vehicle.active = false
 	new_vehicle.active = true
-	_vehicle_follower.target = new_vehicle
+	_camera.target = new_vehicle
 
 
 func _on_score_changed(play_sound := true) -> void:
