@@ -10,6 +10,7 @@ Changes to the game since submission to Ludum Dare 53.
     - Old truck
 - Modified vehicles to use individual power curves
 - Fixed crash sound not being played
+- Added ramp
 
 
 ## 2023-05-05
