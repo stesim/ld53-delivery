@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://q6mx3brfwof7"]
+
+[ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_ustw0"]
+[ext_resource type="PackedScene" uid="uid://dhm1xif2a1f2c" path="res://assets/cars/old_truck.glb" id="2_n1j1q"]
+
+[sub_resource type="Curve" id="Curve_ev13v"]
+_data = [Vector2(0, 0.481818), 0.0, 1.64727, 0, 0, Vector2(0.884106, 0.4), -3.24463, -3.24463, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ajgid"]
+size = Vector3(1.49815, 0.564712, 5.87022)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdcco"]
+size = Vector3(1.33878, 1.0898, 1.19885)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rc8gd"]
+size = Vector3(1.5, 0.447, 0.055)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6hgdk"]
+size = Vector3(3.268, 0.447, 0.055)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n88wl"]
+size = Vector3(1.538, 1.75, 5.861)
+
+[node name="old_truck" instance=ExtResource("1_ustw0")]
+max_engine_force = 2000.0
+power_curve = SubResource("Curve_ev13v")
+max_speed = 6.0
+max_brake_force = 25.0
+
+[node name="collision_shape" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29, 0.688)
+shape = SubResource("BoxShape3D_ajgid")
+
+[node name="collision_shape2" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01953, 1.78963)
+shape = SubResource("BoxShape3D_wdcco")
+
+[node name="collision_shape_bed_front" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.796, 1.102)
+shape = SubResource("BoxShape3D_rc8gd")
+
+[node name="collision_shape_bed_back" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.796, -2.2204)
+shape = SubResource("BoxShape3D_rc8gd")
+
+[node name="collision_shape_bed_left" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.719, 0.796, -0.559)
+shape = SubResource("BoxShape3D_6hgdk")
+
+[node name="collision_shape_bed_right" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.719, 0.796, -0.559)
+shape = SubResource("BoxShape3D_6hgdk")
+
+[node name="mesh" parent="." index="6"]
+visible = false
+mesh = null
+
+[node name="wheel_fr" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, 2.75)
+
+[node name="wheel_fl" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, 2.75)
+
+[node name="wheel_rr" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, -0.9)
+
+[node name="wheel_rl" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, -0.9)
+
+[node name="shape" parent="inventory_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, 0.688)
+shape = SubResource("BoxShape3D_n88wl")
+
+[node name="old_truck" parent="." index="14" instance=ExtResource("2_n1j1q")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.75, 0)

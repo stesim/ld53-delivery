@@ -20,7 +20,6 @@ extends VehicleBody3D
 @export_range(0.0, 20.0, 0.01, "or_greater") var max_speed := 16.0
 @export_range(0.0, 100.0) var max_brake_force := 1.0
 @export_range(0.0, 90.0, 0.01, "radians") var max_steering_angle := 0.25 * PI
-@export_range(0.0, 200.0, 0.01, "or_greater") var inventory_loss_acceleration_threshold := 50.0
 @export_range(0.0, 20.0, 0.01, "or_greater") var crash_sound_speed_threshold := 5.0
 @export_range(0.0, 20.0, 0.01, "or_greater") var brake_sound_speed_threshold := 3.0
 
