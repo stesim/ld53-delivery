@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="9_q7j6y"]
 [ext_resource type="PackedScene" uid="uid://dm7hqkegkwcgm" path="res://vehicles/truck_flat.tscn" id="10_2gp4b"]
 [ext_resource type="PackedScene" uid="uid://dbqpkukigstd7" path="res://vehicles/truck_delivery.tscn" id="11_ikg86"]
-[ext_resource type="PackedScene" path="res://vehicles/construction_vehicle.tscn" id="12_ls5uq"]
+[ext_resource type="PackedScene" uid="uid://bcxgjudwii565" path="res://vehicles/construction_vehicle.tscn" id="12_ls5uq"]
 [ext_resource type="Texture2D" uid="uid://dwph88u5iktro" path="res://assets/gui/key.png" id="13_fm3m8"]
 [ext_resource type="Texture2D" uid="uid://nimgbl8bd61x" path="res://assets/gui/burger.png" id="13_m67nx"]
 [ext_resource type="Script" path="res://tracking_camera.gd" id="14_juihp"]

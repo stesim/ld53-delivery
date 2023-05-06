@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbqpkukigstd7"]
+[gd_scene load_steps=9 format=3 uid="uid://dbqpkukigstd7"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_4o630"]
 [ext_resource type="ArrayMesh" uid="uid://bp7as382d1x25" path="res://assets/cars/delivery.res" id="2_k88b4"]
+
+[sub_resource type="Curve" id="Curve_c7ikt"]
+_data = [Vector2(0, 0.481818), 0.0, 1.64727, 0, 0, Vector2(0.884106, 0.4), -3.24463, -3.24463, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7vbqh"]
 size = Vector3(0.1, 1, 1.8)
@@ -21,6 +25,10 @@ size = Vector3(1.25, 1.40313, 3.2)
 [node name="truck_delivery" instance=ExtResource("1_4o630")]
 mass = 3000.0
 center_of_mass = Vector3(0, 0.2, 0.21)
+max_engine_force = 5000.0
+power_curve = SubResource("Curve_c7ikt")
+max_speed = 10.0
+max_steering_angle = 0.349066
 
 [node name="collision_shape3" type="CollisionShape3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.8, -0.699974)

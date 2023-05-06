@@ -15,8 +15,9 @@ extends VehicleBody3D
 			if _sound_engine:
 				_sound_engine.play()
 
-
-@export_range(0.0, 500.0, 0.01, "or_greater") var max_engine_force := 50.0
+@export_range(0.0, 10000.0, 0.01, "or_greater") var max_engine_force := 6000.0
+@export var power_curve : Curve
+@export_range(0.0, 20.0, 0.01, "or_greater") var max_speed := 16.0
 @export_range(0.0, 100.0) var max_brake_force := 1.0
 @export_range(0.0, 90.0, 0.01, "radians") var max_steering_angle := 0.25 * PI
 @export_range(0.0, 200.0, 0.01, "or_greater") var inventory_loss_acceleration_threshold := 50.0
@@ -40,9 +41,10 @@ func _ready() -> void:
 
 
 func _physics_process(_delta : float) -> void:
+	var speed := linear_velocity.length()
 	var was_braking := brake > 0.0
 
-	engine_force = max_engine_force * Input.get_axis("reverse", "accelerate")
+	engine_force = power_curve.sample_baked(speed / max_speed) * max_engine_force * Input.get_axis("reverse", "accelerate")
 	brake = max_brake_force * Input.get_action_strength("brake")
 	steering = max_steering_angle * Input.get_axis("steer_right", "steer_left")
 
@@ -52,7 +54,6 @@ func _physics_process(_delta : float) -> void:
 	if move_forward and Input.get_axis("reverse", "accelerate") < 0.0:
 		brake = max_brake_force * -1.0 * Input.get_axis("reverse", "accelerate")
 
-	var speed := linear_velocity.length()
 
 	var is_braking := brake > 0.0
 	if not was_braking and is_braking and speed >= brake_sound_speed_threshold:

@@ -1,7 +1,11 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://bcxgjudwii565"]
 
 [ext_resource type="PackedScene" uid="uid://bosvhjnjwtr7t" path="res://vehicles/vehicle.tscn" id="1_h22oh"]
 [ext_resource type="PackedScene" uid="uid://5rc26rh6worb" path="res://assets/cars/construction_vehicle.glb" id="2_tohfy"]
+
+[sub_resource type="Curve" id="Curve_q3qau"]
+_data = [Vector2(0, 0.972727), 0.0, -0.0269162, 0, 0, Vector2(1, 0), -1.96104, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y0tn4"]
 size = Vector3(1.2615, 0.325, 1.8)
@@ -25,6 +29,9 @@ size = Vector3(1.26288, 0.570422, 0.05)
 size = Vector3(1.36017, 1.76223, 2.06282)
 
 [node name="construction_vehicle" instance=ExtResource("1_h22oh")]
+max_engine_force = 5000.0
+power_curve = SubResource("Curve_q3qau")
+max_speed = 8.0
 max_steering_angle = 0.349066
 
 [node name="construction_vehicle" parent="." index="0" instance=ExtResource("2_tohfy")]

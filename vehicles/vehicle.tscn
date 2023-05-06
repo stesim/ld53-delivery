@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bosvhjnjwtr7t"]
+[gd_scene load_steps=11 format=3 uid="uid://bosvhjnjwtr7t"]
 
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cvnsxskahwkk2" path="res://physics_inventory_area.tscn" id="4_lcwta"]
 [ext_resource type="AudioStream" uid="uid://ck2ejuwn8p08m" path="res://assets/sounds/tires_screech.wav" id="6_wm01k"]
 [ext_resource type="AudioStream" uid="uid://c13qisub7wdhw" path="res://assets/sounds/242740__marlonhj__engine.wav" id="8_sj5ua"]
+
+[sub_resource type="Curve" id="Curve_xe40q"]
+_data = [Vector2(0, 0.645455), 0.0, -0.0269162, 0, 0, Vector2(0.741722, 0.681818), -2.85105, -2.85105, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84yfh"]
 size = Vector3(1.3, 0.3, 3.2)
@@ -23,7 +27,7 @@ center_of_mass = Vector3(0, 0.05, 0.21)
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_x1xpc")
-max_engine_force = 3000.0
+power_curve = SubResource("Curve_xe40q")
 max_brake_force = 100.0
 max_steering_angle = 0.523599
 
