@@ -68,6 +68,12 @@ mesh = ExtResource("2_cmy2o")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 22.5)
 mesh = ExtResource("5_0hful")
 
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5135, 0, 19.148)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 2, 0.6, 6, 1.25, 8, 1.25, 8, 0)
+depth = 3.0
+
 [node name="to_enemy_lane01" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 20)
 

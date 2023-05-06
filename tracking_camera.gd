@@ -22,19 +22,29 @@ var _is_adjusting := false
 
 func _ready() -> void:
 	_cycle_configs()
+	_update_transform(false)
 
 
 func _physics_process(_delta : float) -> void:
-	if target:
-		var offset := _current_config.distance * (
-			Vector3.FORWARD
-			.rotated(Vector3.RIGHT, _current_config.pitch)
-			.rotated(Vector3.UP, _current_config.yaw)
-		)
+	_update_transform()
 
-		var ideal_position := target.global_position + offset.rotated(Vector3.UP, target.global_rotation.y)
+
+func _update_transform(interpolated := true) -> void:
+	if not target:
+		return
+
+	var offset := _current_config.distance * (
+		Vector3.FORWARD
+		.rotated(Vector3.RIGHT, _current_config.pitch)
+		.rotated(Vector3.UP, _current_config.yaw)
+	)
+
+	var ideal_position := target.global_position + offset.rotated(Vector3.UP, target.global_rotation.y)
+	if interpolated:
 		var interpolated_position := ideal_position.slerp(global_position, smoothing)
 		look_at_from_position(interpolated_position, target.global_position)
+	else:
+		look_at_from_position(ideal_position, target.global_position)
 
 
 func _unhandled_input(event : InputEvent) -> void:

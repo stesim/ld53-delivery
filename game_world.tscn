@@ -82,7 +82,7 @@ script = ExtResource("1_wxayb")
 background_tracks = Array[AudioStream]([ExtResource("2_wuftt"), ExtResource("3_lhff5"), ExtResource("4_d6s50"), ExtResource("5_pvijm"), ExtResource("6_d5khg"), ExtResource("7_7inye"), ExtResource("8_ypdcj")])
 
 [node name="truck" parent="." instance=ExtResource("9_q7j6y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2455, 2.80538, 18.6208)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.246, 1.5, 25.804)
 
 [node name="truck_flat" parent="." instance=ExtResource("10_2gp4b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
