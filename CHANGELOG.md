@@ -5,7 +5,9 @@ Changes to the game since submission to Ludum Dare 53.
 
 ## 2023-05-06
 
-- Added construction vehicle
+- Added new vehicles
+    - Construction vehicle
+    - Old truck
 - Modified vehicles to use individual power curves
 - Fixed crash sound not being played
 
