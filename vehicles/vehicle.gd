@@ -29,7 +29,9 @@ var _previous_speed := 0.0
 
 
 @onready var _crash_sound := %crash_sound
-@onready var _sound_engine := %sound_engine
+@onready var _sound_engine : AudioStreamPlayer = %sound_engine
+@onready var _initial_engine_sound_pitch := _sound_engine.pitch_scale
+@onready var _initial_engine_sound_volume := _sound_engine.volume_db
 
 
 func _ready() -> void:
@@ -61,8 +63,8 @@ func _physics_process(_delta : float) -> void:
 	if speed < 0.5:
 		move_forward = false
 
-	_sound_engine.pitch_scale = 0.5 + speed / 10.0
-	_sound_engine.volume_db = -8.0 + 10.0 * speed / 10.0
+	_sound_engine.pitch_scale = (0.5 + speed / 10.0) * _initial_engine_sound_pitch
+	_sound_engine.volume_db = _initial_engine_sound_volume + speed
 
 	_previous_speed = speed
 
