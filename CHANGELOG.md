@@ -7,7 +7,9 @@ Changes to the game since submission to Ludum Dare 53.
 
 - Added street sweeper vehicle
     - Can be used to remove littered items from the ground
+- Added separate volume settings for music and sound effects
 - Tweaked engine sounds of the vehicles
+- Settings are now persistent (non-browser builds only)
 
 
 ## 2023-05-06
