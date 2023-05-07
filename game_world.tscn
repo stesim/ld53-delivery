@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=38 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://nmfj8b6qoy5w" path="res://assets/gui/steering_wheel.png" id="18_nvpur"]
 [ext_resource type="Texture2D" uid="uid://cphtd0be0vcd4" path="res://assets/gui/cash.png" id="20_6eu0r"]
 [ext_resource type="Texture2D" uid="uid://bn3rcvb5ihgkk" path="res://assets/gui/reset.png" id="21_c3jf2"]
+[ext_resource type="PackedScene" uid="uid://46b6hisv66ky" path="res://vehicles/street_sweeper.tscn" id="27_0pmg3"]
 
 [sub_resource type="Resource" id="Resource_1t8dc"]
 script = ExtResource("15_3878b")
@@ -558,5 +559,8 @@ environment = SubResource("Environment_xaiqv")
 [node name="sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
 shadow_enabled = true
+
+[node name="street_sweeper" parent="." instance=ExtResource("27_0pmg3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -43.8553, 1, 38.489)
 
 [editable path="ui/overlay_menu"]

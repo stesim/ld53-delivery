@@ -7,7 +7,8 @@ extends VehicleBody3D
 		set_physics_process(active)
 		set_process_unhandled_input(active)
 		if not active:
-			_sound_engine.stop()
+			if _sound_engine:
+				_sound_engine.stop()
 			engine_force = 0.0
 			steering = 0.0
 			brake = max_brake_force
