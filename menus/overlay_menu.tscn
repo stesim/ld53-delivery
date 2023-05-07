@@ -80,15 +80,42 @@ columns = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/settings"]
 layout_mode = 2
-text = "Volume"
+text = "Master Volume"
 
-[node name="volume_slider" type="HSlider" parent="PanelContainer/MarginContainer/settings"]
+[node name="master_volume_slider" type="HSlider" parent="PanelContainer/MarginContainer/settings"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 4
-value = 50.0
-rounded = true
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/settings"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="music_volume_slider" type="HSlider" parent="PanelContainer/MarginContainer/settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="Label4" type="Label" parent="PanelContainer/MarginContainer/settings"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="sfx_volume_slider" type="HSlider" parent="PanelContainer/MarginContainer/settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 0.5
 
 [node name="Label2" type="Label" parent="PanelContainer/MarginContainer/settings"]
 layout_mode = 2
@@ -123,5 +150,7 @@ editable = false
 [connection signal="pressed" from="button_list/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="toggled" from="button_list/credits_button" to="." method="_on_credits_button_toggled"]
 [connection signal="pressed" from="button_list/quit_button" to="." method="_on_quit_button_pressed"]
-[connection signal="value_changed" from="PanelContainer/MarginContainer/settings/volume_slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/MarginContainer/settings/master_volume_slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/MarginContainer/settings/music_volume_slider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/MarginContainer/settings/sfx_volume_slider" to="." method="_on_sfx_volume_slider_value_changed"]
 [connection signal="toggled" from="PanelContainer/MarginContainer/settings/fullscreen_checkbox" to="." method="_on_fullscreen_checkbox_toggled"]

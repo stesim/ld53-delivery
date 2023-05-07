@@ -549,9 +549,11 @@ press key E)"
 unique_name_in_owner = true
 stream = ExtResource("5_26d21")
 pitch_scale = 0.85
+bus = &"SFX"
 
 [node name="background_music" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
+bus = &"Music"
 
 [node name="environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xaiqv")

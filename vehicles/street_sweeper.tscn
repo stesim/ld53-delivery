@@ -154,6 +154,7 @@ volume_db = 0.0
 unique_name_in_owner = true
 stream = ExtResource("5_6mfx4")
 max_polyphony = 2
+bus = &"SFX"
 
 [connection signal="body_entered" from="sweeping_area" to="." method="_on_sweeping_area_body_entered"]
 

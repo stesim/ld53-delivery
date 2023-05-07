@@ -5,10 +5,11 @@ extends Control
 
 
 var _is_ready := false
-var _audio_bus_index := AudioServer.get_bus_index(&"Master")
 
 
-@onready var _volume_slider : Slider = %volume_slider
+@onready var _master_volume_slider : Slider = %master_volume_slider
+@onready var _music_volume_slider : Slider = %music_volume_slider
+@onready var _sfx_volume_slider : Slider = %sfx_volume_slider
 @onready var _fullscreen_checkbox : CheckBox = %fullscreen_checkbox
 @onready var _credits_text_box : TextEdit = %credits_text_box
 
@@ -19,12 +20,10 @@ func _ready() -> void:
 	if pause and visible:
 		GameState.pause()
 
-	_fullscreen_checkbox.button_pressed = get_window().mode == Window.MODE_FULLSCREEN
-	_volume_slider.value = (
-		100.0 * db_to_linear(AudioServer.get_bus_volume_db(_audio_bus_index))
-		if not AudioServer.is_bus_mute(_audio_bus_index) else
-		0.0
-	)
+	_fullscreen_checkbox.button_pressed = GameConfig.fullscreen
+	_master_volume_slider.value = GameConfig.master_volume
+	_music_volume_slider.value = GameConfig.music_volume
+	_sfx_volume_slider.value = GameConfig.sfx_volume
 
 	_load_credits()
 
@@ -70,16 +69,19 @@ func _on_quit_button_pressed() -> void:
 
 
 func _on_volume_slider_value_changed(value : float) -> void:
-	if is_zero_approx(value):
-		AudioServer.set_bus_mute(_audio_bus_index, true)
-	else:
-		AudioServer.set_bus_mute(_audio_bus_index, false)
-		var linear := value / 100.0
-		AudioServer.set_bus_volume_db(_audio_bus_index, linear_to_db(linear))
+	GameConfig.master_volume = value
+
+
+func _on_music_volume_slider_value_changed(value : float) -> void:
+	GameConfig.music_volume = value
+
+
+func _on_sfx_volume_slider_value_changed(value : float) -> void:
+	GameConfig.sfx_volume = value
 
 
 func _on_fullscreen_checkbox_toggled(button_pressed : bool) -> void:
-	get_window().mode = Window.MODE_FULLSCREEN if button_pressed else Window.MODE_WINDOWED
+	GameConfig.fullscreen = button_pressed
 
 
 func _on_credits_button_toggled(button_pressed : bool) -> void:

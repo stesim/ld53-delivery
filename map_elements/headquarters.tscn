@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://br25j1oumvjbg" path="res://loading_area.tscn" id="9_4xo7r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcft0"]
-size = Vector3(0.915113, 0.745022, 0.888074)
+size = Vector3(4.346, 3.725, 4.34)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qoarc"]
 resource_name = "pavement"
@@ -148,7 +148,7 @@ ejection_force = 5.0
 [node name="collision_main" type="StaticBody3D" parent="."]
 
 [node name="shape" type="CollisionShape3D" parent="collision_main"]
-transform = Transform3D(4.75, 0, 0, 0, 5, 0, 0, 0, 4.8875, -2.6, 1.85663, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 1.85663, 2.5)
 shape = SubResource("BoxShape3D_hcft0")
 
 [node name="building" parent="." instance=ExtResource("2_uiyfg")]
@@ -228,23 +228,27 @@ unique_name_in_owner = true
 stream = ExtResource("5_e6gbe")
 volume_db = 8.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="hot_dog_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_16jok")
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="burger_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("7_fik8u")
 volume_db = -6.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="drink_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("8_yewbo")
 volume_db = 8.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="cash_loading_area" parent="." instance=ExtResource("9_4xo7r")]
 unique_name_in_owner = true

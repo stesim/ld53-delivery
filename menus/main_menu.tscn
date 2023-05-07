@@ -58,5 +58,6 @@ visible = false
 process_mode = 3
 stream = ExtResource("2_v560a")
 autoplay = true
+bus = &"Music"
 
 [editable path="overlay_menu"]

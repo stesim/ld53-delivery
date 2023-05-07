@@ -17,21 +17,25 @@ unique_name_in_owner = true
 stream = ExtResource("2_cw73l")
 volume_db = 8.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="hot_dog_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_14jyr")
 volume_db = 1.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="burger_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_x5u1g")
 volume_db = -6.0
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="drink_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_jwv67")
 volume_db = 8.0
 max_polyphony = 3
+bus = &"SFX"

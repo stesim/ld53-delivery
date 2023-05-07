@@ -108,10 +108,12 @@ shape = SubResource("BoxShape3D_x36pu")
 unique_name_in_owner = true
 stream = ExtResource("6_wm01k")
 max_polyphony = 3
+bus = &"SFX"
 
 [node name="sound_engine" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("8_sj5ua")
 volume_db = -8.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
