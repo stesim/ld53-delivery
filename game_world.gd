@@ -31,7 +31,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta : float) -> void:
-	var speed : float = MPS_TO_KMPH * _camera.target.linear_velocity.length()
+	var speed : float = MPS_TO_KMPH * _camera.target.get_speed()
 	_speedometer.speed = speed
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bosvhjnjwtr7t"]
+[gd_scene load_steps=12 format=3 uid="uid://bosvhjnjwtr7t"]
 
 [ext_resource type="ArrayMesh" uid="uid://3dmxrwy148gi" path="res://assets/cars/delivery_flat.res" id="1_hvre7"]
 [ext_resource type="Script" path="res://vehicles/vehicle.gd" id="1_x1xpc"]
 [ext_resource type="ArrayMesh" uid="uid://b1if5d6uis8oj" path="res://assets/cars/wheel_truck.res" id="2_1emut"]
 [ext_resource type="PackedScene" uid="uid://cvnsxskahwkk2" path="res://physics_inventory_area.tscn" id="4_lcwta"]
 [ext_resource type="AudioStream" uid="uid://ck2ejuwn8p08m" path="res://assets/sounds/tires_screech.wav" id="6_wm01k"]
+[ext_resource type="AudioStream" uid="uid://yvnprndjd3ds" path="res://assets/sounds/tires_squal_loop.wav" id="7_ktu7j"]
 [ext_resource type="AudioStream" uid="uid://c13qisub7wdhw" path="res://assets/sounds/242740__marlonhj__engine.wav" id="8_sj5ua"]
 
 [sub_resource type="Curve" id="Curve_xe40q"]
@@ -114,6 +115,11 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("8_sj5ua")
 volume_db = -8.0
+bus = &"SFX"
+
+[node name="skid_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_ktu7j")
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

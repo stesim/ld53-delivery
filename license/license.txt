@@ -52,4 +52,6 @@ Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/).
 Street Sweeper Suction Sound - based on "SFX - Switches » Click Sucktion.wav" (https://freesound.org/people/Rvgerxini/sounds/546174/) by RutgerMuller is licensed under CC0 1.0 Universal (CC0 1.0)
 Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/).
 
+Tire Skid Sound - based on "Car tire squeal skid loop" (https://opengameart.org/content/car-tire-squeal-skid-loop) by qubodup is licensed under CC-BY 3.0
+
 Music Loops by Kenney (www.kenney.nl)
