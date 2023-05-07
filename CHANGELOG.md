@@ -3,6 +3,13 @@
 Changes to the game since submission to Ludum Dare 53.
 
 
+## 2023-05-07
+
+- Added street sweeper vehicle
+    - Can be used to remove littered items from the ground
+- Tweaked engine sounds of the vehicles
+
+
 ## 2023-05-06
 
 - Added new vehicles
