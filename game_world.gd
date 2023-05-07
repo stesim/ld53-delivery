@@ -1,6 +1,9 @@
 extends Node3D
 
 
+const MPS_TO_KMPH := 60.0 * 60.0 / 1000.0
+
+
 @export var background_tracks : Array[AudioStream] = []
 
 
@@ -8,6 +11,7 @@ extends Node3D
 @onready var _score_sound := %score_sound
 @onready var _camera := %camera
 @onready var _tutorial_panels := %tutorial_panels
+@onready var _speedometer := %speedometer
 
 
 func _ready() -> void:
@@ -24,6 +28,11 @@ func _ready() -> void:
 	_on_score_changed(false)
 	_on_tutorial_progressed()
 	_swap_to_vehicle(get_tree().get_first_node_in_group(&"vehicles"))
+
+
+func _physics_process(_delta : float) -> void:
+	var speed : float = MPS_TO_KMPH * _camera.target.linear_velocity.length()
+	_speedometer.speed = speed
 
 
 func _unhandled_input(event : InputEvent) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://douesax7qkljh"]
+[gd_scene load_steps=39 format=3 uid="uid://douesax7qkljh"]
 
 [ext_resource type="Script" path="res://game_world.gd" id="1_wxayb"]
 [ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://nmfj8b6qoy5w" path="res://assets/gui/steering_wheel.png" id="18_nvpur"]
 [ext_resource type="Texture2D" uid="uid://cphtd0be0vcd4" path="res://assets/gui/cash.png" id="20_6eu0r"]
 [ext_resource type="Texture2D" uid="uid://bn3rcvb5ihgkk" path="res://assets/gui/reset.png" id="21_c3jf2"]
+[ext_resource type="PackedScene" uid="uid://jsp6d7sghlcx" path="res://hud/speedometer.tscn" id="26_ilm17"]
 [ext_resource type="PackedScene" uid="uid://46b6hisv66ky" path="res://vehicles/street_sweeper.tscn" id="27_0pmg3"]
 
 [sub_resource type="Resource" id="Resource_1t8dc"]
@@ -544,6 +545,17 @@ to your store to increase
 your funds.
 (inside green zone,
 press key E)"
+
+[node name="speedometer" parent="ui" instance=ExtResource("26_ilm17")]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -144.0
+offset_right = 125.0
+offset_bottom = -12.0
+grow_vertical = 0
 
 [node name="score_sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
