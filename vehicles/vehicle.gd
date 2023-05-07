@@ -26,7 +26,7 @@ extends VehicleBody3D
 @export_range(0.0, 100.0) var max_brake_force := 1.0
 @export_range(0.0, 90.0, 0.01, "radians") var max_steering_angle := 0.25 * PI
 @export_range(0.0, 20.0, 0.01, "or_greater") var crash_sound_speed_threshold := 5.0
-@export_range(0.0, 20.0, 0.01, "or_greater") var brake_sound_speed_threshold := 3.0
+@export_range(0.0, 20.0, 0.01, "or_greater") var brake_sound_speed_threshold := 4.0
 @export_range(0.0, 20.0, 0.01, "or_greater") var skid_sound_speed_threshold := 1.5
 
 
@@ -53,7 +53,8 @@ func _ready() -> void:
 func _physics_process(_delta : float) -> void:
 	var velocity := linear_velocity
 	var global_basis := global_transform.basis
-	_speed = absf(velocity.dot(global_basis.z))
+	var forward_velocity := velocity.dot(global_basis.z)
+	_speed = absf(forward_velocity)
 	_slip_speed = absf(velocity.dot(global_basis.x))
 
 	var was_braking := brake > 0.0
@@ -62,12 +63,9 @@ func _physics_process(_delta : float) -> void:
 	brake = max_brake_force * Input.get_action_strength("brake")
 	steering = max_steering_angle * Input.get_axis("steer_right", "steer_left")
 
-	if engine_force > 0.0:
-		move_forward = true
-
-	if move_forward and Input.get_axis("reverse", "accelerate") < 0.0:
-		brake = max_brake_force * -1.0 * Input.get_axis("reverse", "accelerate")
-
+	var velocity_opposes_input := signf(forward_velocity) != signf(engine_force)
+	if not is_zero_approx(engine_force) and not is_zero_approx(forward_velocity) and velocity_opposes_input:
+		brake = max_brake_force
 
 	var is_braking := brake > 0.0
 	if not was_braking and is_braking and _speed >= brake_sound_speed_threshold:
