@@ -6,8 +6,10 @@ Changes to the game since submission to Ludum Dare 53.
 ## 2023-05-08
 
 - Added two-player split-screen mode
-- Fixed braking behavior when switching between accelerating and reversing
 - Tuned flatbed truck to be able to drift
+- Fixed camera entering buildings
+- Fixed braking behavior when switching between accelerating and reversing
+- Fixed delivery to only work if the currently controlled vehicle is inside the zone
 
 
 ## 2023-05-07
