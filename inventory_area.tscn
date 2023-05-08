@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf00x2vfcp63r"]
-
-[ext_resource type="Script" path="res://inventory_area.gd" id="1_1ajn3"]
-
-[node name="inventory" type="Area3D"]
-collision_layer = 2
-collision_mask = 0
-monitoring = false
-script = ExtResource("1_1ajn3")
