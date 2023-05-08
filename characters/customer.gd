@@ -4,6 +4,8 @@ extends CharacterBody3D
 const DEFAULT_ANIMATION_SPEED := 1.0
 
 
+@export var requested_item : PackedScene
+
 @export_range(0.0, 100.0) var speed := 0.5
 
 @export var target_point := Vector3.ZERO :
@@ -11,12 +13,6 @@ const DEFAULT_ANIMATION_SPEED := 1.0
 		target_point = value
 		if is_inside_tree():
 			look_at(target_point)
-
-@export var inventory : Inventory :
-	set(value):
-		inventory = value
-		%inventory_area.inventories = [inventory] as Array[Inventory]
-		%quantity_indicator.inventory = inventory
 
 
 @onready var _animation_player := %AnimationPlayer
@@ -29,7 +25,7 @@ func _ready() -> void:
 	velocity = speed * global_position.direction_to(target_point)
 	look_at(target_point)
 
-	inventory.changed.connect(_on_inventory_changed)
+	%indicator_location.add_child(requested_item.instantiate())
 
 
 func _physics_process(delta : float) -> void:
@@ -48,8 +44,3 @@ func _physics_process(delta : float) -> void:
 	elif not was_walking and _is_walking:
 		_animation_player.play(&"Forward")
 		_animation_player.speed_scale = speed * DEFAULT_ANIMATION_SPEED
-
-
-func _on_inventory_changed() -> void:
-	if inventory.is_full():
-		queue_free()

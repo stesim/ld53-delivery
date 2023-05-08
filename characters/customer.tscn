@@ -1,8 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqlvra1wwcr67"]
+[gd_scene load_steps=11 format=3 uid="uid://bqlvra1wwcr67"]
 
 [ext_resource type="Script" path="res://characters/customer.gd" id="2_em66f"]
-[ext_resource type="PackedScene" uid="uid://cf00x2vfcp63r" path="res://inventory_area.tscn" id="3_kss5y"]
-[ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="5_vxqgd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3smk"]
 size = Vector3(1, 1.5, 1)
@@ -686,9 +684,6 @@ _data = {
 "Strafe Right": SubResource("Animation_xxv41")
 }
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ci6fx"]
-radius = 0.25
-
 [node name="customer" type="CharacterBody3D"]
 collision_layer = 9
 collision_mask = 8
@@ -866,16 +861,6 @@ libraries = {
 "": SubResource("AnimationLibrary_g72mt")
 }
 
-[node name="inventory_area" parent="." instance=ExtResource("3_kss5y")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
-collision_layer = 4
-
-[node name="shape" type="CollisionShape3D" parent="inventory_area"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-shape = SubResource("SphereShape3D_ci6fx")
-
-[node name="quantity_indicator" parent="." instance=ExtResource("5_vxqgd")]
+[node name="indicator_location" type="Marker3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
-placeholder = true

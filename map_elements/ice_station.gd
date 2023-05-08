@@ -16,7 +16,7 @@ var _inventories : Array[Inventory]
 var _cash_inventory := GameState.create_cash_inventory()
 
 
-@onready var _feeding_area := %feeding_area
+@onready var _serving_area : Area3D = %serving_area
 @onready var _cash_indicator := %cash_indicator
 @onready var _item_sounds := %item_sounds
 
@@ -25,14 +25,13 @@ func _ready() -> void:
 	_inventories = GameState.create_item_inventories(item_capacity)
 
 	%inventory_indicator.inventories = _inventories
-	_feeding_area.backing_inventories = _inventories
 
 	_cash_indicator.bundle_size = GameState.CASH_BUNDLE_SIZE
 	_cash_indicator.inventory = _cash_inventory
 
 
 func get_serve_location() -> Vector3:
-	return _feeding_area.global_position
+	return _serving_area.global_position
 
 
 func take_food(item, amount : int) -> int:
@@ -67,9 +66,9 @@ func _spawn_cash() -> void:
 
 
 func _on_serve_timer_timeout() -> void:
-	for item in GameState.FOOD_ITEMS:
-		_feeding_area.transfer(item)
-
-
-func _on_feeding_area_items_transferred(item, quantity : int) -> void:
-	_cash_inventory.add(quantity * GameState.get_item_price(item))
+	for customer in _serving_area.get_overlapping_bodies():
+		for inventory in _inventories:
+			if inventory.item == customer.requested_item and inventory.remove(1) > 0:
+				customer.queue_free()
+				_cash_inventory.add(GameState.get_item_price(inventory.item))
+				return

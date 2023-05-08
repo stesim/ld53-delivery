@@ -25,8 +25,5 @@ func _spawn():
 	var new_customer = customer_scene.instantiate()
 	new_customer.position.x += randf_range(-spawn_area, spawn_area)
 	new_customer.target_point = target_shop.get_serve_location()
-	var inventory := Inventory.new()
-	inventory.item = GameState.FOOD_ITEMS.pick_random()
-	inventory.max_quantity = 1
-	new_customer.inventory = inventory
+	new_customer.requested_item = GameState.FOOD_ITEMS.pick_random()
 	add_child(new_customer)
