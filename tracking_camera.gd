@@ -7,6 +7,7 @@ const MAX_PITCH := 0.5 * PI - 0.1
 @export var target : Node3D :
 	set(value):
 		target = value
+		_ray_cast_params.exclude = [target.get_rid()] if target else []
 		if is_inside_tree() and not _current_config:
 			_cycle_configs()
 
@@ -27,10 +28,12 @@ var input_map := {}
 var _current_config : TrackingCameraConfig = null
 var _adjusted_config := TrackingCameraConfig.new()
 var _is_adjusting := false
+var _ray_cast_params := PhysicsRayQueryParameters3D.new()
 
 
 func _ready() -> void:
 	target = target
+	_ray_cast_params.collision_mask = 1
 
 
 func snap_to_target() -> void:
@@ -52,12 +55,17 @@ func _update_transform(interpolated := true) -> void:
 		.rotated(Vector3.UP, _current_config.yaw)
 	)
 
-	var ideal_position := target.global_position + offset.rotated(Vector3.UP, target.global_rotation.y)
-	if interpolated:
-		var interpolated_position := ideal_position.lerp(global_position, smoothing)
-		look_at_from_position(interpolated_position, target.global_position)
-	else:
-		look_at_from_position(ideal_position, target.global_position)
+	var target_position := target.global_position
+	var ideal_position := target_position + offset.rotated(Vector3.UP, target.global_rotation.y)
+	var calculated_position := ideal_position.lerp(global_position, smoothing) if interpolated else ideal_position
+
+	_ray_cast_params.from = target_position
+	_ray_cast_params.to = calculated_position
+	var hit := get_world_3d().direct_space_state.intersect_ray(_ray_cast_params)
+	if not hit.is_empty():
+		calculated_position = hit.position + 0.05 * calculated_position.direction_to(target_position)
+
+	look_at_from_position(calculated_position, target_position)
 
 
 func _adjust_from_axes(delta : float) -> void:
