@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdu7d15q2hbqp"]
+[gd_scene load_steps=15 format=3 uid="uid://cdu7d15q2hbqp"]
 
 [ext_resource type="Script" path="res://map_elements/ice_station.gd" id="1_q8et4"]
 [ext_resource type="PackedScene" uid="uid://bfanekr5bc0a6" path="res://assets/buildings/dummy_ice_hut.glb" id="1_ssjb8"]
@@ -6,6 +6,10 @@
 [ext_resource type="Material" uid="uid://bd8yuekioc8n" path="res://map_elements/highlight_material.tres" id="4_i3hsj"]
 [ext_resource type="PackedScene" uid="uid://c4lqie0mbh7m6" path="res://inventory_indicator.tscn" id="4_ypo1u"]
 [ext_resource type="PackedScene" uid="uid://5u3nlyjdrb06" path="res://quantity_indicator.tscn" id="6_5twhm"]
+[ext_resource type="AudioStream" uid="uid://y7cds7qtmplg" path="res://assets/sounds/mhmm.mp3" id="7_fodmi"]
+[ext_resource type="AudioStream" uid="uid://cvpjvvmpqq117" path="res://assets/sounds/dog.mp3" id="8_b7wpg"]
+[ext_resource type="AudioStream" uid="uid://dsu4y8otybgw4" path="res://assets/sounds/burger.mp3" id="9_ao1xw"]
+[ext_resource type="AudioStream" uid="uid://by2h1thdiwupy" path="res://assets/sounds/drink_fill.mp3" id="10_yfwx6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxifb"]
 size = Vector3(4, 5.6, 3.3)
@@ -20,9 +24,8 @@ size = Vector2(16, 16)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f73mx"]
 size = Vector3(1, 2, 1)
 
-[node name="ice_station" type="StaticBody3D"]
+[node name="ice_station" type="StaticBody3D" groups=["stalls"]]
 script = ExtResource("1_q8et4")
-cash_ejection_force = 0.0
 
 [node name="collision_shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0)
@@ -31,19 +34,19 @@ shape = SubResource("BoxShape3D_sxifb")
 [node name="dummy_ice_hut" parent="." instance=ExtResource("1_ssjb8")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.26, -0.063, 1.18)
 
-[node name="loading_area" parent="." instance=ExtResource("2_fwrp5")]
-unique_name_in_owner = true
-type = 1
-player_controlled = true
+[node name="delivery_area" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
 
-[node name="shape" type="CollisionShape3D" parent="loading_area"]
+[node name="shape" type="CollisionShape3D" parent="delivery_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_p31t4")
 
 [node name="highlight_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002, 0)
 mesh = SubResource("PlaneMesh_akl5l")
-skeleton = NodePath("../loading_area/shape")
+skeleton = NodePath("")
 
 [node name="hint_label" type="Label3D" parent="highlight_mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
@@ -64,18 +67,40 @@ shape = SubResource("BoxShape3D_f73mx")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36814, 3.52605)
 
-[node name="serve_timer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
 [node name="cash_indicator" parent="." instance=ExtResource("6_5twhm")]
 unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.68703, 1.56375, 1.52867)
 spacing = 0.2
 
-[node name="cash_spawn_location" type="Marker3D" parent="."]
+[node name="serve_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="item_sounds" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.68703, 1.56375, 1.52867)
+
+[node name="ice_cream_sound" type="AudioStreamPlayer" parent="item_sounds"]
+stream = ExtResource("7_fodmi")
+volume_db = 8.0
+max_polyphony = 3
+bus = &"SFX"
+
+[node name="hot_dog_sound" type="AudioStreamPlayer" parent="item_sounds"]
+stream = ExtResource("8_b7wpg")
+max_polyphony = 3
+bus = &"SFX"
+
+[node name="burger_sound" type="AudioStreamPlayer" parent="item_sounds"]
+stream = ExtResource("9_ao1xw")
+volume_db = -6.0
+max_polyphony = 3
+bus = &"SFX"
+
+[node name="drink_sound" type="AudioStreamPlayer" parent="item_sounds"]
+stream = ExtResource("10_yfwx6")
+volume_db = 8.0
+max_polyphony = 3
+bus = &"SFX"
 
 [connection signal="items_transferred" from="feeding_area" to="." method="_on_feeding_area_items_transferred"]
 [connection signal="timeout" from="serve_timer" to="." method="_on_serve_timer_timeout"]

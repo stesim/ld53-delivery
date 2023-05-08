@@ -31,5 +31,8 @@ wheel_friction_slip = 0.8
 use_as_traction = true
 wheel_friction_slip = 0.8
 
-[node name="shape" parent="inventory_area" index="0"]
+[node name="shape" parent="delivery_collection_area" index="0"]
+shape = SubResource("BoxShape3D_8opj6")
+
+[node name="shape" parent="delivery_detection_area" index="0"]
 shape = SubResource("BoxShape3D_8opj6")

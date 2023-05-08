@@ -68,13 +68,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.125, -0.9)
 [node name="wheel_rl" parent="." index="10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.125, -0.9)
 
-[node name="shape" parent="inventory_area" index="0"]
+[node name="shape" parent="delivery_collection_area" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, 0.688)
 shape = SubResource("BoxShape3D_n88wl")
 
-[node name="sound_engine" parent="." index="13"]
-volume_db = -4.0
-pitch_scale = 0.8
+[node name="shape" parent="delivery_detection_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, 0.688)
+shape = SubResource("BoxShape3D_n88wl")
 
 [node name="old_truck" parent="." index="14" instance=ExtResource("2_n1j1q")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.75, 0)
+
+[node name="sound_engine" parent="." index="15"]
+volume_db = -4.0
+pitch_scale = 0.8

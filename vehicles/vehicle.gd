@@ -39,6 +39,9 @@ var _speed := 0.0
 var _slip_speed := 0.0
 
 
+@onready var _delivery_detection_area := %delivery_detection_area
+@onready var _delivery_collection_area := %delivery_collection_area
+
 @onready var _crash_sound := %crash_sound
 @onready var _sound_engine : AudioStreamPlayer = %sound_engine
 @onready var _initial_engine_sound_pitch := _sound_engine.pitch_scale
@@ -102,6 +105,51 @@ func _unhandled_input(event : InputEvent) -> void:
 		return
 	if event.is_action_pressed(input_map.reset_vehicle):
 		_reset.call_deferred()
+
+	if event.is_action_pressed(input_map.transfer_item_1):
+		_transfer_food_item(GameState.FOOD_ITEMS[0])
+	if event.is_action_pressed(input_map.transfer_item_2):
+		_transfer_food_item(GameState.FOOD_ITEMS[1])
+	if event.is_action_pressed(input_map.transfer_item_3):
+		_transfer_food_item(GameState.FOOD_ITEMS[2])
+	if event.is_action_pressed(input_map.transfer_item_4):
+		_transfer_food_item(GameState.FOOD_ITEMS[3])
+
+	if event.is_action_pressed(input_map.transfer_cash):
+		_transfer_cash()
+
+
+func _transfer_food_item(item) -> void:
+	for area in _delivery_detection_area.get_overlapping_areas():
+		var target = area.get_owner()
+		if target.is_in_group(&"stalls"):
+			var item_to_be_transferred := _find_loaded_item(item)
+			if item_to_be_transferred and target.take_food(item, 1) > 0:
+				item_to_be_transferred.queue_free()
+				break
+		if target.is_in_group(&"headquarters"):
+			target.spawn_item(item)
+			break
+
+
+func _transfer_cash() -> void:
+	for area in _delivery_detection_area.get_overlapping_areas():
+		var target = area.get_owner()
+		if target.is_in_group(&"stalls") and target.extract_cash():
+			break
+		if target.is_in_group(&"headquarters"):
+			var item_to_be_transferred := _find_loaded_item(GameState.CASH_ITEM)
+			if item_to_be_transferred:
+				target.take_cash(GameState.CASH_BUNDLE_SIZE)
+				item_to_be_transferred.queue_free()
+				break
+
+
+func _find_loaded_item(item_type) -> Node:
+	for item in _delivery_collection_area.get_overlapping_bodies():
+		if item.item_scene == item_type:
+			return item
+	return null
 
 
 func _reset() -> void:

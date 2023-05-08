@@ -169,7 +169,7 @@ select_input_device={
 [layer_names]
 
 3d_physics/layer_1="Generic Collisions"
-3d_physics/layer_2="Delivery Loading"
+3d_physics/layer_2="Delivery Area"
 3d_physics/layer_3="Customer Feeding"
 3d_physics/layer_4="Customer Collision"
 3d_physics/layer_5="Food Items"

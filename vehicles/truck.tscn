@@ -57,6 +57,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.125, -0.95)
 [node name="wheel_rl" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.125, -0.95)
 
-[node name="shape" parent="inventory_area" index="0"]
+[node name="shape" parent="delivery_collection_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
+shape = SubResource("BoxShape3D_0h3y0")
+
+[node name="shape" parent="delivery_detection_area" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
 shape = SubResource("BoxShape3D_0h3y0")

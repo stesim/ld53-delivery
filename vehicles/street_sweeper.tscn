@@ -142,19 +142,23 @@ damping_relaxation = 2.0
 [node name="mesh" parent="wheel_rl" index="0"]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
-[node name="shape" parent="inventory_area" index="0"]
+[node name="shape" parent="delivery_collection_area" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 shape = SubResource("BoxShape3D_qy0gh")
 
-[node name="sound_engine" parent="." index="16"]
-stream = ExtResource("4_y2wkj")
-volume_db = 0.0
+[node name="shape" parent="delivery_detection_area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("BoxShape3D_qy0gh")
 
 [node name="suction_sound" type="AudioStreamPlayer" parent="." index="17"]
 unique_name_in_owner = true
 stream = ExtResource("5_6mfx4")
 max_polyphony = 2
 bus = &"SFX"
+
+[node name="sound_engine" parent="." index="18"]
+stream = ExtResource("4_y2wkj")
+volume_db = 0.0
 
 [connection signal="body_entered" from="sweeping_area" to="." method="_on_sweeping_area_body_entered"]
 
