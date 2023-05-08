@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpfbvnh20vc8h"]
+
+[ext_resource type="Script" path="res://game_scenes/player_view.gd" id="1_wdbyq"]
+[ext_resource type="Script" path="res://tracking_camera.gd" id="2_7d3cl"]
+[ext_resource type="PackedScene" uid="uid://bni8gxxhmqdcc" path="res://hud/hud.tscn" id="4_xsacs"]
+[ext_resource type="Script" path="res://tracking_camera_config.gd" id="15_3878b"]
+
+[sub_resource type="Resource" id="Resource_1t8dc"]
+script = ExtResource("15_3878b")
+pitch = 0.436332
+yaw = 0.0
+distance = 4.0
+
+[sub_resource type="Resource" id="Resource_ypmue"]
+script = ExtResource("15_3878b")
+pitch = 0.436332
+yaw = 0.0
+distance = 7.0
+
+[sub_resource type="Resource" id="Resource_6iaco"]
+script = ExtResource("15_3878b")
+pitch = 1.0472
+yaw = 0.0
+distance = 10.0
+
+[sub_resource type="Resource" id="Resource_loulw"]
+script = ExtResource("15_3878b")
+pitch = 1.4708
+yaw = 0.0
+distance = 20.0
+
+[sub_resource type="Resource" id="Resource_heuos"]
+script = ExtResource("15_3878b")
+pitch = 0.523599
+yaw = 0.0
+distance = 2.0
+
+[node name="player_view" type="Node3D"]
+script = ExtResource("1_wdbyq")
+
+[node name="camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_7d3cl")
+configs = Array[ExtResource("15_3878b")]([SubResource("Resource_1t8dc"), SubResource("Resource_ypmue"), SubResource("Resource_6iaco"), SubResource("Resource_loulw"), SubResource("Resource_heuos")])
+
+[node name="ui_layer" type="CanvasLayer" parent="."]
+
+[node name="hud" parent="ui_layer" instance=ExtResource("4_xsacs")]
+unique_name_in_owner = true

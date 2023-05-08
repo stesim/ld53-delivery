@@ -32,7 +32,11 @@ alignment = 1
 
 [node name="play_button" type="Button" parent="button_list"]
 layout_mode = 2
-text = "Play"
+text = "Single-player"
+
+[node name="play_split_screen" type="Button" parent="button_list"]
+layout_mode = 2
+text = "Split-screen"
 
 [node name="resume_button" type="Button" parent="button_list"]
 layout_mode = 2
@@ -146,6 +150,7 @@ text = "Game by MAR & stesim
 editable = false
 
 [connection signal="pressed" from="button_list/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="button_list/play_split_screen" to="." method="_on_play_split_screen_pressed"]
 [connection signal="pressed" from="button_list/resume_button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="button_list/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="toggled" from="button_list/credits_button" to="." method="_on_credits_button_toggled"]

@@ -1,0 +1,467 @@
+[gd_scene load_steps=13 format=3 uid="uid://bni8gxxhmqdcc"]
+
+[ext_resource type="Script" path="res://hud/hud.gd" id="1_01lco"]
+[ext_resource type="PackedScene" uid="uid://jsp6d7sghlcx" path="res://hud/speedometer.tscn" id="1_7tlr8"]
+[ext_resource type="Texture2D" uid="uid://dwph88u5iktro" path="res://assets/gui/key.png" id="2_p86i6"]
+[ext_resource type="Texture2D" uid="uid://nmfj8b6qoy5w" path="res://assets/gui/steering_wheel.png" id="3_o6xpn"]
+[ext_resource type="Texture2D" uid="uid://bn3rcvb5ihgkk" path="res://assets/gui/reset.png" id="4_xvm8a"]
+[ext_resource type="Texture2D" uid="uid://2ruhwfg33dxk" path="res://assets/gui/iceCream.png" id="5_qnicb"]
+[ext_resource type="Texture2D" uid="uid://bmg67rsc8kulp" path="res://assets/gui/hotDog.png" id="6_s3ghc"]
+[ext_resource type="Texture2D" uid="uid://nimgbl8bd61x" path="res://assets/gui/burger.png" id="7_5y1yt"]
+[ext_resource type="Texture2D" uid="uid://c0kauixpa02qd" path="res://assets/gui/soda.png" id="8_nf1br"]
+[ext_resource type="Texture2D" uid="uid://cphtd0be0vcd4" path="res://assets/gui/cash.png" id="9_fblff"]
+
+[sub_resource type="Theme" id="Theme_wemr6"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 23
+
+[sub_resource type="Theme" id="Theme_a5v8t"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 32
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_01lco")
+
+[node name="speedometer" parent="." instance=ExtResource("1_7tlr8")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -144.0
+offset_right = 125.0
+offset_bottom = -12.0
+grow_vertical = 0
+
+[node name="steering_controls" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -162.0
+offset_top = 8.0
+offset_right = 84.9999
+offset_bottom = 191.0
+grow_horizontal = 0
+scale = Vector2(0.621437, 0.621437)
+
+[node name="Up" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 122.93
+offset_top = 6.0
+offset_right = 302.93
+offset_bottom = 55.0
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="steering_controls/Up"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_wemr6")
+text = "⬆"
+horizontal_alignment = 1
+
+[node name="Left" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 57.9304
+offset_top = 71.0
+offset_right = 237.93
+offset_bottom = 120.0
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="steering_controls/Left"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_wemr6")
+text = "⬅"
+horizontal_alignment = 1
+
+[node name="Right" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 189.93
+offset_top = 74.0
+offset_right = 369.93
+offset_bottom = 123.0
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="steering_controls/Right"]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 71.0
+offset_bottom = 53.0
+rotation = 1.5708
+theme = SubResource("Theme_wemr6")
+text = "⬆"
+horizontal_alignment = 1
+
+[node name="Dpad" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 118.93
+offset_top = 63.0
+offset_right = 225.93
+offset_bottom = 122.0
+texture = ExtResource("3_o6xpn")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Down" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 122.93
+offset_top = 132.0
+offset_right = 302.93
+offset_bottom = 181.0
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="steering_controls/Down"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_wemr6")
+text = "⬇"
+horizontal_alignment = 1
+
+[node name="Reset" type="TextureRect" parent="steering_controls"]
+layout_mode = 2
+offset_left = 59.5393
+offset_top = 4.82751
+offset_right = 239.539
+offset_bottom = 53.8275
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="Key" type="Label" parent="steering_controls/Reset"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 51.0
+theme = SubResource("Theme_wemr6")
+text = "R"
+horizontal_alignment = 1
+
+[node name="Reset Icon" type="TextureRect" parent="steering_controls"]
+layout_mode = 0
+offset_right = 159.0
+offset_bottom = 55.0
+texture = ExtResource("4_xvm8a")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="item_controls" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 580.0
+offset_bottom = 72.0
+scale = Vector2(0.660392, 0.660392)
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="item_controls"]
+layout_mode = 2
+
+[node name="IceCream Button" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="item_controls/HBoxContainer/IceCream Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a5v8t")
+text = "1"
+horizontal_alignment = 1
+
+[node name="IceCream Icon" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_qnicb")
+stretch_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+
+[node name="HotDog Button" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="item_controls/HBoxContainer/HotDog Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a5v8t")
+text = "2"
+horizontal_alignment = 1
+
+[node name="HotDog Icon" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_s3ghc")
+stretch_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+
+[node name="Burger Button" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="item_controls/HBoxContainer/Burger Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a5v8t")
+text = "3"
+horizontal_alignment = 1
+
+[node name="Burger Icon" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_5y1yt")
+stretch_mode = 2
+
+[node name="VSeparator3" type="VSeparator" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+
+[node name="Drink Button" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="item_controls/HBoxContainer/Drink Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a5v8t")
+text = "4
+"
+horizontal_alignment = 1
+
+[node name="Drink Icon" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_nf1br")
+stretch_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+
+[node name="Cash Button" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_p86i6")
+expand_mode = 2
+
+[node name="Key" type="Label" parent="item_controls/HBoxContainer/Cash Button"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a5v8t")
+text = "E"
+horizontal_alignment = 1
+
+[node name="Cash Icon" type="TextureRect" parent="item_controls/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_fblff")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="score_panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_top = 64.0
+offset_right = 44.0
+offset_bottom = 136.0
+grow_horizontal = 2
+
+[node name="margin" type="MarginContainer" parent="score_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="vbox" type="VBoxContainer" parent="score_panel/margin"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="score_panel/margin/vbox"]
+layout_mode = 2
+text = "Funds"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="revenue_label" type="Label" parent="score_panel/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$0"
+horizontal_alignment = 1
+
+[node name="broke_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 112.0
+offset_right = 94.0
+offset_bottom = 184.0
+grow_horizontal = 2
+
+[node name="margin" type="MarginContainer" parent="broke_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="broke_panel/margin"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="broke_panel/margin/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.360784, 0.360784, 1)
+text = "You went bankrupt in"
+horizontal_alignment = 1
+
+[node name="broke_time_label" type="Label" parent="broke_panel/margin/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.360784, 0.360784, 1)
+text = "0:00"
+horizontal_alignment = 1
+
+[node name="tutorial_panels" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -822.0
+offset_top = -153.0
+offset_right = -8.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="tutorial_panel" type="PanelContainer" parent="tutorial_panels"]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="margin" type="MarginContainer" parent="tutorial_panels/tutorial_panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="tutorial1" type="Label" parent="tutorial_panels/tutorial_panel/margin"]
+layout_mode = 2
+text = "Drive to your store and 
+get your food delivery. 
+(inside green zone,
+press keys 1 - 4)"
+
+[node name="tutorial_panel2" type="PanelContainer" parent="tutorial_panels"]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="margin" type="MarginContainer" parent="tutorial_panels/tutorial_panel2"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="tutorial2" type="Label" parent="tutorial_panels/tutorial_panel2/margin"]
+layout_mode = 2
+text = "Now drive to your diners
+and deliver the supplies.
+(inside green zones,
+press keys 1 - 4)"
+
+[node name="tutorial_panel3" type="PanelContainer" parent="tutorial_panels"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="margin" type="MarginContainer" parent="tutorial_panels/tutorial_panel3"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="tutorial3" type="Label" parent="tutorial_panels/tutorial_panel3/margin"]
+layout_mode = 2
+text = "You can also get your
+earnings there - after
+selling enough food.
+(below cash stack next
+to the diner, press key E)"
+
+[node name="tutorial_panel4" type="PanelContainer" parent="tutorial_panels"]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="margin" type="MarginContainer" parent="tutorial_panels/tutorial_panel4"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="tutorial4" type="Label" parent="tutorial_panels/tutorial_panel4/margin"]
+layout_mode = 2
+text = "Bring your cash back
+to your store to increase 
+your funds.
+(inside green zone,
+press key E)"

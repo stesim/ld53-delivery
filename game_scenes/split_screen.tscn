@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp2caado1ja0o"]
+
+[ext_resource type="Script" path="res://game_scenes/split_screen.gd" id="1_ce325"]
+[ext_resource type="PackedScene" uid="uid://dejoxoqo67nr" path="res://game_scenes/game_world.tscn" id="2_sr3xb"]
+[ext_resource type="PackedScene" uid="uid://cpfbvnh20vc8h" path="res://game_scenes/player_view.tscn" id="3_owovv"]
+[ext_resource type="PackedScene" uid="uid://dy71lmaltr0c2" path="res://menus/overlay_menu.tscn" id="4_3qwnk"]
+
+[node name="split_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="hbox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_ce325")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="viewport_1" type="SubViewport" parent="hbox/SubViewportContainer"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(956, 1080)
+render_target_update_mode = 4
+
+[node name="game_world" parent="hbox/SubViewportContainer/viewport_1" instance=ExtResource("2_sr3xb")]
+
+[node name="player_view" parent="hbox/SubViewportContainer/viewport_1" instance=ExtResource("3_owovv")]
+
+[node name="ColorRect" type="ColorRect" parent="hbox"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="viewport_2" type="SubViewport" parent="hbox/SubViewportContainer2"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(956, 1080)
+render_target_update_mode = 4
+
+[node name="player_view" parent="hbox/SubViewportContainer2/viewport_2" instance=ExtResource("3_owovv")]
+player_index = 1
+
+[node name="overlay_menu" parent="." instance=ExtResource("4_3qwnk")]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_left = -4.0
+offset_right = -4.0
+
+[node name="play_button" parent="overlay_menu/button_list" index="0"]
+visible = false
+
+[node name="play_split_screen" parent="overlay_menu/button_list" index="1"]
+visible = false
+
+[node name="38748" type="HScrollBar" parent="overlay_menu/credits_text_box" index="5"]
+visible = false
+layout_mode = 0
+offset_top = 232.0
+offset_right = 760.0
+offset_bottom = 240.0
+max_value = 0.0
+
+[node name="38749" type="VScrollBar" parent="overlay_menu/credits_text_box" index="6"]
+visible = false
+layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 768.0
+offset_bottom = 232.0
+max_value = 0.0
+
+[node name="38750" type="Timer" parent="overlay_menu/credits_text_box" index="7"]
+wait_time = 0.65
+
+[node name="38751" type="Timer" parent="overlay_menu/credits_text_box" index="8"]
+wait_time = 0.05
+
+[node name="38752" type="Timer" parent="overlay_menu/credits_text_box" index="9"]
+wait_time = 3.0
+one_shot = true
+
+[node name="38221" type="HScrollBar" parent="overlay_menu/credits_text_box" index="10"]
+visible = false
+layout_mode = 0
+offset_top = 232.0
+offset_right = 760.0
+offset_bottom = 240.0
+max_value = 0.0
+
+[node name="38222" type="VScrollBar" parent="overlay_menu/credits_text_box" index="11"]
+visible = false
+layout_mode = 0
+offset_left = 760.0
+offset_top = 4.0
+offset_right = 768.0
+offset_bottom = 232.0
+max_value = 0.0
+
+[node name="38223" type="Timer" parent="overlay_menu/credits_text_box" index="12"]
+wait_time = 0.65
+
+[node name="38224" type="Timer" parent="overlay_menu/credits_text_box" index="13"]
+wait_time = 0.05
+
+[node name="38225" type="Timer" parent="overlay_menu/credits_text_box" index="14"]
+wait_time = 3.0
+one_shot = true
+
+[node name="background" type="Panel" parent="overlay_menu"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[editable path="overlay_menu"]

@@ -1,0 +1,70 @@
+[gd_scene load_steps=20 format=3 uid="uid://dejoxoqo67nr"]
+
+[ext_resource type="Script" path="res://game_scenes/game_world.gd" id="1_0ggk8"]
+[ext_resource type="PackedScene" uid="uid://db8m8ii5ewx0l" path="res://maps/test_map.tscn" id="2_050wm"]
+[ext_resource type="AudioStream" uid="uid://cv12ngfg2vqtx" path="res://assets/music/Cheerful Annoyance.ogg" id="2_wuftt"]
+[ext_resource type="AudioStream" uid="uid://cuy6cbssa4ss4" path="res://assets/music/Farm Frolics.ogg" id="3_lhff5"]
+[ext_resource type="AudioStream" uid="uid://cgejiskvw3lyn" path="res://assets/music/Flowing Rocks.ogg" id="4_d6s50"]
+[ext_resource type="AudioStream" uid="uid://bapcvn8cugbkv" path="res://assets/sounds/coin2.ogg" id="5_26d21"]
+[ext_resource type="AudioStream" uid="uid://bqk3t22grum2k" path="res://assets/music/Italian Mom.ogg" id="5_pvijm"]
+[ext_resource type="AudioStream" uid="uid://dsgew3iijckw1" path="res://assets/music/Mishief Stroll.ogg" id="6_d5khg"]
+[ext_resource type="AudioStream" uid="uid://cgjbekrvogi5b" path="res://assets/music/Polka Train.ogg" id="7_7inye"]
+[ext_resource type="AudioStream" uid="uid://dqen0rqp3mdgt" path="res://assets/music/Swinging Pants.ogg" id="8_ypdcj"]
+[ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="9_q7j6y"]
+[ext_resource type="PackedScene" uid="uid://dm7hqkegkwcgm" path="res://vehicles/truck_flat.tscn" id="10_2gp4b"]
+[ext_resource type="PackedScene" uid="uid://dbqpkukigstd7" path="res://vehicles/truck_delivery.tscn" id="11_ikg86"]
+[ext_resource type="PackedScene" uid="uid://bcxgjudwii565" path="res://vehicles/construction_vehicle.tscn" id="12_ls5uq"]
+[ext_resource type="PackedScene" uid="uid://q6mx3brfwof7" path="res://vehicles/old_truck.tscn" id="13_rfc04"]
+[ext_resource type="PackedScene" uid="uid://46b6hisv66ky" path="res://vehicles/street_sweeper.tscn" id="27_0pmg3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjrqk"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_80r3o"]
+sky_material = SubResource("ProceduralSkyMaterial_kjrqk")
+
+[sub_resource type="Environment" id="Environment_xaiqv"]
+background_mode = 2
+sky = SubResource("Sky_80r3o")
+tonemap_mode = 2
+
+[node name="game_world" type="Node3D"]
+script = ExtResource("1_0ggk8")
+background_tracks = Array[AudioStream]([ExtResource("2_wuftt"), ExtResource("3_lhff5"), ExtResource("4_d6s50"), ExtResource("5_pvijm"), ExtResource("6_d5khg"), ExtResource("7_7inye"), ExtResource("8_ypdcj")])
+
+[node name="truck" parent="." instance=ExtResource("9_q7j6y")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.246, 1.5, 25.804)
+
+[node name="truck_flat" parent="." instance=ExtResource("10_2gp4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="truck_delivery" parent="." instance=ExtResource("11_ikg86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 1, 3)
+
+[node name="construction_vehicle" parent="." instance=ExtResource("12_ls5uq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.3826, 0.735576, 21.5943)
+
+[node name="old_truck" parent="." instance=ExtResource("13_rfc04")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -66.9477, 0.154659, 28.3728)
+
+[node name="test_map" parent="." instance=ExtResource("2_050wm")]
+
+[node name="score_sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_26d21")
+pitch_scale = 0.85
+bus = &"SFX"
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"Music"
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xaiqv")
+
+[node name="sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)
+
+[node name="street_sweeper" parent="." instance=ExtResource("27_0pmg3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -43.8553, 1, 38.489)

@@ -1,4 +1,4 @@
-extends "res://vehicles/vehicle.gd"
+extends Vehicle
 
 
 @onready var _suction_sound := %suction_sound

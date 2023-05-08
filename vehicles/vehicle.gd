@@ -1,9 +1,11 @@
+class_name Vehicle
 extends VehicleBody3D
 
 
-@export var active := false :
+@export var controlling_player_index := -1 :
 	set(value):
-		active = value
+		controlling_player_index = value
+		var active := is_controlled()
 		set_physics_process(active)
 		set_process_unhandled_input(active)
 		if not active:
@@ -30,7 +32,8 @@ extends VehicleBody3D
 @export_range(0.0, 20.0, 0.01, "or_greater") var skid_sound_speed_threshold := 1.5
 
 
-var move_forward := false
+var input_map := {}
+
 
 var _speed := 0.0
 var _slip_speed := 0.0
@@ -46,7 +49,7 @@ var _slip_speed := 0.0
 func _ready() -> void:
 	set_physics_process(false)
 	set_process_unhandled_input(false)
-	if not active:
+	if not is_controlled():
 		brake = max_brake_force
 
 
@@ -59,9 +62,9 @@ func _physics_process(_delta : float) -> void:
 
 	var was_braking := brake > 0.0
 
-	engine_force = power_curve.sample_baked(_speed / max_speed) * max_engine_force * Input.get_axis("reverse", "accelerate")
-	brake = max_brake_force * Input.get_action_strength("brake")
-	steering = max_steering_angle * Input.get_axis("steer_right", "steer_left")
+	engine_force = power_curve.sample_baked(_speed / max_speed) * max_engine_force * Input.get_axis(input_map.reverse, input_map.accelerate)
+	brake = max_brake_force * Input.get_action_strength(input_map.brake)
+	steering = max_steering_angle * Input.get_axis(input_map.steer_right, input_map.steer_left)
 
 	var velocity_opposes_input := signf(forward_velocity) != signf(engine_force)
 	if not is_zero_approx(engine_force) and not is_zero_approx(forward_velocity) and velocity_opposes_input:
@@ -70,9 +73,6 @@ func _physics_process(_delta : float) -> void:
 	var is_braking := brake > 0.0
 	if not was_braking and is_braking and _speed >= brake_sound_speed_threshold:
 		_crash_sound.play()
-
-	if _speed < 0.5:
-		move_forward = false
 
 	var skid_strength := _slip_speed - skid_sound_speed_threshold
 	if skid_strength > 0.0:
@@ -85,6 +85,10 @@ func _physics_process(_delta : float) -> void:
 	_sound_engine.volume_db = _initial_engine_sound_volume + _speed
 
 
+func is_controlled() -> bool:
+	return controlling_player_index >= 0
+
+
 func get_speed() -> float:
 	return absf(linear_velocity.dot(global_transform.basis.z))
 
@@ -94,7 +98,9 @@ func get_slip_speed() -> float:
 
 
 func _unhandled_input(event : InputEvent) -> void:
-	if event.is_action_pressed(&"reset_vehicle"):
+	if not is_controlled():
+		return
+	if event.is_action_pressed(input_map.reset_vehicle):
 		_reset.call_deferred()
 
 
@@ -106,7 +112,7 @@ func _reset() -> void:
 
 
 func _on_body_entered(body : Node) -> void:
-	if not active or body is RigidBody3D:
+	if not is_controlled() or body is RigidBody3D:
 		return
 	if _speed >= crash_sound_speed_threshold:
 		_crash_sound.play()

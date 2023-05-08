@@ -57,6 +57,8 @@ var game_time := 0.0
 
 var tutorial_progress := TutorialStep.GET_ITEMS
 
+var player_inputs : Array[Dictionary] = []
+
 
 var _rent_timer := Timer.new()
 

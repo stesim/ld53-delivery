@@ -53,7 +53,11 @@ func _focus_first_visible_button() -> void:
 
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://game_world.tscn")
+	get_tree().change_scene_to_file("res://game_scenes/single_player.tscn")
+
+
+func _on_play_split_screen_pressed() -> void:
+	get_tree().change_scene_to_file("res://game_scenes/split_screen.tscn")
 
 
 func _on_resume_button_pressed() -> void:
@@ -61,7 +65,7 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_restart_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://game_world.tscn")
+	get_tree().reload_current_scene()
 
 
 func _on_quit_button_pressed() -> void:
