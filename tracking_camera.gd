@@ -7,10 +7,8 @@ const MAX_PITCH := 0.5 * PI - 0.1
 @export var target : Node3D :
 	set(value):
 		target = value
-		if is_inside_tree():
-			if not _current_config:
-				_cycle_configs()
-			_update_transform(false)
+		if is_inside_tree() and not _current_config:
+			_cycle_configs()
 
 
 @export_range(0.0, 1.0) var smoothing := 0.9
@@ -35,6 +33,10 @@ func _ready() -> void:
 	target = target
 
 
+func snap_to_target() -> void:
+	_update_transform(false)
+
+
 func _physics_process(delta : float) -> void:
 	_adjust_from_axes(delta)
 	_update_transform()
@@ -52,7 +54,7 @@ func _update_transform(interpolated := true) -> void:
 
 	var ideal_position := target.global_position + offset.rotated(Vector3.UP, target.global_rotation.y)
 	if interpolated:
-		var interpolated_position := ideal_position.slerp(global_position, smoothing)
+		var interpolated_position := ideal_position.lerp(global_position, smoothing)
 		look_at_from_position(interpolated_position, target.global_position)
 	else:
 		look_at_from_position(ideal_position, target.global_position)

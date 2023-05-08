@@ -36,6 +36,7 @@ func _ready() -> void:
 
 	_camera.input_map = _input_map
 	_swap_vehicle()
+	_camera.snap_to_target()
 
 
 func _exit_tree() -> void:
