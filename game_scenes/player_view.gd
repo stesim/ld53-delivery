@@ -55,8 +55,6 @@ func _unhandled_input(event : InputEvent) -> void:
 
 func _swap_vehicle() -> void:
 	var vehicles := get_tree().get_nodes_in_group(&"vehicles")
-	if vehicles.size() < 2:
-		return
 	var start_index := vehicles.find(_controlled_vehicle) + 1
 	for i in vehicles.size():
 		var next_vehicle := vehicles[(start_index + i) % vehicles.size()]

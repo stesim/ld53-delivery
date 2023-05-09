@@ -1,0 +1,3221 @@
+[gd_scene load_steps=121 format=3 uid="uid://dij255qptyb8q"]
+
+[ext_resource type="Script" path="res://map_elements/road_graph.gd" id="1_iqcej"]
+[ext_resource type="Script" path="res://map_elements/road_intersection.gd" id="2_yq7qx"]
+[ext_resource type="Script" path="res://map_elements/road.gd" id="3_ytvyo"]
+[ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="4_shfuc"]
+[ext_resource type="PackedScene" uid="uid://cpfbvnh20vc8h" path="res://game_scenes/player_view.tscn" id="4_sojqs"]
+
+[sub_resource type="Curve3D" id="Curve3D_bai47"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.6077, 0, 8.91719, 0, 0, 0, 0, 0, 0, 36.6077, 0, -8.91719),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_qp58p"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.20712, 0, -33.0646, 0, 0, 0, 0, 0, 0, -3.20712, 0, 33.0646),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ocwks"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.9564, 0, 9.59337, 0, 0, 0, 0, 0, 0, 42.9564, 0, -9.59337),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_j714l"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.14155, 0, -32.3884, 0, 0, 0, 0, 0, 0, 3.14155, 0, 32.3884),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_d3n0b"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -37.9752, 0, 4.22272, 0, 0, 0, 0, 0, 0, 37.9752, 0, -4.22272),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_qfvi6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.2634, 0, -8.4666, 0, 0, 0, 0, 0, 0, 33.2634, 0, 8.4666),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1xoxl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.57025, 0, -45.0778, 0, 0, 0, 0, 0, 0, -1.57025, 0, 45.0778),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_i3824"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.2155, 0, -6.88188, 0, 0, 0, 0, 0, 0, 30.2155, 0, 6.88188),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_lhev0"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.1329, 0, 7.99958, 0, 0, 0, 0, 0, 0, 36.1329, 0, -7.99958),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_k76bv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.34709, 0, -30.1963, 0, 0, 0, 0, 0, 0, 4.34709, 0, 30.1963),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_k0uft"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.8244, 0, 7.99234, 0, 0, 0, 0, 0, 0, 34.8244, 0, -7.99234),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1odxg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -26.0735, 0, 0.189014, 0, 0, 0, 0, 0, 0, 26.0735, 0, -0.189014),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ixbex"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.40381, 0, -37.9996, 0, 0, 0, 0, 0, 0, -4.40381, 0, 37.9996),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_t0aav"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.8143, 0, -8.52423, 0, 0, 0, 0, 0, 0, 20.8143, 0, 8.52423),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_0h0rc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.462, 0, 6.91342, 0, 0, 0, 0, 0, 0, 16.462, 0, -6.91342),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_k1k35"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 8.75618, 0, -22.562, 0, 0, 0, 0, 0, 0, -8.75618, 0, 22.562),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1o1a4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.9986, 0, -3.87736, 0, 0, 0, 0, 0, 0, 24.9986, 0, 3.87736),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_8o5jf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -54.3115, 0, -13.6836, 0, 0, 0, 0, 0, 0, 54.3115, 0, 13.6836),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nbj6j"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.5567, 0, -32.3682, 0, 0, 0, 0, 0, 0, 20.5567, 0, 32.3682),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_x0ryd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.6347, 0, 9.8648, 0, 0, 0, 0, 0, 0, 45.6347, 0, -9.8648),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_at8uk"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.1282, 0, -3.4845, 0, 0, 0, 0, 0, 0, 14.1282, 0, 3.4845),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_xtvcn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 10.9498, 0, -45.7175, 0, 0, 0, 0, 0, 0, -10.9498, 0, 45.7175),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nxhb3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.10327, 0, -16.598, 0, 0, 0, 0, 0, 0, 0.10327, 0, 16.598),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_lb3y1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.136, 0, -16.1863, 0, 0, 0, 0, 0, 0, 42.136, 0, 16.1863),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hpqrm"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.717106, 0, -42.3777, 0, 0, 0, 0, 0, 0, -0.717106, 0, 42.3777),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_e0pnw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.7775, 0, 16.4224, 0, 0, 0, 0, 0, 0, 24.7775, 0, -16.4224),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_cvre4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.203, 0, -17.4886, 0, 0, 0, 0, 0, 0, -9.203, 0, 17.4886),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_f485e"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.6648, 0, -3.50532, 0, 0, 0, 0, 0, 0, 41.6648, 0, 3.50532),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_l8jd1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.6711, 0, -28.9935, 0, 0, 0, 0, 0, 0, -3.6711, 0, 28.9935),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_3r1ur"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.0056, 0, -8.9121, 0, 0, 0, 0, 0, 0, 28.0056, 0, 8.9121),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jfgt5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.73901, 0, -38.0946, 0, 0, 0, 0, 0, 0, -1.73901, 0, 38.0946),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_g83sk"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.0783, 0, 5.24825, 0, 0, 0, 0, 0, 0, 23.0783, 0, -5.24825),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_v1slj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.87733, 0, -39.7598, 0, 0, 0, 0, 0, 0, 4.87733, 0, 39.7598),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_vv3no"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.8604, 0, -3.67205, 0, 0, 0, 0, 0, 0, 32.8604, 0, 3.67205),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_u6gkt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16.5737, 0, -29.7483, 0, 0, 0, 0, 0, 0, -16.5737, 0, 29.7483),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_d3pf4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -44.0405, 0, 3.4529, 0, 0, 0, 0, 0, 0, 44.0405, 0, -3.4529),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_mc0ig"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.3386, 0, -22.8109, 0, 0, 0, 0, 0, 0, 13.3386, 0, 22.8109),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_j1ujc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.6577, 0, -41.6573, 0, 0, 0, 0, 0, 0, 16.6577, 0, 41.6573),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_wly8g"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.0675, 0, -9.3489, 0, 0, 0, 0, 0, 0, 21.0675, 0, 9.3489),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_2gpyd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.41078, 0, -34.8199, 0, 0, 0, 0, 0, 0, -4.41078, 0, 34.8199),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_054vv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.708, 0, 13.2383, 0, 0, 0, 0, 0, 0, 21.708, 0, -13.2383),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_3meab"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.48029, 0, -38.0041, 0, 0, 0, 0, 0, 0, -7.48029, 0, 38.0041),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_rjkri"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.4206, 0, 6.52707, 0, 0, 0, 0, 0, 0, 34.4206, 0, -6.52707),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_03l2r"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.7244, 0, -27.9717, 0, 0, 0, 0, 0, 0, -14.7244, 0, 27.9717),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_so1hc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.3081, 0, -16.507, 0, 0, 0, 0, 0, 0, 45.3081, 0, 16.507),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ux3w7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.57811, 0, -35.5665, 0, 0, 0, 0, 0, 0, 2.57811, 0, 35.5665),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_rfq4e"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.7896, 0, 5.82849, 0, 0, 0, 0, 0, 0, 20.7896, 0, -5.82849),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_p2fyt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.289429, 0, -34.9863, 0, 0, 0, 0, 0, 0, 0.289429, 0, 34.9863),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jrg0t"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.0623, 0, -3.85107, 0, 0, 0, 0, 0, 0, 34.0623, 0, 3.85107),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_5jgd0"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.4913, 0, -35.1653, 0, 0, 0, 0, 0, 0, 1.4913, 0, 35.1653),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_r0ocx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.6754, 0, 1.82369, 0, 0, 0, 0, 0, 0, 34.6754, 0, -1.82369),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_j3ys6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.87381, 0, -36.7945, 0, 0, 0, 0, 0, 0, -7.87381, 0, 36.7945),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_yqy0i"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 22.3176, 0, -38.7924, 0, 0, 0, 0, 0, 0, -22.3176, 0, 38.7924),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_txbg6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.07, 0, 7.61723, 0, 0, 0, 0, 0, 0, 36.07, 0, -7.61723),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_qf6pd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.3151, 0, -21.8263, 0, 0, 0, 0, 0, 0, -7.3151, 0, 21.8263),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_87ycl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.1906, 0, 10.6474, 0, 0, 0, 0, 0, 0, 27.1906, 0, -10.6474),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_d8dw4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.83249, 0, -24.4172, 0, 0, 0, 0, 0, 0, -1.83249, 0, 24.4172),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jcama"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -54.5847, 0, 0.29509, 0, 0, 0, 0, 0, 0, 54.5847, 0, -0.29509),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_8bwpt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.3316, 0, -30.6491, 0, 0, 0, 0, 0, 0, 18.3316, 0, 30.6491),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_47kqr"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.8189, 0, -14.0412, 0, 0, 0, 0, 0, 0, 28.8189, 0, 14.0412),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_i7ogi"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.84233, 0, -28.1833, 0, 0, 0, 0, 0, 0, 1.84233, 0, 28.1833),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_weoyg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.1038, 0, 8.69002, 0, 0, 0, 0, 0, 0, 21.1038, 0, -8.69002),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1n1w7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.15645, 0, -25.3218, 0, 0, 0, 0, 0, 0, 2.15645, 0, 25.3218),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1croj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.5901, 0, -14.728, 0, 0, 0, 0, 0, 0, 41.5901, 0, 14.728),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hlwjv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.68427, 0, -36.1988, 0, 0, 0, 0, 0, 0, 9.68427, 0, 36.1988),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_tcjf8"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.2924, 0, 4.25516, 0, 0, 0, 0, 0, 0, 29.2924, 0, -4.25516),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_s6lb6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.3013, 0, -33.7673, 0, 0, 0, 0, 0, 0, 4.3013, 0, 33.7673),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_t3g2w"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.86961, 0, -31.4017, 0, 0, 0, 0, 0, 0, 3.86961, 0, 31.4017),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_r17wv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.5814, 0, 8.96461, 0, 0, 0, 0, 0, 0, 30.5814, 0, -8.96461),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_o3ft2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.61902, 0, -30.0544, 0, 0, 0, 0, 0, 0, -1.61902, 0, 30.0544),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_u3hrr"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -40.5773, 0, 8.36429, 0, 0, 0, 0, 0, 0, 40.5773, 0, -8.36429),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_86pol"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.7676, 0, -32.3375, 0, 0, 0, 0, 0, 0, 11.7676, 0, 32.3375),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_byrxx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.1386, 0, -17.8704, 0, 0, 0, 0, 0, 0, 41.1386, 0, 17.8704),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_2fqm5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.67842, 0, -50.503, 0, 0, 0, 0, 0, 0, -1.67842, 0, 50.503),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ga0wy"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.0449, 0, 7.82019, 0, 0, 0, 0, 0, 0, 27.0449, 0, -7.82019),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hvisb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.45236, 0, -28.6416, 0, 0, 0, 0, 0, 0, -3.45236, 0, 28.6416),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1f1sl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.4059, 0, 10.3796, 0, 0, 0, 0, 0, 0, 18.4059, 0, -10.3796),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jspsj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 6.15025, 0, -26.9521, 0, 0, 0, 0, 0, 0, -6.15025, 0, 26.9521),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_5hlu4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -44.5493, 0, -4.99918, 0, 0, 0, 0, 0, 0, 44.5493, 0, 4.99918),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_cxh0j"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.19099, 0, -17.2232, 0, 0, 0, 0, 0, 0, -3.19099, 0, 17.2232),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_goj0o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -19.6819, 0, -0.860153, 0, 0, 0, 0, 0, 0, 19.6819, 0, 0.860153),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_alfc1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.8015, 0, -22.3385, 0, 0, 0, 0, 0, 0, -12.8015, 0, 22.3385),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_i4utg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.1909, 0, -19.162, 0, 0, 0, 0, 0, 0, 10.1909, 0, 19.162),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_gk2jn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.2786, 0, -7.45169, 0, 0, 0, 0, 0, 0, 35.2786, 0, 7.45169),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_01i4n"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.8882, 0, -35.5784, 0, 0, 0, 0, 0, 0, 14.8882, 0, 35.5784),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_5hbla"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.9059, 0, 11.0423, 0, 0, 0, 0, 0, 0, 31.9059, 0, -11.0423),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_tx24p"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.21681, 0, -32.9004, 0, 0, 0, 0, 0, 0, 6.21681, 0, 32.9004),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nid0k"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.7352, 0, -7.95964, 0, 0, 0, 0, 0, 0, 25.7352, 0, 7.95964),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_oddn1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.18658, 0, -22.9896, 0, 0, 0, 0, 0, 0, -9.18658, 0, 22.9896),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_i3qgp"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.789, 0, 7.55664, 0, 0, 0, 0, 0, 0, 30.789, 0, -7.55664),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_6rcr2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.4425, 0, -23.2532, 0, 0, 0, 0, 0, 0, -5.4425, 0, 23.2532),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ftdba"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.0779, 0, -16.6747, 0, 0, 0, 0, 0, 0, 33.0779, 0, 16.6747),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_q8gnm"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.22955, 0, -50.3075, 0, 0, 0, 0, 0, 0, 9.22955, 0, 50.3075),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hct85"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.2236, 0, -1.38376, 0, 0, 0, 0, 0, 0, 22.2236, 0, 1.38376),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nhits"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 13.0962, 0, -46.692, 0, 0, 0, 0, 0, 0, -13.0962, 0, 46.692),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_5pitd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.0871, 0, 15.7299, 0, 0, 0, 0, 0, 0, 35.0871, 0, -15.7299),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_8iqji"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.30901, 0, -30.102, 0, 0, 0, 0, 0, 0, 2.30901, 0, 30.102),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_vh6fv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.67907, 0, -29.2898, 0, 0, 0, 0, 0, 0, 4.67907, 0, 29.2898),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_bekha"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.7145, 0, -9.59277, 0, 0, 0, 0, 0, 0, 24.7145, 0, 9.59277),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_queuq"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.88507, 0, -31.4308, 0, 0, 0, 0, 0, 0, -5.88507, 0, 31.4308),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_xejl3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.1554, 0, -2.38983, 0, 0, 0, 0, 0, 0, 42.1554, 0, 2.38983),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_81xt3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.36443, 0, -44.8629, 0, 0, 0, 0, 0, 0, 4.36443, 0, 44.8629),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hvcoj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.9737, 0, 6.27229, 0, 0, 0, 0, 0, 0, 32.9737, 0, -6.27229),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_44ylg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6029, 0, -30.631, 0, 0, 0, 0, 0, 0, 11.6029, 0, 30.631),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nwagi"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -19.9079, 0, -9.50299, 0, 0, 0, 0, 0, 0, 19.9079, 0, 9.50299),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_857j2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.721771, 0, -47.6906, 0, 0, 0, 0, 0, 0, 0.721771, 0, 47.6906),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_famyp"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.3845, 0, 2.08597, 0, 0, 0, 0, 0, 0, 32.3845, 0, -2.08597),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_pa33u"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0283051, 0, -28.93, 0, 0, 0, 0, 0, 0, 0.0283051, 0, 28.93),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_s4dsd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.2684, 0, 3.63159, 0, 0, 0, 0, 0, 0, 27.2684, 0, -3.63159),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_8nuey"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.0731, 0, -23.9146, 0, 0, 0, 0, 0, 0, 5.0731, 0, 23.9146),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_dudlj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.3034, 0, 11.4382, 0, 0, 0, 0, 0, 0, 45.3034, 0, -11.4382),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_6xo7v"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.2894, 0, -28.2063, 0, 0, 0, 0, 0, 0, 15.2894, 0, 28.2063),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mx12p"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_alcw2"]
+sky_material = SubResource("ProceduralSkyMaterial_mx12p")
+
+[sub_resource type="Environment" id="Environment_ym8wp"]
+background_mode = 2
+sky = SubResource("Sky_alcw2")
+tonemap_mode = 2
+
+[node name="test_map_2" type="Node3D"]
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="."]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="road_graph" type="Node3D" parent="."]
+script = ExtResource("1_iqcej")
+cross_section_path = NodePath("../road_cross_section")
+block_size = Vector2(64, 64)
+uniformity = 0.25
+
+[node name="@@38610" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0052, 0, 36.7005)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38611" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2207, 0, 18.8661)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38612" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.171, 0, 10.4207)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38613" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.602, 0, 24.1844)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38614" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 299.251, 0, 8.19974)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38615" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 340.88, 0, 25.2482)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38616" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.877, 0, 33.0029)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38617" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 482.146, 0, 13.2733)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38618" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.591, 0, 102.83)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38619" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5038, 0, 83.643)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38620" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.031, 0, 100.576)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38621" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.296, 0, 84.577)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38622" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 290.443, 0, 84.199)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38623" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 323.367, 0, 70.3721)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38624" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 431.99, 0, 97.7393)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38625" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 460.247, 0, 104.708)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38626" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7975, 0, 136.026)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38627" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.0696, 0, 168.398)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38628" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.625, 0, 135.553)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38629" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 230.954, 0, 142.564)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38630" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 286.965, 0, 160.388)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38631" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.122, 0, 149.892)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38632" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.843, 0, 157.236)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38633" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 486.924, 0, 150.33)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38634" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.113, 0, 219.34)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38635" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.248, 0, 238.038)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38636" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.664, 0, 211.562)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38637" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.505, 0, 198.507)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38638" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 292.122, 0, 231.521)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38639" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.701, 0, 219.864)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38640" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.825, 0, 227.566)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38641" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.176, 0, 223.919)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38642" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47782, 0, 296.925)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38643" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6178, 0, 281.691)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38644" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.999, 0, 260.396)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38645" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.168, 0, 259.806)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38646" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.806, 0, 287.888)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38647" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.014, 0, 270.508)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38648" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 421.194, 0, 299.964)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38649" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.779, 0, 291.454)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38650" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.217, 0, 359.729)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38651" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.3798, 0, 341.799)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38652" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.534, 0, 325.071)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38653" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 234.812, 0, 360.812)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38654" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.901, 0, 345.171)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38655" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325.713, 0, 324.412)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38656" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 414.812, 0, 334.41)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38657" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 454.176, 0, 336.131)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38658" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5989, 0, 398.053)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38659" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.156, 0, 412.956)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38660" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.968, 0, 390.872)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38661" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.438, 0, 406.791)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38662" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.016, 0, 391.678)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38663" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.172, 0, 425.027)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38664" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 388.62, 0, 427.795)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38665" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.794, 0, 396.335)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38666" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9571, 0, 456.632)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38667" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.386, 0, 475.818)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38668" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.697, 0, 480.597)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38669" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 239.644, 0, 468.053)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38670" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.46, 0, 487.059)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38671" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.229, 0, 482.887)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38672" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.766, 0, 475.624)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38673" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 489.373, 0, 452.747)
+script = ExtResource("2_yq7qx")
+
+[node name="@@38674" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.613, 0, 27.7833)
+curve = SubResource("Curve3D_bai47")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38674"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38675" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7981, 0, 69.7651)
+curve = SubResource("Curve3D_qp58p")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38675"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38676" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5474, 0, 93.2364)
+curve = SubResource("Curve3D_ocwks")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38676"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38677" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.3623, 0, 51.2545)
+curve = SubResource("Curve3D_j714l")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38677"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38678" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.196, 0, 14.6434)
+curve = SubResource("Curve3D_d3n0b")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38678"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38679" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.767, 0, 92.1096)
+curve = SubResource("Curve3D_qfvi6")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38679"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38680" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.601, 0, 55.4984)
+curve = SubResource("Curve3D_1xoxl")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38680"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38681" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.387, 0, 17.3025)
+curve = SubResource("Curve3D_i3824")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38681"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38682" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202.163, 0, 92.5766)
+curve = SubResource("Curve3D_lhev0")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38682"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38683" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.949, 0, 54.3807)
+curve = SubResource("Curve3D_k76bv")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38683"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38684" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.427, 0, 16.1921)
+curve = SubResource("Curve3D_k0uft")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38684"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38685" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.37, 0, 84.388)
+curve = SubResource("Curve3D_1odxg")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38685"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38686" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.847, 0, 46.1994)
+curve = SubResource("Curve3D_ixbex")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38686"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38687" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320.065, 0, 16.724)
+curve = SubResource("Curve3D_t0aav")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38687"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38688" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.905, 0, 77.2856)
+curve = SubResource("Curve3D_0h0rc")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38688"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38689" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 332.123, 0, 47.8102)
+curve = SubResource("Curve3D_k1k35")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38689"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38690" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.878, 0, 29.1255)
+curve = SubResource("Curve3D_1o1a4")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38690"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38691" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 377.679, 0, 84.0557)
+curve = SubResource("Curve3D_8o5jf")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38691"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38692" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 411.434, 0, 65.3711)
+curve = SubResource("Curve3D_nbj6j")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38692"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38693" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 436.512, 0, 23.1381)
+curve = SubResource("Curve3D_x0ryd")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38693"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38694" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 446.118, 0, 101.224)
+curve = SubResource("Curve3D_at8uk")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38694"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38695" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.196, 0, 58.9908)
+curve = SubResource("Curve3D_xtvcn")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38695"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38696" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6943, 0, 119.428)
+curve = SubResource("Curve3D_nxhb3")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38696"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38697" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.9336, 0, 152.212)
+curve = SubResource("Curve3D_lb3y1")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38697"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38698" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7867, 0, 126.021)
+curve = SubResource("Curve3D_hpqrm")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38698"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38699" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.847, 0, 151.976)
+curve = SubResource("Curve3D_e0pnw")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38699"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38700" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.828, 0, 118.065)
+curve = SubResource("Curve3D_cvre4")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38700"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38701" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 189.289, 0, 139.059)
+curve = SubResource("Curve3D_f485e")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38701"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38702" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 234.625, 0, 113.571)
+curve = SubResource("Curve3D_l8jd1")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38702"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38703" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 258.96, 0, 151.476)
+curve = SubResource("Curve3D_3r1ur")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38703"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38704" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.704, 0, 122.294)
+curve = SubResource("Curve3D_jfgt5")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38704"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38705" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.044, 0, 155.14)
+curve = SubResource("Curve3D_g83sk")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38705"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38706" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.245, 0, 110.132)
+curve = SubResource("Curve3D_v1slj")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38706"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38707" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.982, 0, 153.564)
+curve = SubResource("Curve3D_vv3no")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38707"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38708" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 415.416, 0, 127.488)
+curve = SubResource("Curve3D_u6gkt")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38708"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38709" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 442.883, 0, 153.783)
+curve = SubResource("Curve3D_d3pf4")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38709"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38710" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 473.585, 0, 127.519)
+curve = SubResource("Curve3D_mc0ig")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38710"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38711" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4553, 0, 177.683)
+curve = SubResource("Curve3D_j1ujc")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38711"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38712" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.1805, 0, 228.689)
+curve = SubResource("Curve3D_wly8g")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38712"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38713" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.6588, 0, 203.218)
+curve = SubResource("Curve3D_2gpyd")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38713"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38714" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.956, 0, 224.8)
+curve = SubResource("Curve3D_054vv")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38714"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38715" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.144, 0, 173.557)
+curve = SubResource("Curve3D_3meab")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38715"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38716" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.085, 0, 205.034)
+curve = SubResource("Curve3D_rjkri")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38716"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38717" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.23, 0, 170.536)
+curve = SubResource("Curve3D_03l2r")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38717"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38718" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 246.813, 0, 215.014)
+curve = SubResource("Curve3D_so1hc")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38718"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38719" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 289.543, 0, 195.955)
+curve = SubResource("Curve3D_ux3w7")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38719"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38720" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.911, 0, 225.693)
+curve = SubResource("Curve3D_rfq4e")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38720"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38721" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.411, 0, 184.878)
+curve = SubResource("Curve3D_p2fyt")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38721"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38722" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 367.763, 0, 223.715)
+curve = SubResource("Curve3D_jrg0t")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38722"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38723" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.334, 0, 192.401)
+curve = SubResource("Curve3D_5jgd0")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38723"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38724" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 436.501, 0, 225.743)
+curve = SubResource("Curve3D_r0ocx")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38724"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38725" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.05, 0, 187.125)
+curve = SubResource("Curve3D_j3ys6")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38725"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38726" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7954, 0, 258.133)
+curve = SubResource("Curve3D_yqy0i")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38726"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38727" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5478, 0, 289.308)
+curve = SubResource("Curve3D_txbg6")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38727"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38728" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.9329, 0, 259.864)
+curve = SubResource("Curve3D_qf6pd")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38728"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38729" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.808, 0, 271.043)
+curve = SubResource("Curve3D_87ycl")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38729"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38730" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.832, 0, 235.979)
+curve = SubResource("Curve3D_d8dw4")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38730"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38731" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.584, 0, 260.101)
+curve = SubResource("Curve3D_jcama")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38731"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38732" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.837, 0, 229.157)
+curve = SubResource("Curve3D_8bwpt")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38732"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38733" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 266.987, 0, 273.847)
+curve = SubResource("Curve3D_47kqr")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38733"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38734" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 293.964, 0, 259.705)
+curve = SubResource("Curve3D_i7ogi")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38734"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38735" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.91, 0, 279.198)
+curve = SubResource("Curve3D_weoyg")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38735"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38736" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 335.857, 0, 245.186)
+curve = SubResource("Curve3D_1n1w7")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38736"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38737" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 379.604, 0, 285.236)
+curve = SubResource("Curve3D_1croj")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38737"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38738" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 411.51, 0, 263.765)
+curve = SubResource("Curve3D_hlwjv")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38738"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38739" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.486, 0, 295.709)
+curve = SubResource("Curve3D_tcjf8")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38739"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38740" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.477, 0, 257.686)
+curve = SubResource("Curve3D_s6lb6")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38740"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38741" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34743, 0, 328.327)
+curve = SubResource("Curve3D_t3g2w")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38741"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38742" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7984, 0, 350.764)
+curve = SubResource("Curve3D_r17wv")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38742"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38743" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.9988, 0, 311.745)
+curve = SubResource("Curve3D_o3ft2")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38743"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38744" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.957, 0, 333.435)
+curve = SubResource("Curve3D_u3hrr")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38744"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38745" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.767, 0, 292.733)
+curve = SubResource("Curve3D_86pol")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38745"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38746" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.673, 0, 342.941)
+curve = SubResource("Curve3D_byrxx")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38746"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38747" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236.49, 0, 310.309)
+curve = SubResource("Curve3D_2fqm5")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38747"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38748" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.857, 0, 352.991)
+curve = SubResource("Curve3D_ga0wy")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38748"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38749" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 292.354, 0, 316.53)
+curve = SubResource("Curve3D_hvisb")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38749"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38750" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 307.307, 0, 334.792)
+curve = SubResource("Curve3D_1f1sl")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38750"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38751" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 331.863, 0, 297.46)
+curve = SubResource("Curve3D_jspsj")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38751"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38752" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 370.263, 0, 329.411)
+curve = SubResource("Curve3D_5hlu4")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38752"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38753" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 418.003, 0, 317.187)
+curve = SubResource("Curve3D_cxh0j")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38753"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38754" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434.494, 0, 335.271)
+curve = SubResource("Curve3D_goj0o")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38754"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38755" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466.977, 0, 313.792)
+curve = SubResource("Curve3D_alfc1")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38755"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38756" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.408, 0, 378.891)
+curve = SubResource("Curve3D_i4utg")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38756"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38757" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.8776, 0, 405.504)
+curve = SubResource("Curve3D_gk2jn")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38757"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38758" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.268, 0, 377.378)
+curve = SubResource("Curve3D_01i4n")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38758"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38759" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.062, 0, 401.914)
+curve = SubResource("Curve3D_5hbla")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38759"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38760" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.751, 0, 357.971)
+curve = SubResource("Curve3D_tx24p")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38760"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38761" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 190.703, 0, 398.831)
+curve = SubResource("Curve3D_nid0k")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38761"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38762" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 225.625, 0, 383.801)
+curve = SubResource("Curve3D_oddn1")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38762"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38763" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.227, 0, 399.234)
+curve = SubResource("Curve3D_i3qgp")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38763"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38764" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.459, 0, 368.424)
+curve = SubResource("Curve3D_6rcr2")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38764"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38765" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.094, 0, 408.352)
+curve = SubResource("Curve3D_ftdba")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38765"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38766" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 334.943, 0, 374.72)
+curve = SubResource("Curve3D_q8gnm")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38766"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38767" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.396, 0, 426.411)
+curve = SubResource("Curve3D_hct85")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38767"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38768" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.716, 0, 381.102)
+curve = SubResource("Curve3D_nhits")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38768"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38769" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 423.707, 0, 412.065)
+curve = SubResource("Curve3D_5pitd")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38769"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38770" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.485, 0, 366.233)
+curve = SubResource("Curve3D_8iqji")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38770"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38771" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.278, 0, 427.342)
+curve = SubResource("Curve3D_vh6fv")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38771"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38772" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.6716, 0, 466.225)
+curve = SubResource("Curve3D_bekha")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38772"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38773" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.2711, 0, 444.387)
+curve = SubResource("Curve3D_queuq")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38773"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38774" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.541, 0, 478.208)
+curve = SubResource("Curve3D_xejl3")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38774"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38775" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.332, 0, 435.735)
+curve = SubResource("Curve3D_81xt3")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38775"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38776" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 206.671, 0, 474.325)
+curve = SubResource("Curve3D_hvcoj")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38776"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38777" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.041, 0, 437.422)
+curve = SubResource("Curve3D_44ylg")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38777"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38778" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.552, 0, 477.556)
+curve = SubResource("Curve3D_nwagi")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38778"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38779" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.738, 0, 439.368)
+curve = SubResource("Curve3D_857j2")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38779"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38780" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.844, 0, 484.973)
+curve = SubResource("Curve3D_famyp")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38780"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38781" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.201, 0, 453.957)
+curve = SubResource("Curve3D_pa33u")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38781"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38782" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 371.497, 0, 479.255)
+curve = SubResource("Curve3D_s4dsd")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38782"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38783" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 393.693, 0, 451.709)
+curve = SubResource("Curve3D_8nuey")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38783"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38784" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 444.069, 0, 464.186)
+curve = SubResource("Curve3D_dudlj")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38784"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="@@38785" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 474.083, 0, 424.541)
+curve = SubResource("Curve3D_6xo7v")
+script = ExtResource("3_ytvyo")
+
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38785"]
+use_collision = true
+polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="truck" parent="." instance=ExtResource("4_shfuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.169, 0.674887, 41.4814)
+
+[node name="player_view" parent="." instance=ExtResource("4_sojqs")]
+player_index = -1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ym8wp")
