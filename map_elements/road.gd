@@ -4,7 +4,10 @@ extends Path3D
 
 
 var from : RoadIntersection
+var from_offset := 0.0
 var to : RoadIntersection
+var to_offset := 0.0
+var width := 0.0
 
 
 func _ready() -> void:
@@ -16,8 +19,9 @@ func _ready() -> void:
 	curve = Curve3D.new()
 	curve.point_count = 2
 	var diff := to.position - from.position
-	curve.set_point_position(0, -0.5 * diff)
-	curve.set_point_position(1, 0.5 * diff)
+	var dir := diff.normalized()
+	curve.set_point_position(0, -0.5 * diff + from_offset * dir)
+	curve.set_point_position(1, 0.5 * diff - to_offset * dir)
 
 
 func get_tangent(length_fraction : float) -> Vector3:
@@ -28,3 +32,17 @@ func get_tangent(length_fraction : float) -> Vector3:
 func get_normal(length_fraction : float) -> Vector3:
 	var local_transform := curve.sample_baked_with_rotation(length_fraction * curve.get_baked_length())
 	return local_transform.basis.x
+
+
+func get_tangent_at_intersection(intersection : RoadIntersection) -> Vector3:
+	match intersection:
+		from: return get_tangent(0.0)
+		to: return -get_tangent(1.0)
+	return Vector3.ZERO
+
+
+func get_normal_at_intersection(intersection : RoadIntersection) -> Vector3:
+	match intersection:
+		from: return get_normal(0.0)
+		to: return -get_normal(1.0)
+	return Vector3.ZERO

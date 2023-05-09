@@ -6,786 +6,786 @@
 [ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="4_shfuc"]
 [ext_resource type="PackedScene" uid="uid://cpfbvnh20vc8h" path="res://game_scenes/player_view.tscn" id="4_sojqs"]
 
-[sub_resource type="Curve3D" id="Curve3D_bai47"]
+[sub_resource type="Curve3D" id="Curve3D_qsb4g"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.6077, 0, 8.91719, 0, 0, 0, 0, 0, 0, 36.6077, 0, -8.91719),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.3983, 0, -11.136, 0, 0, 0, 0, 0, 0, 32.3983, 0, 11.136),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_qp58p"]
+[sub_resource type="Curve3D" id="Curve3D_tuvfh"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.20712, 0, -33.0646, 0, 0, 0, 0, 0, 0, -3.20712, 0, 33.0646),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.76837, 0, -35.3893, 0, 0, 0, 0, 0, 0, 8.76837, 0, 35.3893),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_ocwks"]
+[sub_resource type="Curve3D" id="Curve3D_yg01g"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.9564, 0, 9.59337, 0, 0, 0, 0, 0, 0, 42.9564, 0, -9.59337),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.9577, 0, -18.7381, 0, 0, 0, 0, 0, 0, 17.9577, 0, 18.7381),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_j714l"]
+[sub_resource type="Curve3D" id="Curve3D_a6ejb"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.14155, 0, -32.3884, 0, 0, 0, 0, 0, 0, 3.14155, 0, 32.3884),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.67229, 0, -42.9913, 0, 0, 0, 0, 0, 0, -5.67229, 0, 42.9913),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_d3n0b"]
+[sub_resource type="Curve3D" id="Curve3D_4o12r"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -37.9752, 0, 4.22272, 0, 0, 0, 0, 0, 0, 37.9752, 0, -4.22272),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -47.479, 0, 2.7935, 0, 0, 0, 0, 0, 0, 47.479, 0, -2.7935),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_qfvi6"]
+[sub_resource type="Curve3D" id="Curve3D_16whg"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.2634, 0, -8.4666, 0, 0, 0, 0, 0, 0, 33.2634, 0, 8.4666),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -48.4485, 0, 0.844501, 0, 0, 0, 0, 0, 0, 48.4485, 0, -0.844501),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1xoxl"]
+[sub_resource type="Curve3D" id="Curve3D_l4ev3"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.57025, 0, -45.0778, 0, 0, 0, 0, 0, 0, -1.57025, 0, 45.0778),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.7028, 0, -44.9403, 0, 0, 0, 0, 0, 0, -4.7028, 0, 44.9403),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_i3824"]
+[sub_resource type="Curve3D" id="Curve3D_umlt7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.2155, 0, -6.88188, 0, 0, 0, 0, 0, 0, 30.2155, 0, 6.88188),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.6287, 0, -7.45428, 0, 0, 0, 0, 0, 0, 28.6287, 0, 7.45428),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_lhev0"]
+[sub_resource type="Curve3D" id="Curve3D_i27cm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.1329, 0, 7.99958, 0, 0, 0, 0, 0, 0, 36.1329, 0, -7.99958),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.4825, 0, 18.0597, 0, 0, 0, 0, 0, 0, 15.4825, 0, -18.0597),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_k76bv"]
+[sub_resource type="Curve3D" id="Curve3D_eftef"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.34709, 0, -30.1963, 0, 0, 0, 0, 0, 0, 4.34709, 0, 30.1963),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 17.849, 0, -19.4264, 0, 0, 0, 0, 0, 0, -17.849, 0, 19.4264),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_k0uft"]
+[sub_resource type="Curve3D" id="Curve3D_re134"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.8244, 0, 7.99234, 0, 0, 0, 0, 0, 0, 34.8244, 0, -7.99234),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.5803, 0, -3.67192, 0, 0, 0, 0, 0, 0, 14.5803, 0, 3.67192),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1odxg"]
+[sub_resource type="Curve3D" id="Curve3D_5gwy0"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -26.0735, 0, 0.189014, 0, 0, 0, 0, 0, 0, 26.0735, 0, -0.189014),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -50.6855, 0, -13.8629, 0, 0, 0, 0, 0, 0, 50.6855, 0, 13.8629),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_ixbex"]
+[sub_resource type="Curve3D" id="Curve3D_5xg5w"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.40381, 0, -37.9996, 0, 0, 0, 0, 0, 0, -4.40381, 0, 37.9996),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.2562, 0, -29.6174, 0, 0, 0, 0, 0, 0, 18.2562, 0, 29.6174),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_t0aav"]
+[sub_resource type="Curve3D" id="Curve3D_ypfs4"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.8143, 0, -8.52423, 0, 0, 0, 0, 0, 0, 20.8143, 0, 8.52423),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -50.8461, 0, -1.5102, 0, 0, 0, 0, 0, 0, 50.8461, 0, 1.5102),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_0h0rc"]
+[sub_resource type="Curve3D" id="Curve3D_ns6qe"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.462, 0, 6.91342, 0, 0, 0, 0, 0, 0, 16.462, 0, -6.91342),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -26.5111, 0, 14.6214, 0, 0, 0, 0, 0, 0, 26.5111, 0, -14.6214),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_k1k35"]
+[sub_resource type="Curve3D" id="Curve3D_dhwtx"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 8.75618, 0, -22.562, 0, 0, 0, 0, 0, 0, -8.75618, 0, 22.562),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 6.0789, 0, -13.4858, 0, 0, 0, 0, 0, 0, -6.0789, 0, 13.4858),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1o1a4"]
+[sub_resource type="Curve3D" id="Curve3D_tbwou"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.9986, 0, -3.87736, 0, 0, 0, 0, 0, 0, 24.9986, 0, 3.87736),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.1353, 0, 11.2699, 0, 0, 0, 0, 0, 0, 16.1353, 0, -11.2699),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_8o5jf"]
+[sub_resource type="Curve3D" id="Curve3D_r8myb"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -54.3115, 0, -13.6836, 0, 0, 0, 0, 0, 0, 54.3115, 0, 13.6836),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.7235, 0, -10.8208, 0, 0, 0, 0, 0, 0, 23.7235, 0, 10.8208),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nbj6j"]
+[sub_resource type="Curve3D" id="Curve3D_fdm3k"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.5567, 0, -32.3682, 0, 0, 0, 0, 0, 0, 20.5567, 0, 32.3682),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.50934, 0, -35.5765, 0, 0, 0, 0, 0, 0, 1.50934, 0, 35.5765),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_x0ryd"]
+[sub_resource type="Curve3D" id="Curve3D_0wjwh"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.6347, 0, 9.8648, 0, 0, 0, 0, 0, 0, 45.6347, 0, -9.8648),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.5362, 0, 6.79957, 0, 0, 0, 0, 0, 0, 33.5362, 0, -6.79957),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_at8uk"]
+[sub_resource type="Curve3D" id="Curve3D_x3xfn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.1282, 0, -3.4845, 0, 0, 0, 0, 0, 0, 14.1282, 0, 3.4845),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -43.4617, 0, 6.65836, 0, 0, 0, 0, 0, 0, 43.4617, 0, -6.65836),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_xtvcn"]
+[sub_resource type="Curve3D" id="Curve3D_1bfn3"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 10.9498, 0, -45.7175, 0, 0, 0, 0, 0, 0, -10.9498, 0, 45.7175),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.4348, 0, -35.7178, 0, 0, 0, 0, 0, 0, 11.4348, 0, 35.7178),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nxhb3"]
+[sub_resource type="Curve3D" id="Curve3D_ewfyi"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.10327, 0, -16.598, 0, 0, 0, 0, 0, 0, 0.10327, 0, 16.598),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.29714, 0, -30.9229, 0, 0, 0, 0, 0, 0, -7.29714, 0, 30.9229),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_lb3y1"]
+[sub_resource type="Curve3D" id="Curve3D_17yfm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.136, 0, -16.1863, 0, 0, 0, 0, 0, 0, 42.136, 0, 16.1863),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -39.1952, 0, -13.4346, 0, 0, 0, 0, 0, 0, 39.1952, 0, 13.4346),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_hpqrm"]
+[sub_resource type="Curve3D" id="Curve3D_dtcgd"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.717106, 0, -42.3777, 0, 0, 0, 0, 0, 0, -0.717106, 0, 42.3777),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.9404, 0, -25.6194, 0, 0, 0, 0, 0, 0, 13.9404, 0, 25.6194),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_e0pnw"]
+[sub_resource type="Curve3D" id="Curve3D_yrtxy"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.7775, 0, 16.4224, 0, 0, 0, 0, 0, 0, 24.7775, 0, -16.4224),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.1913, 0, 4.58947, 0, 0, 0, 0, 0, 0, 23.1913, 0, -4.58947),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_cvre4"]
+[sub_resource type="Curve3D" id="Curve3D_i7cj3"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.203, 0, -17.4886, 0, 0, 0, 0, 0, 0, -9.203, 0, 17.4886),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 11.3168, 0, -21.8745, 0, 0, 0, 0, 0, 0, -11.3168, 0, 21.8745),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_f485e"]
+[sub_resource type="Curve3D" id="Curve3D_aqvad"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.6648, 0, -3.50532, 0, 0, 0, 0, 0, 0, 41.6648, 0, 3.50532),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.3267, 0, 11.6248, 0, 0, 0, 0, 0, 0, 34.3267, 0, -11.6248),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_l8jd1"]
+[sub_resource type="Curve3D" id="Curve3D_l50v8"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.6711, 0, -28.9935, 0, 0, 0, 0, 0, 0, -3.6711, 0, 28.9935),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.52743, 0, -28.3094, 0, 0, 0, 0, 0, 0, 7.52743, 0, 28.3094),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_3r1ur"]
+[sub_resource type="Curve3D" id="Curve3D_warqi"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.0056, 0, -8.9121, 0, 0, 0, 0, 0, 0, 28.0056, 0, 8.9121),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.7777, 0, -13.9946, 0, 0, 0, 0, 0, 0, 31.7777, 0, 13.9946),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_jfgt5"]
+[sub_resource type="Curve3D" id="Curve3D_t4whm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.73901, 0, -38.0946, 0, 0, 0, 0, 0, 0, -1.73901, 0, 38.0946),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 11.3803, 0, -28.4411, 0, 0, 0, 0, 0, 0, -11.3803, 0, 28.4411),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_g83sk"]
+[sub_resource type="Curve3D" id="Curve3D_edecm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.0783, 0, 5.24825, 0, 0, 0, 0, 0, 0, 23.0783, 0, -5.24825),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.0639, 0, 3.27644, 0, 0, 0, 0, 0, 0, 28.0639, 0, -3.27644),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_v1slj"]
+[sub_resource type="Curve3D" id="Curve3D_lgyjh"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.87733, 0, -39.7598, 0, 0, 0, 0, 0, 0, 4.87733, 0, 39.7598),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.82747, 0, -39.786, 0, 0, 0, 0, 0, 0, -9.82747, 0, 39.786),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_vv3no"]
+[sub_resource type="Curve3D" id="Curve3D_hhnm7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.8604, 0, -3.67205, 0, 0, 0, 0, 0, 0, 32.8604, 0, 3.67205),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -49.3613, 0, 4.52689, 0, 0, 0, 0, 0, 0, 49.3613, 0, -4.52689),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_u6gkt"]
+[sub_resource type="Curve3D" id="Curve3D_c4j3o"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16.5737, 0, -29.7483, 0, 0, 0, 0, 0, 0, -16.5737, 0, 29.7483),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.8103, 0, -24.4383, 0, 0, 0, 0, 0, 0, 15.8103, 0, 24.4383),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_d3pf4"]
+[sub_resource type="Curve3D" id="Curve3D_2f3wk"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -44.0405, 0, 3.4529, 0, 0, 0, 0, 0, 0, 44.0405, 0, -3.4529),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.7181, 0, -9.72135, 0, 0, 0, 0, 0, 0, 25.7181, 0, 9.72135),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_mc0ig"]
+[sub_resource type="Curve3D" id="Curve3D_ntj66"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.3386, 0, -22.8109, 0, 0, 0, 0, 0, 0, 13.3386, 0, 22.8109),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.93317, 0, -40.818, 0, 0, 0, 0, 0, 0, -1.93317, 0, 40.818),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_j1ujc"]
+[sub_resource type="Curve3D" id="Curve3D_2tpw0"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.6577, 0, -41.6573, 0, 0, 0, 0, 0, 0, 16.6577, 0, 41.6573),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.71877, 0, -41.4015, 0, 0, 0, 0, 0, 0, 2.71877, 0, 41.4015),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_wly8g"]
+[sub_resource type="Curve3D" id="Curve3D_roemg"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.0675, 0, -9.3489, 0, 0, 0, 0, 0, 0, 21.0675, 0, 9.3489),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.3967, 0, -6.41565, 0, 0, 0, 0, 0, 0, 22.3967, 0, 6.41565),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_2gpyd"]
+[sub_resource type="Curve3D" id="Curve3D_vyt0k"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.41078, 0, -34.8199, 0, 0, 0, 0, 0, 0, -4.41078, 0, 34.8199),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.0797, 0, -34.3825, 0, 0, 0, 0, 0, 0, -14.0797, 0, 34.3825),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_054vv"]
+[sub_resource type="Curve3D" id="Curve3D_ontwg"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.708, 0, 13.2383, 0, 0, 0, 0, 0, 0, 21.708, 0, -13.2383),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -38.9114, 0, 0.203201, 0, 0, 0, 0, 0, 0, 38.9114, 0, -0.203201),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_3meab"]
+[sub_resource type="Curve3D" id="Curve3D_uyuwc"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.48029, 0, -38.0041, 0, 0, 0, 0, 0, 0, -7.48029, 0, 38.0041),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.64037, 0, -38.7688, 0, 0, 0, 0, 0, 0, 1.64037, 0, 38.7688),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_rjkri"]
+[sub_resource type="Curve3D" id="Curve3D_fopn3"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.4206, 0, 6.52707, 0, 0, 0, 0, 0, 0, 34.4206, 0, -6.52707),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.9383, 0, 9.02254, 0, 0, 0, 0, 0, 0, 36.9383, 0, -9.02254),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_03l2r"]
+[sub_resource type="Curve3D" id="Curve3D_qqvhv"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.7244, 0, -27.9717, 0, 0, 0, 0, 0, 0, -14.7244, 0, 27.9717),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.25201, 0, -41.371, 0, 0, 0, 0, 0, 0, 4.25201, 0, 41.371),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_so1hc"]
+[sub_resource type="Curve3D" id="Curve3D_rdf5h"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.3081, 0, -16.507, 0, 0, 0, 0, 0, 0, 45.3081, 0, 16.507),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.4907, 0, 1.23669, 0, 0, 0, 0, 0, 0, 20.4907, 0, -1.23669),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_ux3w7"]
+[sub_resource type="Curve3D" id="Curve3D_4shd6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.57811, 0, -35.5665, 0, 0, 0, 0, 0, 0, 2.57811, 0, 35.5665),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.03494, 0, -26.1397, 0, 0, 0, 0, 0, 0, -7.03494, 0, 26.1397),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_rfq4e"]
+[sub_resource type="Curve3D" id="Curve3D_ctdgj"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.7896, 0, 5.82849, 0, 0, 0, 0, 0, 0, 20.7896, 0, -5.82849),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -47.1471, 0, -1.43804, 0, 0, 0, 0, 0, 0, 47.1471, 0, 1.43804),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_p2fyt"]
+[sub_resource type="Curve3D" id="Curve3D_yo8mi"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.289429, 0, -34.9863, 0, 0, 0, 0, 0, 0, 0.289429, 0, 34.9863),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.0482, 0, -30.8542, 0, 0, 0, 0, 0, 0, 12.0482, 0, 30.8542),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_jrg0t"]
+[sub_resource type="Curve3D" id="Curve3D_aflqe"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.0623, 0, -3.85107, 0, 0, 0, 0, 0, 0, 34.0623, 0, 3.85107),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.296, 0, 8.58061, 0, 0, 0, 0, 0, 0, 24.296, 0, -8.58061),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_5jgd0"]
+[sub_resource type="Curve3D" id="Curve3D_v407b"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.4913, 0, -35.1653, 0, 0, 0, 0, 0, 0, 1.4913, 0, 35.1653),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 13.0171, 0, -26.8005, 0, 0, 0, 0, 0, 0, -13.0171, 0, 26.8005),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_r0ocx"]
+[sub_resource type="Curve3D" id="Curve3D_ymwmk"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.6754, 0, 1.82369, 0, 0, 0, 0, 0, 0, 34.6754, 0, -1.82369),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.3124, 0, -14.386, 0, 0, 0, 0, 0, 0, 23.3124, 0, 14.386),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_j3ys6"]
+[sub_resource type="Curve3D" id="Curve3D_kl3uo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.87381, 0, -36.7945, 0, 0, 0, 0, 0, 0, -7.87381, 0, 36.7945),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 15.4228, 0, -31.4651, 0, 0, 0, 0, 0, 0, -15.4228, 0, 31.4651),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_yqy0i"]
+[sub_resource type="Curve3D" id="Curve3D_frum7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 22.3176, 0, -38.7924, 0, 0, 0, 0, 0, 0, -22.3176, 0, 38.7924),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.56954, 0, -31.4997, 0, 0, 0, 0, 0, 0, -5.56954, 0, 31.4997),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_txbg6"]
+[sub_resource type="Curve3D" id="Curve3D_sk72u"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.07, 0, 7.61723, 0, 0, 0, 0, 0, 0, 36.07, 0, -7.61723),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.2551, 0, 6.54251, 0, 0, 0, 0, 0, 0, 33.2551, 0, -6.54251),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_qf6pd"]
+[sub_resource type="Curve3D" id="Curve3D_tmywd"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.3151, 0, -21.8263, 0, 0, 0, 0, 0, 0, -7.3151, 0, 21.8263),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.28878, 0, -18.5415, 0, 0, 0, 0, 0, 0, 5.28878, 0, 18.5415),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_87ycl"]
+[sub_resource type="Curve3D" id="Curve3D_rmfpw"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.1906, 0, 10.6474, 0, 0, 0, 0, 0, 0, 27.1906, 0, -10.6474),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.258, 0, -18.0015, 0, 0, 0, 0, 0, 0, 35.258, 0, 18.0015),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_d8dw4"]
+[sub_resource type="Curve3D" id="Curve3D_s61up"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.83249, 0, -24.4172, 0, 0, 0, 0, 0, 0, -1.83249, 0, 24.4172),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.63531, 0, -36.7462, 0, 0, 0, 0, 0, 0, 1.63531, 0, 36.7462),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_jcama"]
+[sub_resource type="Curve3D" id="Curve3D_nt6s1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -54.5847, 0, 0.29509, 0, 0, 0, 0, 0, 0, 54.5847, 0, -0.29509),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.1052, 0, 13.8644, 0, 0, 0, 0, 0, 0, 27.1052, 0, -13.8644),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_8bwpt"]
+[sub_resource type="Curve3D" id="Curve3D_oxyev"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.3316, 0, -30.6491, 0, 0, 0, 0, 0, 0, 18.3316, 0, 30.6491),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 8.19781, 0, -31.9043, 0, 0, 0, 0, 0, 0, -8.19781, 0, 31.9043),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_47kqr"]
+[sub_resource type="Curve3D" id="Curve3D_67018"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.8189, 0, -14.0412, 0, 0, 0, 0, 0, 0, 28.8189, 0, 14.0412),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.9808, 0, -3.30933, 0, 0, 0, 0, 0, 0, 34.9808, 0, 3.30933),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_i7ogi"]
+[sub_resource type="Curve3D" id="Curve3D_ka8cn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.84233, 0, -28.1833, 0, 0, 0, 0, 0, 0, 1.84233, 0, 28.1833),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.29224, 0, -36.4503, 0, 0, 0, 0, 0, 0, 6.29224, 0, 36.4503),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_weoyg"]
+[sub_resource type="Curve3D" id="Curve3D_oh3ls"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -21.1038, 0, 8.69002, 0, 0, 0, 0, 0, 0, 21.1038, 0, -8.69002),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.5579, 0, -9.17264, 0, 0, 0, 0, 0, 0, 45.5579, 0, 9.17264),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1n1w7"]
+[sub_resource type="Curve3D" id="Curve3D_qrow1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.15645, 0, -25.3218, 0, 0, 0, 0, 0, 0, 2.15645, 0, 25.3218),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.70302, 0, -44.1849, 0, 0, 0, 0, 0, 0, 4.70302, 0, 44.1849),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1croj"]
+[sub_resource type="Curve3D" id="Curve3D_ucntw"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.5901, 0, -14.728, 0, 0, 0, 0, 0, 0, 41.5901, 0, 14.728),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.9755, 0, 7.41971, 0, 0, 0, 0, 0, 0, 13.9755, 0, -7.41971),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_hlwjv"]
+[sub_resource type="Curve3D" id="Curve3D_m83gm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.68427, 0, -36.1988, 0, 0, 0, 0, 0, 0, 9.68427, 0, 36.1988),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.61751, 0, -45.3458, 0, 0, 0, 0, 0, 0, -5.61751, 0, 45.3458),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_tcjf8"]
+[sub_resource type="Curve3D" id="Curve3D_qkrst"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.2924, 0, 4.25516, 0, 0, 0, 0, 0, 0, 29.2924, 0, -4.25516),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -44.3992, 0, 8.34921, 0, 0, 0, 0, 0, 0, 44.3992, 0, -8.34921),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_s6lb6"]
+[sub_resource type="Curve3D" id="Curve3D_x6m0j"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.3013, 0, -33.7673, 0, 0, 0, 0, 0, 0, 4.3013, 0, 33.7673),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.4693, 0, -22.6106, 0, 0, 0, 0, 0, 0, 15.4693, 0, 22.6106),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_t3g2w"]
+[sub_resource type="Curve3D" id="Curve3D_myepj"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.86961, 0, -31.4017, 0, 0, 0, 0, 0, 0, 3.86961, 0, 31.4017),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.14565, 0, -36.0866, 0, 0, 0, 0, 0, 0, -4.14565, 0, 36.0866),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_r17wv"]
+[sub_resource type="Curve3D" id="Curve3D_5a28n"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.5814, 0, 8.96461, 0, 0, 0, 0, 0, 0, 30.5814, 0, -8.96461),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.3704, 0, -6.32114, 0, 0, 0, 0, 0, 0, 32.3704, 0, 6.32114),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_o3ft2"]
+[sub_resource type="Curve3D" id="Curve3D_gaot4"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.61902, 0, -30.0544, 0, 0, 0, 0, 0, 0, -1.61902, 0, 30.0544),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.03034, 0, -48.9502, 0, 0, 0, 0, 0, 0, -5.03034, 0, 48.9502),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_u3hrr"]
+[sub_resource type="Curve3D" id="Curve3D_d1x74"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -40.5773, 0, 8.36429, 0, 0, 0, 0, 0, 0, 40.5773, 0, -8.36429),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -48.6431, 0, 12.1858, 0, 0, 0, 0, 0, 0, 48.6431, 0, -12.1858),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_86pol"]
+[sub_resource type="Curve3D" id="Curve3D_0hefr"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.7676, 0, -32.3375, 0, 0, 0, 0, 0, 0, 11.7676, 0, 32.3375),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.35484, 0, -18.763, 0, 0, 0, 0, 0, 0, 8.35484, 0, 18.763),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_byrxx"]
+[sub_resource type="Curve3D" id="Curve3D_ax1bm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -41.1386, 0, -17.8704, 0, 0, 0, 0, 0, 0, 41.1386, 0, 17.8704),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.2221, 0, -11.9883, 0, 0, 0, 0, 0, 0, 22.2221, 0, 11.9883),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_2fqm5"]
+[sub_resource type="Curve3D" id="Curve3D_h6ck2"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.67842, 0, -50.503, 0, 0, 0, 0, 0, 0, -1.67842, 0, 50.503),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.4717, 0, -44.6157, 0, 0, 0, 0, 0, 0, 3.4717, 0, 44.6157),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_ga0wy"]
+[sub_resource type="Curve3D" id="Curve3D_i1ria"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.0449, 0, 7.82019, 0, 0, 0, 0, 0, 0, 27.0449, 0, -7.82019),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.0094, 0, 1.32854, 0, 0, 0, 0, 0, 0, 24.0094, 0, -1.32854),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_hvisb"]
+[sub_resource type="Curve3D" id="Curve3D_hesif"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.45236, 0, -28.6416, 0, 0, 0, 0, 0, 0, -3.45236, 0, 28.6416),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.49973, 0, -39.9778, 0, 0, 0, 0, 0, 0, -7.49973, 0, 39.9778),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_1f1sl"]
+[sub_resource type="Curve3D" id="Curve3D_6vhwa"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.4059, 0, 10.3796, 0, 0, 0, 0, 0, 0, 18.4059, 0, -10.3796),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.5972, 0, 9.50156, 0, 0, 0, 0, 0, 0, 36.5972, 0, -9.50156),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_jspsj"]
+[sub_resource type="Curve3D" id="Curve3D_wbp51"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 6.15025, 0, -26.9521, 0, 0, 0, 0, 0, 0, -6.15025, 0, 26.9521),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16.4605, 0, -21.3036, 0, 0, 0, 0, 0, 0, -16.4605, 0, 21.3036),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_5hlu4"]
+[sub_resource type="Curve3D" id="Curve3D_v6hp0"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -44.5493, 0, -4.99918, 0, 0, 0, 0, 0, 0, 44.5493, 0, 4.99918),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.8445, 0, 0.722763, 0, 0, 0, 0, 0, 0, 35.8445, 0, -0.722763),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_cxh0j"]
+[sub_resource type="Curve3D" id="Curve3D_uetqp"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.19099, 0, -17.2232, 0, 0, 0, 0, 0, 0, -3.19099, 0, 17.2232),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.40852, 0, -28.0006, 0, 0, 0, 0, 0, 0, 5.40852, 0, 28.0006),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_goj0o"]
+[sub_resource type="Curve3D" id="Curve3D_ys3m7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -19.6819, 0, -0.860153, 0, 0, 0, 0, 0, 0, 19.6819, 0, 0.860153),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -39.601, 0, -9.96648, 0, 0, 0, 0, 0, 0, 39.601, 0, 9.96648),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_alfc1"]
+[sub_resource type="Curve3D" id="Curve3D_yvgp1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.8015, 0, -22.3385, 0, 0, 0, 0, 0, 0, -12.8015, 0, 22.3385),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.610336, 0, -46.3163, 0, 0, 0, 0, 0, 0, 0.610336, 0, 46.3163),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_i4utg"]
+[sub_resource type="Curve3D" id="Curve3D_tmon5"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.1909, 0, -19.162, 0, 0, 0, 0, 0, 0, 10.1909, 0, 19.162),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.0472, 0, -39.5353, 0, 0, 0, 0, 0, 0, 23.0472, 0, 39.5353),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_gk2jn"]
+[sub_resource type="Curve3D" id="Curve3D_7fjb2"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.2786, 0, -7.45169, 0, 0, 0, 0, 0, 0, 35.2786, 0, 7.45169),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.8087, 0, 18.2183, 0, 0, 0, 0, 0, 0, 20.8087, 0, -18.2183),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_01i4n"]
+[sub_resource type="Curve3D" id="Curve3D_m4g04"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.8882, 0, -35.5784, 0, 0, 0, 0, 0, 0, 14.8882, 0, 35.5784),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.4855, 0, -14.9959, 0, 0, 0, 0, 0, 0, 11.4855, 0, 14.9959),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_5hbla"]
+[sub_resource type="Curve3D" id="Curve3D_b3rbb"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.9059, 0, 11.0423, 0, 0, 0, 0, 0, 0, 31.9059, 0, -11.0423),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.3189, 0, -1.6599, 0, 0, 0, 0, 0, 0, 33.3189, 0, 1.6599),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_tx24p"]
+[sub_resource type="Curve3D" id="Curve3D_yg0vm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.21681, 0, -32.9004, 0, 0, 0, 0, 0, 0, 6.21681, 0, 32.9004),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.83875, 0, -28.8416, 0, 0, 0, 0, 0, 0, -3.83875, 0, 28.8416),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nid0k"]
+[sub_resource type="Curve3D" id="Curve3D_mfpas"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.7352, 0, -7.95964, 0, 0, 0, 0, 0, 0, 25.7352, 0, 7.95964),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.6656, 0, 1.53555, 0, 0, 0, 0, 0, 0, 28.6656, 0, -1.53555),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_oddn1"]
+[sub_resource type="Curve3D" id="Curve3D_56upm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.18658, 0, -22.9896, 0, 0, 0, 0, 0, 0, -9.18658, 0, 22.9896),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.60481, 0, -15.3177, 0, 0, 0, 0, 0, 0, 2.60481, 0, 15.3177),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_i3qgp"]
+[sub_resource type="Curve3D" id="Curve3D_q6tyd"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -30.789, 0, 7.55664, 0, 0, 0, 0, 0, 0, 30.789, 0, -7.55664),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36.9469, 0, 1.49274, 0, 0, 0, 0, 0, 0, 36.9469, 0, -1.49274),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_6rcr2"]
+[sub_resource type="Curve3D" id="Curve3D_de31k"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.4425, 0, -23.2532, 0, 0, 0, 0, 0, 0, -5.4425, 0, 23.2532),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.5423, 0, -15.1535, 0, 0, 0, 0, 0, 0, 15.5423, 0, 15.1535),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_ftdba"]
+[sub_resource type="Curve3D" id="Curve3D_n2a4h"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.0779, 0, -16.6747, 0, 0, 0, 0, 0, 0, 33.0779, 0, 16.6747),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.0647, 0, -13.3379, 0, 0, 0, 0, 0, 0, 31.0647, 0, 13.3379),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_q8gnm"]
+[sub_resource type="Curve3D" id="Curve3D_2pdfe"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.22955, 0, -50.3075, 0, 0, 0, 0, 0, 0, 9.22955, 0, 50.3075),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.0099, 0, -37.993, 0, 0, 0, 0, 0, 0, 10.0099, 0, 37.993),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_hct85"]
+[sub_resource type="Curve3D" id="Curve3D_mnjvf"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.2236, 0, -1.38376, 0, 0, 0, 0, 0, 0, 22.2236, 0, 1.38376),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.244, 0, -6.25426, 0, 0, 0, 0, 0, 0, 23.244, 0, 6.25426),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nhits"]
+[sub_resource type="Curve3D" id="Curve3D_7n7ai"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 13.0962, 0, -46.692, 0, 0, 0, 0, 0, 0, -13.0962, 0, 46.692),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2.59059, 0, -44.97, 0, 0, 0, 0, 0, 0, -2.59059, 0, 44.97),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_5pitd"]
+[sub_resource type="Curve3D" id="Curve3D_jetiq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.0871, 0, 15.7299, 0, 0, 0, 0, 0, 0, 35.0871, 0, -15.7299),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.6266, 0, 18.2481, 0, 0, 0, 0, 0, 0, 42.6266, 0, -18.2481),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_8iqji"]
+[sub_resource type="Curve3D" id="Curve3D_2go7h"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.30901, 0, -30.102, 0, 0, 0, 0, 0, 0, 2.30901, 0, 30.102),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.434982, 0, -16.7554, 0, 0, 0, 0, 0, 0, 0.434982, 0, 16.7554),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_vh6fv"]
+[sub_resource type="Curve3D" id="Curve3D_x083d"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.67907, 0, -29.2898, 0, 0, 0, 0, 0, 0, 4.67907, 0, 29.2898),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2.00743, 0, -17.8641, 0, 0, 0, 0, 0, 0, -2.00743, 0, 17.8641),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_bekha"]
+[sub_resource type="Curve3D" id="Curve3D_t1ege"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.7145, 0, -9.59277, 0, 0, 0, 0, 0, 0, 24.7145, 0, 9.59277),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.5603, 0, 0.370255, 0, 0, 0, 0, 0, 0, 28.5603, 0, -0.370255),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_queuq"]
+[sub_resource type="Curve3D" id="Curve3D_adkrp"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 5.88507, 0, -31.4308, 0, 0, 0, 0, 0, 0, -5.88507, 0, 31.4308),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.74416, 0, -35.7121, 0, 0, 0, 0, 0, 0, 5.74416, 0, 35.7121),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_xejl3"]
+[sub_resource type="Curve3D" id="Curve3D_5gkai"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -42.1554, 0, -2.38983, 0, 0, 0, 0, 0, 0, 42.1554, 0, 2.38983),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.2241, 0, 8.01425, 0, 0, 0, 0, 0, 0, 33.2241, 0, -8.01425),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_81xt3"]
+[sub_resource type="Curve3D" id="Curve3D_gpn85"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.36443, 0, -44.8629, 0, 0, 0, 0, 0, 0, 4.36443, 0, 44.8629),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.64935, 0, -26.0379, 0, 0, 0, 0, 0, 0, 5.64935, 0, 26.0379),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_hvcoj"]
+[sub_resource type="Curve3D" id="Curve3D_6twj5"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.9737, 0, 6.27229, 0, 0, 0, 0, 0, 0, 32.9737, 0, -6.27229),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -26.3172, 0, -16.6671, 0, 0, 0, 0, 0, 0, 26.3172, 0, 16.6671),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_44ylg"]
+[sub_resource type="Curve3D" id="Curve3D_xlob7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6029, 0, -30.631, 0, 0, 0, 0, 0, 0, 11.6029, 0, 30.631),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.30095, 0, -44.2406, 0, 0, 0, 0, 0, 0, 3.30095, 0, 44.2406),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nwagi"]
+[sub_resource type="Curve3D" id="Curve3D_tmlps"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -19.9079, 0, -9.50299, 0, 0, 0, 0, 0, 0, 19.9079, 0, 9.50299),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.3938, 0, 12.6026, 0, 0, 0, 0, 0, 0, 33.3938, 0, -12.6026),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_857j2"]
+[sub_resource type="Curve3D" id="Curve3D_rydb0"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.721771, 0, -47.6906, 0, 0, 0, 0, 0, 0, 0.721771, 0, 47.6906),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.252182, 0, -33.1308, 0, 0, 0, 0, 0, 0, -0.252182, 0, 33.1308),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_famyp"]
+[sub_resource type="Curve3D" id="Curve3D_ditew"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -32.3845, 0, 2.08597, 0, 0, 0, 0, 0, 0, 32.3845, 0, -2.08597),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.2407, 0, 3.51962, 0, 0, 0, 0, 0, 0, 25.2407, 0, -3.51962),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_pa33u"]
+[sub_resource type="Curve3D" id="Curve3D_gew2p"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0283051, 0, -28.93, 0, 0, 0, 0, 0, 0, 0.0283051, 0, 28.93),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 6.0762, 0, -16.2733, 0, 0, 0, 0, 0, 0, -6.0762, 0, 16.2733),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_s4dsd"]
+[sub_resource type="Curve3D" id="Curve3D_sgdrd"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.2684, 0, 3.63159, 0, 0, 0, 0, 0, 0, 27.2684, 0, -3.63159),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.0758, 0, -2.09189, 0, 0, 0, 0, 0, 0, 28.0758, 0, 2.09189),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_8nuey"]
+[sub_resource type="Curve3D" id="Curve3D_635xq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.0731, 0, -23.9146, 0, 0, 0, 0, 0, 0, 5.0731, 0, 23.9146),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.24445, 0, -12.1109, 0, 0, 0, 0, 0, 0, -1.24445, 0, 12.1109),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_dudlj"]
+[sub_resource type="Curve3D" id="Curve3D_6vemu"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -45.3034, 0, 11.4382, 0, 0, 0, 0, 0, 0, 45.3034, 0, -11.4382),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.689, 0, -10.3617, 0, 0, 0, 0, 0, 0, 31.689, 0, 10.3617),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_6xo7v"]
+[sub_resource type="Curve3D" id="Curve3D_bso68"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.2894, 0, -28.2063, 0, 0, 0, 0, 0, 0, 15.2894, 0, 28.2063),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.182, 0, -40.7207, 0, 0, 0, 0, 0, 0, -12.182, 0, 40.7207),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -824,268 +824,448 @@ cross_section_path = NodePath("../road_cross_section")
 block_size = Vector2(64, 64)
 uniformity = 0.25
 
-[node name="@@38610" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0052, 0, 36.7005)
+[node name="@@56875" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8677, 0, 1.06126)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38611" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2207, 0, 18.8661)
+[node name="@@56876" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.6644, 0, 23.3333)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38612" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.171, 0, 10.4207)
+[node name="@@56877" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 172.622, 0, 17.7463)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38613" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.602, 0, 24.1844)
+[node name="@@56878" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.88, 0, 32.6548)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38614" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 299.251, 0, 8.19974)
+[node name="@@56879" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.04, 0, 39.9987)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38615" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 340.88, 0, 25.2482)
+[node name="@@56880" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 360.733, 0, 43.0191)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38616" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.877, 0, 33.0029)
+[node name="@@56881" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 393.003, 0, 20.4792)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38617" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 482.146, 0, 13.2733)
+[node name="@@56882" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 460.076, 0, 6.88007)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38618" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.591, 0, 102.83)
+[node name="@@56883" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4045, 0, 71.8398)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38619" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5038, 0, 83.643)
+[node name="@@56884" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.3198, 0, 109.316)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38620" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.031, 0, 100.576)
+[node name="@@57051" type="CSGPolygon3D" parent="road_graph/@@56884"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.33672, -7.13539, 3.71558, -3.31526, 5.4173, 3.15607, -2.64707, 1.93502)
+
+[node name="@@56885" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.217, 0, 107.627)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57052" type="CSGPolygon3D" parent="road_graph/@@56885"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.93295, -3.19937, 4.31727, -10.0293, 2.71311, 1.82868, -5.38943, 3.34444)
 
-[node name="@@38621" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.296, 0, 84.577)
+[node name="@@56886" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.182, 0, 71.5076)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38622" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 290.443, 0, 84.199)
+[node name="@@57053" type="CSGPolygon3D" parent="road_graph/@@56886"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.43102, -2.15772, 6.00122, -1.72798, 4.59286, 4.62556, -1.55339, 6.80537)
+
+[node name="@@56887" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.553, 0, 99.2334)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38623" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 323.367, 0, 70.3721)
+[node name="@@57054" type="CSGPolygon3D" parent="road_graph/@@56887"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-7.09001, -5.30855, 1.14185, -4.34127, 2.58612, 2.28522, -4.37043, 2.17402)
+
+[node name="@@56888" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.575, 0, 69.9906)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57055" type="CSGPolygon3D" parent="road_graph/@@56888"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.51786, -2.32287, 4.29254, -1.61419, 2.2157, 4.58275, -4.93702, 6.43438)
 
-[node name="@@38624" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 431.99, 0, 97.7393)
+[node name="@@56889" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 396.022, 0, 91.6323)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57056" type="CSGPolygon3D" parent="road_graph/@@56889"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.47165, -5.15562, 3.09333, -3.76182, 5.45708, 2.45189, -2.21284, 2.56279)
 
-[node name="@@38625" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 460.247, 0, 104.708)
+[node name="@@56890" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 482.945, 0, 78.3156)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38626" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7975, 0, 136.026)
+[node name="@@56891" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8102, 0, 133.686)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38627" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.0696, 0, 168.398)
+[node name="@@56892" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.2006, 0, 160.555)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57057" type="CSGPolygon3D" parent="road_graph/@@56892"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-6.84631, -5.78227, 1.71281, -3.65199, 2.34531, 2.8489, -4.3134, 1.95714)
 
-[node name="@@38628" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.625, 0, 135.553)
+[node name="@@56893" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.583, 0, 151.376)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57058" type="CSGPolygon3D" parent="road_graph/@@56893"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.16704, -2.88418, 6.58872, -5.66258, 3.35009, 2.2968, -3.08688, 3.92391)
 
-[node name="@@38629" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 230.954, 0, 142.564)
+[node name="@@56894" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 209.237, 0, 128.126)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57059" type="CSGPolygon3D" parent="road_graph/@@56894"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.92213, -2.10307, 2.73946, -2.34477, 3.8043, 5.22658, -2.81643, 4.38509)
 
-[node name="@@38630" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 286.965, 0, 160.388)
+[node name="@@56895" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 272.792, 0, 156.116)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38631" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.122, 0, 149.892)
+[node name="@@57060" type="CSGPolygon3D" parent="road_graph/@@56895"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-1.768, -4.32981, 5.04551, -3.86113, 2.56565, 2.97254, -3.86347, 1.84977)
+
+[node name="@@56896" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.92, 0, 149.563)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57061" type="CSGPolygon3D" parent="road_graph/@@56896"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.61486, -2.96679, 4.2501, -3.65341, 4.59872, 2.84189, -2.11487, 3.51898)
 
-[node name="@@38632" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.843, 0, 157.236)
+[node name="@@56897" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 427.643, 0, 140.509)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38633" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 486.924, 0, 150.33)
+[node name="@@57062" type="CSGPolygon3D" parent="road_graph/@@56897"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-5.64719, -2.74574, 2.14844, -2.66233, 1.62685, 4.08937, -5.44057, 3.76259)
+
+[node name="@@56898" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.079, 0, 159.952)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38634" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.113, 0, 219.34)
+[node name="@@56899" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2477, 0, 216.489)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38635" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.248, 0, 238.038)
+[node name="@@56900" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0412, 0, 229.32)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38636" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.664, 0, 211.562)
+[node name="@@57063" type="CSGPolygon3D" parent="road_graph/@@56900"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-1.90417, -3.92617, 4.85322, -3.27539, 4.30026, 3.22759, -2.63022, 2.62727)
+
+[node name="@@56901" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143.864, 0, 228.913)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57064" type="CSGPolygon3D" parent="road_graph/@@56901"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.38967, -3.23234, 3.07953, -4.09775, 3.36552, 2.52349, -3.10786, 3.26627)
 
-[node name="@@38637" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.505, 0, 198.507)
+[node name="@@56902" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 217.741, 0, 210.868)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57065" type="CSGPolygon3D" parent="road_graph/@@56902"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.52254, -2.48513, 2.91441, -3.43181, 2.55864, 3.10149, -4.49749, 4.4441)
 
-[node name="@@38638" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 292.122, 0, 231.521)
+[node name="@@56903" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 258.722, 0, 208.395)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57066" type="CSGPolygon3D" parent="road_graph/@@56903"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.53048, -3.10319, 4.20619, -3.12322, 3.87979, 3.36985, -2.7078, 3.41934)
 
-[node name="@@38639" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.701, 0, 219.864)
+[node name="@@56904" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 353.016, 0, 211.271)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57067" type="CSGPolygon3D" parent="road_graph/@@56904"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-4.81604, -3.39841, 1.88335, -4.11187, 3.50352, 2.20939, -2.93179, 3.16209)
 
-[node name="@@38640" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.825, 0, 227.566)
+[node name="@@56905" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.609, 0, 194.11)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57068" type="CSGPolygon3D" parent="road_graph/@@56905"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.34045, -2.62015, 4.20702, -1.22287, 2.60277, 5.42516, -3.8712, 4.81392)
 
-[node name="@@38641" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.176, 0, 223.919)
+[node name="@@56906" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 448.233, 0, 222.882)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38642" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47782, 0, 296.925)
+[node name="@@56907" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1086, 0, 279.488)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38643" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6178, 0, 281.691)
+[node name="@@56908" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.6187, 0, 266.403)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38644" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.999, 0, 260.396)
+[node name="@@57069" type="CSGPolygon3D" parent="road_graph/@@56908"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-4.09465, -2.50673, 2.73742, -2.25146, 2.74794, 5.0521, -3.68194, 4.03668)
+
+[node name="@@56909" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.135, 0, 302.406)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57070" type="CSGPolygon3D" parent="road_graph/@@56909"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.49503, -5.43353, 3.02197, -5.19624, 4.22161, 1.49111, -2.50145, 2.37194)
 
-[node name="@@38645" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.168, 0, 259.806)
+[node name="@@56910" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.345, 0, 274.677)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38646" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.806, 0, 287.888)
+[node name="@@57071" type="CSGPolygon3D" parent="road_graph/@@56910"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.78341, -2.22676, 4.09485, -2.87712, 3.53991, 3.5994, -2.86186, 5.11434)
+
+[node name="@@56911" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 271.307, 0, 281.296)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38647" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.014, 0, 270.508)
+[node name="@@57072" type="CSGPolygon3D" parent="road_graph/@@56911"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.92572, -3.6359, 2.82393, -2.74665, 2.58705, 3.8361, -3.85077, 2.90021)
+
+[node name="@@56912" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 362.423, 0, 299.641)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57073" type="CSGPolygon3D" parent="road_graph/@@56912"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.70053, -4.06029, 2.72283, -5.12521, 2.14315, 2.54181, -5.77089, 2.15331)
 
-[node name="@@38648" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 421.194, 0, 299.964)
+[node name="@@56913" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.374, 0, 284.801)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57074" type="CSGPolygon3D" parent="road_graph/@@56913"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.01746, -2.07763, 3.7724, -4.01636, 3.81043, 2.59042, -2.35756, 4.93128)
 
-[node name="@@38649" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.779, 0, 291.454)
+[node name="@@56914" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.172, 0, 268.103)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38650" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.217, 0, 359.729)
+[node name="@@56915" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81733, 0, 351.661)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38651" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.3798, 0, 341.799)
+[node name="@@56916" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5581, 0, 364.303)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57075" type="CSGPolygon3D" parent="road_graph/@@56916"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.86925, -3.87168, 3.70685, -4.27905, 5.58774, 1.95062, -1.83142, 2.95375)
 
-[node name="@@38652" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.534, 0, 325.071)
+[node name="@@56917" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.844, 0, 339.932)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57076" type="CSGPolygon3D" parent="road_graph/@@56917"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-4.54279, -2.2124, 2.51824, -2.33424, 2.60044, 5.09564, -3.85307, 4.31568)
 
-[node name="@@38653" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 234.812, 0, 360.812)
+[node name="@@56918" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208.289, 0, 363.908)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57077" type="CSGPolygon3D" parent="road_graph/@@56918"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.7026, -5.69023, 2.99365, -3.42062, 3.81428, 3.04391, -2.93824, 2.10766)
 
-[node name="@@38654" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.901, 0, 345.171)
+[node name="@@56919" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256.307, 0, 361.251)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38655" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325.713, 0, 324.412)
+[node name="@@57078" type="CSGPolygon3D" parent="road_graph/@@56919"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.72435, -3.10422, 4.13815, -4.43212, 6.3962, 1.69713, -1.24631, 3.32394)
+
+[node name="@@56920" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.502, 0, 342.248)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57079" type="CSGPolygon3D" parent="road_graph/@@56920"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-1.89231, -2.86645, 6.72352, -3.38623, 4.19506, 3.16607, -2.31772, 3.95949)
 
-[node name="@@38656" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 414.812, 0, 334.41)
+[node name="@@56921" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.191, 0, 340.803)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38657" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 454.176, 0, 336.131)
+[node name="@@57080" type="CSGPolygon3D" parent="road_graph/@@56921"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.92269, -3.17156, 2.79879, -2.64697, 3.01856, 4.11103, -3.44665, 3.32016)
+
+[node name="@@56922" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480.393, 0, 360.736)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38658" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5989, 0, 398.053)
+[node name="@@56923" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9116, 0, 430.732)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38659" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.156, 0, 412.956)
+[node name="@@56924" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.5291, 0, 394.295)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38660" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.968, 0, 390.872)
+[node name="@@57081" type="CSGPolygon3D" parent="road_graph/@@56924"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-4.43093, -0.440258, 1.66497, -3.17108, 3.84599, 3.44563, -2.27641, 6.31262)
+
+[node name="@@56925" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.167, 0, 397.615)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57082" type="CSGPolygon3D" parent="road_graph/@@56925"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-2.82681, -3.39486, 3.7385, -3.45492, 3.98545, 3.04117, -2.64823, 3.1221)
 
-[node name="@@38661" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.438, 0, 406.791)
+[node name="@@56926" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213.498, 0, 394.544)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57083" type="CSGPolygon3D" parent="road_graph/@@56926"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.81536, -3.05028, 2.72482, -3.36274, 3.4912, 3.1116, -3.00419, 3.41559)
 
-[node name="@@38662" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.016, 0, 391.678)
+[node name="@@56927" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 287.392, 0, 391.558)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57084" type="CSGPolygon3D" parent="road_graph/@@56927"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-7.67365, -2.94262, 1.83673, -2.74829, 3.21267, 4.91629, -3.27586, 3.385)
 
-[node name="@@38663" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.172, 0, 425.027)
+[node name="@@56928" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 349.521, 0, 418.234)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57085" type="CSGPolygon3D" parent="road_graph/@@56928"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-4.8403, -5.61513, 2.66297, -2.64907, 2.01051, 3.90656, -4.128, 1.76451)
 
-[node name="@@38664" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 388.62, 0, 427.795)
+[node name="@@56929" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 396.009, 0, 430.743)
 script = ExtResource("2_yq7qx")
+
+[node name="@@57086" type="CSGPolygon3D" parent="road_graph/@@56929"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(-3.01478, -4.17677, 3.54651, -5.05352, 3.03746, 2.23497, -3.51574, 2.41962)
 
-[node name="@@38665" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.794, 0, 396.335)
+[node name="@@56930" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 481.263, 0, 394.246)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38666" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9571, 0, 456.632)
+[node name="@@56931" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.8968, 0, 466.46)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38667" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.386, 0, 475.818)
+[node name="@@56932" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.017, 0, 465.719)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38668" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.697, 0, 480.597)
+[node name="@@56933" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.466, 0, 449.691)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38669" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 239.644, 0, 468.053)
+[node name="@@56934" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220.1, 0, 483.025)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38670" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.46, 0, 487.059)
+[node name="@@56935" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 286.888, 0, 457.82)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38671" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.229, 0, 482.887)
+[node name="@@56936" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 337.369, 0, 450.781)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38672" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.766, 0, 475.624)
+[node name="@@56937" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 393.52, 0, 454.964)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38673" type="Marker3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 489.373, 0, 452.747)
+[node name="@@56938" type="Marker3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.898, 0, 475.688)
 script = ExtResource("2_yq7qx")
 
-[node name="@@38674" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.613, 0, 27.7833)
-curve = SubResource("Curve3D_bai47")
+[node name="@@56939" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2661, 0, 12.1973)
+curve = SubResource("Curve3D_qsb4g")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38674"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56939"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1099,12 +1279,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38675" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7981, 0, 69.7651)
-curve = SubResource("Curve3D_qp58p")
+[node name="@@56940" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6361, 0, 36.4505)
+curve = SubResource("Curve3D_tuvfh")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38675"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56940"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1118,12 +1298,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38676" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5474, 0, 93.2364)
-curve = SubResource("Curve3D_ocwks")
+[node name="@@56941" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.3621, 0, 90.5778)
+curve = SubResource("Curve3D_yg01g")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38676"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56941"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1137,12 +1317,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38677" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.3623, 0, 51.2545)
-curve = SubResource("Curve3D_j714l")
+[node name="@@56942" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9921, 0, 66.3246)
+curve = SubResource("Curve3D_a6ejb")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38677"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56942"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1156,12 +1336,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38678" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.196, 0, 14.6434)
-curve = SubResource("Curve3D_d3n0b")
+[node name="@@56943" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.143, 0, 20.5398)
+curve = SubResource("Curve3D_4o12r")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38678"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56943"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1175,12 +1355,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38679" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.767, 0, 92.1096)
-curve = SubResource("Curve3D_qfvi6")
+[node name="@@56944" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.768, 0, 108.471)
+curve = SubResource("Curve3D_16whg")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38679"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56944"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1194,12 +1374,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38680" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.601, 0, 55.4984)
-curve = SubResource("Curve3D_1xoxl")
+[node name="@@56945" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.92, 0, 62.6866)
+curve = SubResource("Curve3D_l4ev3")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38680"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56945"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1213,12 +1393,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38681" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.387, 0, 17.3025)
-curve = SubResource("Curve3D_i3824")
+[node name="@@56946" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.251, 0, 25.2006)
+curve = SubResource("Curve3D_umlt7")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38681"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56946"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1232,12 +1412,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38682" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202.163, 0, 92.5766)
-curve = SubResource("Curve3D_lhev0")
+[node name="@@56947" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178.699, 0, 89.5672)
+curve = SubResource("Curve3D_i27cm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38682"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56947"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1251,12 +1431,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38683" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.949, 0, 54.3807)
-curve = SubResource("Curve3D_k76bv")
+[node name="@@56948" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 212.031, 0, 52.0812)
+curve = SubResource("Curve3D_eftef")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38683"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56948"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1270,12 +1450,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38684" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.427, 0, 16.1921)
-curve = SubResource("Curve3D_k0uft")
+[node name="@@56949" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 244.46, 0, 36.3268)
+curve = SubResource("Curve3D_re134")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38684"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56949"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1289,12 +1469,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38685" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.37, 0, 84.388)
-curve = SubResource("Curve3D_1odxg")
+[node name="@@56950" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 244.867, 0, 85.3705)
+curve = SubResource("Curve3D_5gwy0")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38685"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56950"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1308,12 +1488,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38686" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.847, 0, 46.1994)
-curve = SubResource("Curve3D_ixbex")
+[node name="@@56951" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 277.297, 0, 69.616)
+curve = SubResource("Curve3D_5xg5w")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38686"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56951"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1327,12 +1507,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38687" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320.065, 0, 16.724)
-curve = SubResource("Curve3D_t0aav")
+[node name="@@56952" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 309.887, 0, 41.5089)
+curve = SubResource("Curve3D_ypfs4")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38687"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56952"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1346,12 +1526,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38688" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.905, 0, 77.2856)
-curve = SubResource("Curve3D_0h0rc")
+[node name="@@56953" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 322.064, 0, 84.612)
+curve = SubResource("Curve3D_ns6qe")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38688"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56953"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1365,12 +1545,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38689" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 332.123, 0, 47.8102)
-curve = SubResource("Curve3D_k1k35")
+[node name="@@56954" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 354.654, 0, 56.5048)
+curve = SubResource("Curve3D_dhwtx")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38689"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56954"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1384,12 +1564,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38690" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.878, 0, 29.1255)
-curve = SubResource("Curve3D_1o1a4")
+[node name="@@56955" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 376.868, 0, 31.7491)
+curve = SubResource("Curve3D_tbwou")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38690"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56955"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1403,12 +1583,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38691" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 377.679, 0, 84.0557)
-curve = SubResource("Curve3D_8o5jf")
+[node name="@@56956" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 372.298, 0, 80.8115)
+curve = SubResource("Curve3D_r8myb")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38691"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56956"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1422,12 +1602,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38692" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 411.434, 0, 65.3711)
-curve = SubResource("Curve3D_nbj6j")
+[node name="@@56957" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 394.513, 0, 56.0557)
+curve = SubResource("Curve3D_fdm3k")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38692"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56957"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1441,12 +1621,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38693" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 436.512, 0, 23.1381)
-curve = SubResource("Curve3D_x0ryd")
+[node name="@@56958" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.539, 0, 13.6796)
+curve = SubResource("Curve3D_0wjwh")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38693"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56958"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1460,12 +1640,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38694" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 446.118, 0, 101.224)
-curve = SubResource("Curve3D_at8uk")
+[node name="@@56959" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 439.484, 0, 84.9739)
+curve = SubResource("Curve3D_x3xfn")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38694"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56959"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1479,12 +1659,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38695" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.196, 0, 58.9908)
-curve = SubResource("Curve3D_xtvcn")
+[node name="@@56960" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.51, 0, 42.5978)
+curve = SubResource("Curve3D_1bfn3")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38695"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56960"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1498,12 +1678,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38696" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6943, 0, 119.428)
-curve = SubResource("Curve3D_nxhb3")
+[node name="@@56961" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1073, 0, 102.763)
+curve = SubResource("Curve3D_ewfyi")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38696"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56961"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1517,12 +1697,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38697" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.9336, 0, 152.212)
-curve = SubResource("Curve3D_lb3y1")
+[node name="@@56962" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.0054, 0, 147.12)
+curve = SubResource("Curve3D_17yfm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38697"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56962"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1536,12 +1716,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38698" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7867, 0, 126.021)
-curve = SubResource("Curve3D_hpqrm")
+[node name="@@56963" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.2602, 0, 134.935)
+curve = SubResource("Curve3D_dtcgd")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38698"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56963"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1555,12 +1735,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38699" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.847, 0, 151.976)
-curve = SubResource("Curve3D_e0pnw")
+[node name="@@56964" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.392, 0, 155.965)
+curve = SubResource("Curve3D_yrtxy")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38699"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56964"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1574,12 +1754,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38700" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.828, 0, 118.065)
-curve = SubResource("Curve3D_cvre4")
+[node name="@@56965" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.9, 0, 129.501)
+curve = SubResource("Curve3D_i7cj3")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38700"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56965"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1593,12 +1773,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38701" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 189.289, 0, 139.059)
-curve = SubResource("Curve3D_f485e")
+[node name="@@56966" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.91, 0, 139.751)
+curve = SubResource("Curve3D_aqvad")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38701"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56966"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1612,12 +1792,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38702" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 234.625, 0, 113.571)
-curve = SubResource("Curve3D_l8jd1")
+[node name="@@56967" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.709, 0, 99.817)
+curve = SubResource("Curve3D_l50v8")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38702"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56967"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1631,12 +1811,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38703" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 258.96, 0, 151.476)
-curve = SubResource("Curve3D_3r1ur")
+[node name="@@56968" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 241.014, 0, 142.121)
+curve = SubResource("Curve3D_warqi")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38703"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56968"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1650,12 +1830,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38704" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.704, 0, 122.294)
-curve = SubResource("Curve3D_jfgt5")
+[node name="@@56969" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 284.172, 0, 127.674)
+curve = SubResource("Curve3D_t4whm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38704"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56969"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1669,12 +1849,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38705" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.044, 0, 155.14)
-curve = SubResource("Curve3D_g83sk")
+[node name="@@56970" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 300.856, 0, 152.839)
+curve = SubResource("Curve3D_edecm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38705"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56970"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1688,12 +1868,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38706" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.245, 0, 110.132)
-curve = SubResource("Curve3D_v1slj")
+[node name="@@56971" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.747, 0, 109.777)
+curve = SubResource("Curve3D_lgyjh")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38706"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56971"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1707,12 +1887,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38707" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.982, 0, 153.564)
-curve = SubResource("Curve3D_vv3no")
+[node name="@@56972" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 378.281, 0, 145.036)
+curve = SubResource("Curve3D_hhnm7")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38707"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56972"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1726,12 +1906,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38708" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 415.416, 0, 127.488)
-curve = SubResource("Curve3D_u6gkt")
+[node name="@@56973" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 411.832, 0, 116.071)
+curve = SubResource("Curve3D_c4j3o")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38708"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56973"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1745,12 +1925,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38709" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 442.883, 0, 153.783)
-curve = SubResource("Curve3D_d3pf4")
+[node name="@@56974" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.361, 0, 150.23)
+curve = SubResource("Curve3D_2f3wk")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38709"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56974"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1764,12 +1944,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38710" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 473.585, 0, 127.519)
-curve = SubResource("Curve3D_mc0ig")
+[node name="@@56975" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 481.012, 0, 119.134)
+curve = SubResource("Curve3D_ntj66")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38710"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56975"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1783,12 +1963,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38711" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4553, 0, 177.683)
-curve = SubResource("Curve3D_j1ujc")
+[node name="@@56976" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.529, 0, 175.087)
+curve = SubResource("Curve3D_2tpw0")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38711"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56976"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1802,12 +1982,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38712" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.1805, 0, 228.689)
-curve = SubResource("Curve3D_wly8g")
+[node name="@@56977" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6445, 0, 222.904)
+curve = SubResource("Curve3D_roemg")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38712"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56977"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1821,12 +2001,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38713" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.6588, 0, 203.218)
-curve = SubResource("Curve3D_2gpyd")
+[node name="@@56978" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.1209, 0, 194.937)
+curve = SubResource("Curve3D_vyt0k")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38713"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56978"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1840,12 +2020,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38714" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.956, 0, 224.8)
-curve = SubResource("Curve3D_054vv")
+[node name="@@56979" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.953, 0, 229.117)
+curve = SubResource("Curve3D_ontwg")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38714"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56979"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1859,12 +2039,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38715" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.144, 0, 173.557)
-curve = SubResource("Curve3D_3meab")
+[node name="@@56980" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.224, 0, 190.145)
+curve = SubResource("Curve3D_uyuwc")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38715"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56980"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1878,12 +2058,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38716" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.085, 0, 205.034)
-curve = SubResource("Curve3D_rjkri")
+[node name="@@56981" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.802, 0, 219.891)
+curve = SubResource("Curve3D_fopn3")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38716"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56981"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1897,12 +2077,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38717" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.23, 0, 170.536)
-curve = SubResource("Curve3D_03l2r")
+[node name="@@56982" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213.489, 0, 169.497)
+curve = SubResource("Curve3D_qqvhv")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38717"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56982"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1916,12 +2096,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38718" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 246.813, 0, 215.014)
-curve = SubResource("Curve3D_so1hc")
+[node name="@@56983" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.231, 0, 209.632)
+curve = SubResource("Curve3D_rdf5h")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38718"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56983"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1935,12 +2115,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38719" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 289.543, 0, 195.955)
-curve = SubResource("Curve3D_ux3w7")
+[node name="@@56984" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 265.757, 0, 182.255)
+curve = SubResource("Curve3D_4shd6")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38719"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56984"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1954,12 +2134,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38720" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.911, 0, 225.693)
-curve = SubResource("Curve3D_rfq4e")
+[node name="@@56985" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.869, 0, 209.833)
+curve = SubResource("Curve3D_ctdgj")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38720"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56985"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1973,12 +2153,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38721" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.411, 0, 184.878)
-curve = SubResource("Curve3D_p2fyt")
+[node name="@@56986" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 340.968, 0, 180.417)
+curve = SubResource("Curve3D_yo8mi")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38721"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56986"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -1992,12 +2172,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38722" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 367.763, 0, 223.715)
-curve = SubResource("Curve3D_jrg0t")
+[node name="@@56987" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 377.312, 0, 202.69)
+curve = SubResource("Curve3D_aflqe")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38722"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56987"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2011,12 +2191,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38723" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.334, 0, 192.401)
-curve = SubResource("Curve3D_5jgd0")
+[node name="@@56988" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 414.626, 0, 167.309)
+curve = SubResource("Curve3D_v407b")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38723"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56988"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2030,12 +2210,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38724" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 436.501, 0, 225.743)
-curve = SubResource("Curve3D_r0ocx")
+[node name="@@56989" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 424.921, 0, 208.496)
+curve = SubResource("Curve3D_ymwmk")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38724"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56989"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2049,12 +2229,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38725" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.05, 0, 187.125)
-curve = SubResource("Curve3D_j3ys6")
+[node name="@@56990" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.656, 0, 191.417)
+curve = SubResource("Curve3D_kl3uo")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38725"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56990"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2068,12 +2248,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38726" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7954, 0, 258.133)
-curve = SubResource("Curve3D_yqy0i")
+[node name="@@56991" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6782, 0, 247.988)
+curve = SubResource("Curve3D_frum7")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38726"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56991"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2087,12 +2267,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38727" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5478, 0, 289.308)
-curve = SubResource("Curve3D_txbg6")
+[node name="@@56992" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.3637, 0, 272.945)
+curve = SubResource("Curve3D_sk72u")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38727"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56992"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2106,12 +2286,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38728" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.9329, 0, 259.864)
-curve = SubResource("Curve3D_qf6pd")
+[node name="@@56993" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.33, 0, 247.861)
+curve = SubResource("Curve3D_tmywd")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38728"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56993"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2125,12 +2305,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38729" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.808, 0, 271.043)
-curve = SubResource("Curve3D_87ycl")
+[node name="@@56994" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.877, 0, 284.404)
+curve = SubResource("Curve3D_rmfpw")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38729"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56994"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2144,12 +2324,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38730" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.832, 0, 235.979)
-curve = SubResource("Curve3D_d8dw4")
+[node name="@@56995" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.499, 0, 265.66)
+curve = SubResource("Curve3D_s61up")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38730"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56995"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2163,12 +2343,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38731" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.584, 0, 260.101)
-curve = SubResource("Curve3D_jcama")
+[node name="@@56996" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.24, 0, 288.541)
+curve = SubResource("Curve3D_nt6s1")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38731"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56996"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2182,12 +2362,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38732" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.837, 0, 229.157)
-curve = SubResource("Curve3D_8bwpt")
+[node name="@@56997" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 209.543, 0, 242.773)
+curve = SubResource("Curve3D_oxyev")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38732"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56997"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2201,12 +2381,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38733" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 266.987, 0, 273.847)
-curve = SubResource("Curve3D_47kqr")
+[node name="@@56998" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236.326, 0, 277.986)
+curve = SubResource("Curve3D_67018")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38733"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56998"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2220,12 +2400,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38734" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 293.964, 0, 259.705)
-curve = SubResource("Curve3D_i7ogi")
+[node name="@@56999" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 265.014, 0, 244.845)
+curve = SubResource("Curve3D_ka8cn")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38734"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@56999"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2239,12 +2419,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38735" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.91, 0, 279.198)
-curve = SubResource("Curve3D_weoyg")
+[node name="@@57000" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.865, 0, 290.468)
+curve = SubResource("Curve3D_oh3ls")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38735"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57000"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2258,12 +2438,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38736" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 335.857, 0, 245.186)
-curve = SubResource("Curve3D_1n1w7")
+[node name="@@57001" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 357.719, 0, 255.456)
+curve = SubResource("Curve3D_qrow1")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38736"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57001"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2277,12 +2457,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38737" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 379.604, 0, 285.236)
-curve = SubResource("Curve3D_1croj")
+[node name="@@57002" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 376.398, 0, 292.221)
+curve = SubResource("Curve3D_ucntw")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38737"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57002"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2296,12 +2476,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38738" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 411.51, 0, 263.765)
-curve = SubResource("Curve3D_hlwjv")
+[node name="@@57003" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 395.991, 0, 239.456)
+curve = SubResource("Curve3D_m83gm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38738"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57003"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2315,12 +2495,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38739" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.486, 0, 295.709)
-curve = SubResource("Curve3D_tcjf8")
+[node name="@@57004" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434.773, 0, 276.452)
+curve = SubResource("Curve3D_qkrst")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38739"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57004"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2334,12 +2514,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38740" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 475.477, 0, 257.686)
-curve = SubResource("Curve3D_s6lb6")
+[node name="@@57005" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.703, 0, 245.492)
+curve = SubResource("Curve3D_x6m0j")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38740"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57005"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2353,12 +2533,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38741" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34743, 0, 328.327)
-curve = SubResource("Curve3D_t3g2w")
+[node name="@@57006" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96298, 0, 315.574)
+curve = SubResource("Curve3D_myepj")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38741"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57006"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2372,12 +2552,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38742" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7984, 0, 350.764)
-curve = SubResource("Curve3D_r17wv")
+[node name="@@57007" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1877, 0, 357.982)
+curve = SubResource("Curve3D_5a28n")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38742"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57007"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2391,12 +2571,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38743" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.9988, 0, 311.745)
-curve = SubResource("Curve3D_o3ft2")
+[node name="@@57008" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5884, 0, 315.353)
+curve = SubResource("Curve3D_gaot4")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38743"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57008"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2410,12 +2590,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38744" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.957, 0, 333.435)
-curve = SubResource("Curve3D_u3hrr")
+[node name="@@57009" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.201, 0, 352.117)
+curve = SubResource("Curve3D_d1x74")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38744"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57009"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2429,12 +2609,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38745" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.767, 0, 292.733)
-curve = SubResource("Curve3D_86pol")
+[node name="@@57010" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.49, 0, 321.169)
+curve = SubResource("Curve3D_0hefr")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38745"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57010"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2448,12 +2628,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38746" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.673, 0, 342.941)
-curve = SubResource("Curve3D_byrxx")
+[node name="@@57011" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 186.066, 0, 351.92)
+curve = SubResource("Curve3D_ax1bm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38746"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57011"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2467,12 +2647,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38747" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236.49, 0, 310.309)
-curve = SubResource("Curve3D_2fqm5")
+[node name="@@57012" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.817, 0, 319.293)
+curve = SubResource("Curve3D_h6ck2")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38747"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57012"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2486,12 +2666,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38748" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.857, 0, 352.991)
-curve = SubResource("Curve3D_ga0wy")
+[node name="@@57013" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 232.298, 0, 362.58)
+curve = SubResource("Curve3D_i1ria")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38748"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57013"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2505,12 +2685,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38749" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 292.354, 0, 316.53)
-curve = SubResource("Curve3D_hvisb")
+[node name="@@57014" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 263.807, 0, 321.273)
+curve = SubResource("Curve3D_hesif")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38749"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57014"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2524,12 +2704,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38750" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 307.307, 0, 334.792)
-curve = SubResource("Curve3D_1f1sl")
+[node name="@@57015" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 292.904, 0, 351.75)
+curve = SubResource("Curve3D_6vhwa")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38750"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57015"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2543,12 +2723,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38751" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 331.863, 0, 297.46)
-curve = SubResource("Curve3D_jspsj")
+[node name="@@57016" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 345.962, 0, 320.944)
+curve = SubResource("Curve3D_wbp51")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38751"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57016"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2562,12 +2742,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38752" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 370.263, 0, 329.411)
-curve = SubResource("Curve3D_5hlu4")
+[node name="@@57017" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.346, 0, 341.525)
+curve = SubResource("Curve3D_v6hp0")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38752"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57017"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2581,12 +2761,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38753" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 418.003, 0, 317.187)
-curve = SubResource("Curve3D_cxh0j")
+[node name="@@57018" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 395.782, 0, 312.802)
+curve = SubResource("Curve3D_uetqp")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38753"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57018"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2600,12 +2780,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38754" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434.494, 0, 335.271)
-curve = SubResource("Curve3D_goj0o")
+[node name="@@57019" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 440.792, 0, 350.769)
+curve = SubResource("Curve3D_ys3m7")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38754"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57019"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2619,12 +2799,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38755" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466.977, 0, 313.792)
-curve = SubResource("Curve3D_alfc1")
+[node name="@@57020" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 479.782, 0, 314.419)
+curve = SubResource("Curve3D_yvgp1")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38755"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57020"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2638,12 +2818,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38756" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.408, 0, 378.891)
-curve = SubResource("Curve3D_i4utg")
+[node name="@@57021" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8645, 0, 391.196)
+curve = SubResource("Curve3D_tmon5")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38756"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57021"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2657,12 +2837,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38757" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.8776, 0, 405.504)
-curve = SubResource("Curve3D_gk2jn")
+[node name="@@57022" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.7204, 0, 412.513)
+curve = SubResource("Curve3D_7fjb2")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38757"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57022"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2676,12 +2856,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38758" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.268, 0, 377.378)
-curve = SubResource("Curve3D_01i4n")
+[node name="@@57023" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.0436, 0, 379.299)
+curve = SubResource("Curve3D_m4g04")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38758"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57023"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2695,12 +2875,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38759" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.062, 0, 401.914)
-curve = SubResource("Curve3D_5hbla")
+[node name="@@57024" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.848, 0, 395.955)
+curve = SubResource("Curve3D_b3rbb")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38759"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57024"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2714,12 +2894,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38760" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.751, 0, 357.971)
-curve = SubResource("Curve3D_tx24p")
+[node name="@@57025" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160.006, 0, 368.773)
+curve = SubResource("Curve3D_yg0vm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38760"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57025"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2733,12 +2913,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38761" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 190.703, 0, 398.831)
-curve = SubResource("Curve3D_nid0k")
+[node name="@@57026" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.832, 0, 396.079)
+curve = SubResource("Curve3D_mfpas")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38761"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57026"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2752,12 +2932,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38762" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 225.625, 0, 383.801)
-curve = SubResource("Curve3D_oddn1")
+[node name="@@57027" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 210.893, 0, 379.226)
+curve = SubResource("Curve3D_56upm")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38762"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57027"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2771,12 +2951,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38763" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.227, 0, 399.234)
-curve = SubResource("Curve3D_i3qgp")
+[node name="@@57028" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.445, 0, 393.051)
+curve = SubResource("Curve3D_q6tyd")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38763"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57028"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2790,12 +2970,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38764" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.459, 0, 368.424)
-curve = SubResource("Curve3D_6rcr2")
+[node name="@@57029" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 271.85, 0, 376.405)
+curve = SubResource("Curve3D_de31k")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38764"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57029"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2809,12 +2989,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38765" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.094, 0, 408.352)
-curve = SubResource("Curve3D_ftdba")
+[node name="@@57030" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.457, 0, 404.896)
+curve = SubResource("Curve3D_n2a4h")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38765"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57030"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2828,12 +3008,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38766" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 334.943, 0, 374.72)
-curve = SubResource("Curve3D_q8gnm")
+[node name="@@57031" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 339.511, 0, 380.241)
+curve = SubResource("Curve3D_2pdfe")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38766"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57031"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2847,12 +3027,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38767" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.396, 0, 426.411)
-curve = SubResource("Curve3D_hct85")
+[node name="@@57032" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 372.765, 0, 424.488)
+curve = SubResource("Curve3D_mnjvf")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38767"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57032"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2866,12 +3046,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38768" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.716, 0, 381.102)
-curve = SubResource("Curve3D_nhits")
+[node name="@@57033" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.6, 0, 385.773)
+curve = SubResource("Curve3D_7n7ai")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38768"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57033"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2885,12 +3065,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38769" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 423.707, 0, 412.065)
-curve = SubResource("Curve3D_5pitd")
+[node name="@@57034" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.636, 0, 412.494)
+curve = SubResource("Curve3D_jetiq")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38769"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57034"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2904,12 +3084,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38770" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.485, 0, 366.233)
-curve = SubResource("Curve3D_8iqji")
+[node name="@@57035" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 480.828, 0, 377.491)
+curve = SubResource("Curve3D_2go7h")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38770"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57035"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2923,12 +3103,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38771" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.278, 0, 427.342)
-curve = SubResource("Curve3D_vh6fv")
+[node name="@@57036" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9042, 0, 448.596)
+curve = SubResource("Curve3D_x083d")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38771"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57036"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2942,12 +3122,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38772" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.6716, 0, 466.225)
-curve = SubResource("Curve3D_bekha")
+[node name="@@57037" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.4571, 0, 466.089)
+curve = SubResource("Curve3D_t1ege")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38772"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57037"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2961,12 +3141,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38773" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.2711, 0, 444.387)
-curve = SubResource("Curve3D_queuq")
+[node name="@@57038" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.2732, 0, 430.007)
+curve = SubResource("Curve3D_adkrp")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38773"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57038"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2980,12 +3160,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38774" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.541, 0, 478.208)
-curve = SubResource("Curve3D_xejl3")
+[node name="@@57039" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.241, 0, 457.705)
+curve = SubResource("Curve3D_5gkai")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38774"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57039"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -2999,12 +3179,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38775" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.332, 0, 435.735)
-curve = SubResource("Curve3D_81xt3")
+[node name="@@57040" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161.816, 0, 423.653)
+curve = SubResource("Curve3D_gpn85")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38775"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57040"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3018,12 +3198,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38776" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 206.671, 0, 474.325)
-curve = SubResource("Curve3D_hvcoj")
+[node name="@@57041" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.783, 0, 466.358)
+curve = SubResource("Curve3D_6twj5")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38776"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57041"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3037,12 +3217,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38777" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.041, 0, 437.422)
-curve = SubResource("Curve3D_44ylg")
+[node name="@@57042" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.799, 0, 438.784)
+curve = SubResource("Curve3D_xlob7")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38777"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57042"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3056,12 +3236,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38778" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.552, 0, 477.556)
-curve = SubResource("Curve3D_nwagi")
+[node name="@@57043" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 253.494, 0, 470.422)
+curve = SubResource("Curve3D_tmlps")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38778"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57043"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3075,12 +3255,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38779" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.738, 0, 439.368)
-curve = SubResource("Curve3D_857j2")
+[node name="@@57044" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 287.14, 0, 424.689)
+curve = SubResource("Curve3D_rydb0")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38779"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57044"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3094,12 +3274,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38780" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.844, 0, 484.973)
-curve = SubResource("Curve3D_famyp")
+[node name="@@57045" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.128, 0, 454.3)
+curve = SubResource("Curve3D_ditew")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38780"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57045"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3113,12 +3293,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38781" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.201, 0, 453.957)
-curve = SubResource("Curve3D_pa33u")
+[node name="@@57046" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.445, 0, 434.507)
+curve = SubResource("Curve3D_gew2p")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38781"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57046"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3132,12 +3312,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38782" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 371.497, 0, 479.255)
-curve = SubResource("Curve3D_s4dsd")
+[node name="@@57047" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.445, 0, 452.873)
+curve = SubResource("Curve3D_sgdrd")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38782"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57047"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3151,12 +3331,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38783" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 393.693, 0, 451.709)
-curve = SubResource("Curve3D_8nuey")
+[node name="@@57048" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 394.765, 0, 442.853)
+curve = SubResource("Curve3D_635xq")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38783"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57048"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3170,12 +3350,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38784" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 444.069, 0, 464.186)
-curve = SubResource("Curve3D_dudlj")
+[node name="@@57049" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 425.209, 0, 465.326)
+curve = SubResource("Curve3D_6vemu")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38784"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57049"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
@@ -3189,12 +3369,12 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
-[node name="@@38785" type="Path3D" parent="road_graph"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 474.083, 0, 424.541)
-curve = SubResource("Curve3D_6xo7v")
+[node name="@@57050" type="Path3D" parent="road_graph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 469.081, 0, 434.967)
+curve = SubResource("Curve3D_bso68")
 script = ExtResource("3_ytvyo")
 
-[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@38785"]
+[node name="road_cross_section" type="CSGPolygon3D" parent="road_graph/@@57050"]
 use_collision = true
 polygon = PackedVector2Array(-3.25, 0, -3.25, 0.1, 3.25, 0.1, 3.25, 0)
 mode = 2
