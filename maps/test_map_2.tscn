@@ -1,12 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://dij255qptyb8q"]
+[gd_scene load_steps=21 format=3 uid="uid://dij255qptyb8q"]
 
 [ext_resource type="Script" path="res://map_elements/road_graph.gd" id="1_iqcej"]
 [ext_resource type="Script" path="res://map_elements/road_intersection.gd" id="2_14lh2"]
 [ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="4_shfuc"]
 [ext_resource type="PackedScene" uid="uid://cpfbvnh20vc8h" path="res://game_scenes/player_view.tscn" id="4_sojqs"]
+[ext_resource type="Script" path="res://map_elements/block.gd" id="5_1wf33"]
+[ext_resource type="ArrayMesh" uid="uid://cnpjf674rnka6" path="res://assets/buildings/synty/SM_Bld_Apartment_01.res" id="6_g8gbd"]
+[ext_resource type="ArrayMesh" uid="uid://cj6f8p2uw8dq" path="res://assets/buildings/synty/SM_Bld_Apartment_02.res" id="7_xpt48"]
+[ext_resource type="ArrayMesh" uid="uid://pvkt6ol6c37y" path="res://assets/buildings/synty/SM_Bld_Apartment_Door_01.res" id="8_sjjkp"]
+[ext_resource type="ArrayMesh" uid="uid://d2new1tqxytdd" path="res://assets/buildings/synty/SM_Bld_Apartment_Door_02.res" id="9_2qqqt"]
+[ext_resource type="ArrayMesh" uid="uid://dtdi83e6esgk7" path="res://assets/buildings/synty/SM_Bld_Shop_01.res" id="9_v5i7j"]
+[ext_resource type="ArrayMesh" uid="uid://d25kmbllccfl1" path="res://assets/buildings/synty/SM_Bld_Shop_02.res" id="10_e3ooe"]
+[ext_resource type="ArrayMesh" uid="uid://opmsqmgujjpt" path="res://assets/buildings/synty/SM_Bld_Shop_03.res" id="11_qljie"]
+[ext_resource type="ArrayMesh" uid="uid://bv7c1f0rf6u4e" path="res://assets/buildings/synty/SM_Bld_Shop_04.res" id="12_w1wt4"]
+[ext_resource type="ArrayMesh" uid="uid://dpxysvv8nuhvh" path="res://assets/buildings/synty/SM_Bld_Shop_05.res" id="13_wy5jv"]
+[ext_resource type="ArrayMesh" uid="uid://c0j0obcvwp3a1" path="res://assets/buildings/synty/SM_Bld_Shop_06.res" id="14_308ku"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_freen"]
 albedo_color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uexs5"]
+albedo_color = Color(0.478431, 0.478431, 0.478431, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mx12p"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -23,270 +37,273 @@ tonemap_mode = 2
 [node name="test_map_2" type="Node3D"]
 
 [node name="truck" parent="." instance=ExtResource("4_shfuc")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 58.3865, 0.674887, 94.3442)
+transform = Transform3D(-0.0479955, 0, 0.998848, 0, 1, 0, -0.998848, 0, -0.0479955, 74.9699, 0.674887, 71.2008)
 
 [node name="road_graph" type="Node3D" parent="."]
 script = ExtResource("1_iqcej")
 block_size = Vector2(64, 64)
-uniformity = 0.125
+uniformity = 0.9
 road_material = SubResource("StandardMaterial3D_freen")
+pavement_material = SubResource("StandardMaterial3D_uexs5")
+buildings = Array[Mesh]([ExtResource("6_g8gbd"), ExtResource("7_xpt48"), ExtResource("8_sjjkp"), ExtResource("9_2qqqt"), ExtResource("9_v5i7j"), ExtResource("10_e3ooe"), ExtResource("11_qljie"), ExtResource("12_w1wt4"), ExtResource("13_wy5jv"), ExtResource("14_308ku")])
+building_mesh_scale = Vector3(100, 100, -100)
 
 [node name="intersections" type="Node3D" parent="road_graph"]
 
-[node name="@@39047" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 32)
+[node name="@@120693" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93473, 0, 5.99085)
 script = ExtResource("2_14lh2")
 
-[node name="@@39048" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5494, 0, 47.4212)
+[node name="@@120694" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.6459, 0, 4.67392)
 script = ExtResource("2_14lh2")
 
-[node name="@@39049" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.449, 0, 21.6498)
+[node name="@@120695" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.6, 0, 1.98716)
 script = ExtResource("2_14lh2")
 
-[node name="@@39050" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 243.436, 0, 54.9197)
+[node name="@@120696" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195.538, 0, 0.55185)
 script = ExtResource("2_14lh2")
 
-[node name="@@39051" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 293.666, 0, 33.6623)
+[node name="@@120697" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.178, 0, 2.37089)
 script = ExtResource("2_14lh2")
 
-[node name="@@39052" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 351.437, 0, 49.5634)
+[node name="@@120698" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 323.237, 0, 4.77596)
 script = ExtResource("2_14lh2")
 
-[node name="@@39053" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 404.449, 0, 48.8065)
+[node name="@@120699" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387.529, 0, 0.146731)
 script = ExtResource("2_14lh2")
 
-[node name="@@39054" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.565, 0, 54.4715)
+[node name="@@120700" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 449.227, 0, 3.65601)
 script = ExtResource("2_14lh2")
 
-[node name="@@39055" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21468, 0, 98.8885)
+[node name="@@120701" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91691, 0, 66.8807)
 script = ExtResource("2_14lh2")
 
-[node name="@@39056" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.7196, 0, 91.6611)
+[node name="@@120702" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9354, 0, 69.4511)
 script = ExtResource("2_14lh2")
 
-[node name="@@39057" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.825, 0, 74.267)
+[node name="@@120703" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.903, 0, 65.9833)
 script = ExtResource("2_14lh2")
 
-[node name="@@39058" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213.962, 0, 119.8)
+[node name="@@120704" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.467, 0, 68.3367)
 script = ExtResource("2_14lh2")
 
-[node name="@@39059" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.346, 0, 117.564)
+[node name="@@120705" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 258.157, 0, 66.7364)
 script = ExtResource("2_14lh2")
 
-[node name="@@39060" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 372.369, 0, 84.3582)
+[node name="@@120706" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325.127, 0, 69.2186)
 script = ExtResource("2_14lh2")
 
-[node name="@@39061" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400.382, 0, 91.995)
+[node name="@@120707" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 388.986, 0, 70.044)
 script = ExtResource("2_14lh2")
 
-[node name="@@39062" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 490.165, 0, 106.314)
+[node name="@@120708" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 449.937, 0, 69.0684)
 script = ExtResource("2_14lh2")
 
-[node name="@@39063" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3035, 0, 169.135)
+[node name="@@120709" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15711, 0, 131.268)
 script = ExtResource("2_14lh2")
 
-[node name="@@39064" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.3343, 0, 159.768)
+[node name="@@120710" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.8355, 0, 132.277)
 script = ExtResource("2_14lh2")
 
-[node name="@@39065" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.654, 0, 167.586)
+[node name="@@120711" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.608, 0, 130.44)
 script = ExtResource("2_14lh2")
 
-[node name="@@39066" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200.13, 0, 139.927)
+[node name="@@120712" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.072, 0, 132.175)
 script = ExtResource("2_14lh2")
 
-[node name="@@39067" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.235, 0, 133.191)
+[node name="@@120713" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.958, 0, 133.649)
 script = ExtResource("2_14lh2")
 
-[node name="@@39068" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.404, 0, 179.38)
+[node name="@@120714" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 324.727, 0, 129.671)
 script = ExtResource("2_14lh2")
 
-[node name="@@39069" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 427.268, 0, 169.722)
+[node name="@@120715" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 384.587, 0, 134.371)
 script = ExtResource("2_14lh2")
 
-[node name="@@39070" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 500.117, 0, 152.05)
+[node name="@@120716" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.117, 0, 132.085)
 script = ExtResource("2_14lh2")
 
-[node name="@@39071" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6352, 0, 240.189)
+[node name="@@120717" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.785235, 0, 192.347)
 script = ExtResource("2_14lh2")
 
-[node name="@@39072" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.6969, 0, 234.618)
+[node name="@@120718" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4491, 0, 194.849)
 script = ExtResource("2_14lh2")
 
-[node name="@@39073" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.953, 0, 230.039)
+[node name="@@120719" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.61, 0, 192.463)
 script = ExtResource("2_14lh2")
 
-[node name="@@39074" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 212.93, 0, 213.911)
+[node name="@@120720" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.195, 0, 192.371)
 script = ExtResource("2_14lh2")
 
-[node name="@@39075" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 272.21, 0, 228.205)
+[node name="@@120721" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.79, 0, 196.581)
 script = ExtResource("2_14lh2")
 
-[node name="@@39076" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 342.126, 0, 210.724)
+[node name="@@120722" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 324.741, 0, 193.201)
 script = ExtResource("2_14lh2")
 
-[node name="@@39077" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 395.122, 0, 207.952)
+[node name="@@120723" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 388.756, 0, 197.351)
 script = ExtResource("2_14lh2")
 
-[node name="@@39078" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 459.596, 0, 237.99)
+[node name="@@120724" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.629, 0, 196.051)
 script = ExtResource("2_14lh2")
 
-[node name="@@39079" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4914, 0, 281.03)
+[node name="@@120725" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90381, 0, 259.152)
 script = ExtResource("2_14lh2")
 
-[node name="@@39080" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.0757, 0, 272.101)
+[node name="@@120726" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.736, 0, 256.891)
 script = ExtResource("2_14lh2")
 
-[node name="@@39081" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.142, 0, 264.026)
+[node name="@@120727" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.145, 0, 260.368)
 script = ExtResource("2_14lh2")
 
-[node name="@@39082" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.403, 0, 295.85)
+[node name="@@120728" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.059, 0, 256.561)
 script = ExtResource("2_14lh2")
 
-[node name="@@39083" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 274.731, 0, 308.231)
+[node name="@@120729" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.979, 0, 257.771)
 script = ExtResource("2_14lh2")
 
-[node name="@@39084" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320.286, 0, 283.084)
+[node name="@@120730" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 326.043, 0, 258.026)
 script = ExtResource("2_14lh2")
 
-[node name="@@39085" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 412.115, 0, 279.278)
+[node name="@@120731" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387.909, 0, 261.696)
 script = ExtResource("2_14lh2")
 
-[node name="@@39086" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.061, 0, 281.775)
+[node name="@@120732" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.545, 0, 258.112)
 script = ExtResource("2_14lh2")
 
-[node name="@@39087" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9365, 0, 345.185)
+[node name="@@120733" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04556, 0, 325.656)
 script = ExtResource("2_14lh2")
 
-[node name="@@39088" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.0689, 0, 350.337)
+[node name="@@120734" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.1557, 0, 322.758)
 script = ExtResource("2_14lh2")
 
-[node name="@@39089" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.888, 0, 329.939)
+[node name="@@120735" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.71, 0, 325.598)
 script = ExtResource("2_14lh2")
 
-[node name="@@39090" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.026, 0, 323.495)
+[node name="@@120736" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192.442, 0, 324.398)
 script = ExtResource("2_14lh2")
 
-[node name="@@39091" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.921, 0, 322.945)
+[node name="@@120737" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.314, 0, 322.762)
 script = ExtResource("2_14lh2")
 
-[node name="@@39092" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.063, 0, 368.826)
+[node name="@@120738" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320.255, 0, 323.154)
 script = ExtResource("2_14lh2")
 
-[node name="@@39093" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 405.59, 0, 330.065)
+[node name="@@120739" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 388.004, 0, 325.549)
 script = ExtResource("2_14lh2")
 
-[node name="@@39094" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 490.586, 0, 368.007)
+[node name="@@120740" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 449.769, 0, 321.732)
 script = ExtResource("2_14lh2")
 
-[node name="@@39095" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4009, 0, 393.346)
+[node name="@@120741" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58103, 0, 387.626)
 script = ExtResource("2_14lh2")
 
-[node name="@@39096" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.3305, 0, 402.733)
+[node name="@@120742" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.0139, 0, 386.62)
 script = ExtResource("2_14lh2")
 
-[node name="@@39097" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 159.471, 0, 423.634)
+[node name="@@120743" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.664, 0, 386.845)
 script = ExtResource("2_14lh2")
 
-[node name="@@39098" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 212.654, 0, 403.403)
+[node name="@@120744" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.171, 0, 388.678)
 script = ExtResource("2_14lh2")
 
-[node name="@@39099" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.299, 0, 415.058)
+[node name="@@120745" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.849, 0, 385.846)
 script = ExtResource("2_14lh2")
 
-[node name="@@39100" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 359.446, 0, 393.974)
+[node name="@@120746" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 323.655, 0, 389.208)
 script = ExtResource("2_14lh2")
 
-[node name="@@39101" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 424.109, 0, 417.984)
+[node name="@@120747" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387.949, 0, 387.106)
 script = ExtResource("2_14lh2")
 
-[node name="@@39102" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 492.323, 0, 407.046)
+[node name="@@120748" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.937, 0, 387.818)
 script = ExtResource("2_14lh2")
 
-[node name="@@39103" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1363, 0, 492.964)
+[node name="@@120749" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40172, 0, 448.766)
 script = ExtResource("2_14lh2")
 
-[node name="@@39104" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.0718, 0, 498.821)
+[node name="@@120750" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0599, 0, 450.247)
 script = ExtResource("2_14lh2")
 
-[node name="@@39105" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.001, 0, 491.119)
+[node name="@@120751" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.001, 0, 449.841)
 script = ExtResource("2_14lh2")
 
-[node name="@@39106" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195.243, 0, 467.161)
+[node name="@@120752" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192.32, 0, 452.623)
 script = ExtResource("2_14lh2")
 
-[node name="@@39107" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302.35, 0, 455.535)
+[node name="@@120753" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.828, 0, 449.207)
 script = ExtResource("2_14lh2")
 
-[node name="@@39108" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 324.544, 0, 468.158)
+[node name="@@120754" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325.543, 0, 450.603)
 script = ExtResource("2_14lh2")
 
-[node name="@@39109" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 421.589, 0, 456.212)
+[node name="@@120755" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 384.177, 0, 451.783)
 script = ExtResource("2_14lh2")
 
-[node name="@@39110" type="Marker3D" parent="road_graph/intersections"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 474.623, 0, 477.899)
+[node name="@@120756" type="Marker3D" parent="road_graph/intersections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 449.16, 0, 451.327)
 script = ExtResource("2_14lh2")
 
 [node name="player_view" parent="." instance=ExtResource("4_sojqs")]
@@ -297,3 +314,9 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ym8wp")
+
+[node name="Block" type="Node3D" parent="."]
+script = ExtResource("5_1wf33")
+buildings = Array[Mesh]([ExtResource("6_g8gbd"), ExtResource("7_xpt48"), ExtResource("8_sjjkp"), ExtResource("9_2qqqt"), ExtResource("9_v5i7j"), ExtResource("10_e3ooe"), ExtResource("11_qljie"), ExtResource("12_w1wt4"), ExtResource("13_wy5jv"), ExtResource("14_308ku")])
+mesh_scale = Vector3(100, 100, -100)
+polygon = PackedVector2Array(0, 0, 20, 0, 30, 30, 0, 20)

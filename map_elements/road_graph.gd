@@ -13,15 +13,21 @@ extends Node3D
 
 @export var road_height := 0.1
 
-@export var road_material : Material
+@export var road_material : BaseMaterial3D
 
 @export var pavement_width := 2.0
 
 @export var pavement_height := 0.2
 
+@export var pavement_material : BaseMaterial3D
+
 @export var building_height_min := 5.0
 
 @export var building_height_max := 20.0
+
+@export var buildings : Array[Mesh] = []
+
+@export var building_mesh_scale := Vector3.ONE
 
 @export var regenerate : bool :
 	get: return false
@@ -55,10 +61,13 @@ func _regenerate() -> void:
 
 
 func _reconstruct() -> void:
+	var start_time := Time.get_ticks_msec()
 	_generate_blocks()
 	_generate_roads()
 	_create_intersection_meshes()
 	_generate_buildings()
+	var end_time := Time.get_ticks_msec()
+	print("[%s] reconstructed road graph in %dms" % [name, end_time - start_time])
 
 
 func _generate_intersections() -> void:
@@ -78,9 +87,6 @@ func _generate_intersections() -> void:
 			)
 			_create_intersection(point)
 
-	if _intersections.get_child_count() > 0:
-		_intersections.get_child(0).position = Vector3(0.5 * block_size.x, 0.0, 0.5 * block_size.y)
-
 
 func _generate_blocks() -> void:
 	_remove(_blocks)
@@ -99,6 +105,7 @@ func _generate_blocks() -> void:
 
 			var deflated_polygon := _deflate_polygon_stable(polygon, 0.5 * road_width)
 			var block := _create_mesh_from_polygon(deflated_polygon, pavement_height)
+			block.material = pavement_material
 			_blocks.add_child(block)
 
 
@@ -173,6 +180,7 @@ func _generate_buildings() -> void:
 	_remove(_buildings)
 	_buildings = Node3D.new()
 	_buildings.name = &"buildings"
+	_buildings.position.y = road_height
 	add_child(_buildings)
 
 	for y in grid_size.y - 1:
@@ -180,9 +188,15 @@ func _generate_buildings() -> void:
 			var polygon := _get_block_at_coordinates(Vector2i(x, y)).polygon
 
 			var deflated_polygon := _deflate_polygon_stable(polygon, pavement_width)
-			var height := randf_range(building_height_min, building_height_max)
-			var building := _create_mesh_from_polygon(deflated_polygon, height)
-			_buildings.add_child(building)
+			#var height := randf_range(building_height_min, building_height_max)
+			#var building := _create_mesh_from_polygon(deflated_polygon, height)
+			#_buildings.add_child(building)
+			var block := Block.new()
+			block.buildings = buildings
+			block.mesh_scale = building_mesh_scale
+			block.polygon = deflated_polygon
+			block._regenerate()
+			_buildings.add_child(block)
 
 
 func _create_intersection(location : Vector3) -> void:
