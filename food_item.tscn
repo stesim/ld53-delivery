@@ -8,7 +8,7 @@ height = 0.15
 radius = 0.09
 
 [node name="food_item" type="RigidBody3D"]
-collision_layer = 17
+collision_layer = 16
 script = ExtResource("1_axxur")
 item_scene = ExtResource("1_hadva")
 
