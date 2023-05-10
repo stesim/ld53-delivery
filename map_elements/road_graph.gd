@@ -3,11 +3,6 @@ class_name RoadGraph
 extends Node3D
 
 
-@export var cross_section_path : NodePath :
-	set(value):
-		cross_section_path = value
-		_cross_section = get_node_or_null(cross_section_path)
-
 @export var block_size := Vector2(32.0, 32.0)
 
 @export var grid_size := Vector2i(8, 8)
@@ -18,75 +13,61 @@ extends Node3D
 
 @export var road_height := 0.1
 
+@export var road_material : Material
+
+@export var pavement_width := 2.0
+
+@export var pavement_height := 0.2
+
+@export var building_height_min := 5.0
+
+@export var building_height_max := 20.0
+
 @export var regenerate : bool :
 	get: return false
 	set(_value): _regenerate()
 
+@export var reconstruct : bool :
+	get: return false
+	set(_value): _reconstruct()
 
-var _cross_section : CSGPolygon3D = null
+
+var _intersections : Node3D = null
+var _roads : Node3D = null
+var _blocks : Node3D = null
+var _buildings : Node3D = null
 
 
 func _ready() -> void:
-	if not Engine.is_editor_hint():
-		return
-
-	cross_section_path = cross_section_path
+	_intersections = get_node_or_null(^"intersections")
+	if _intersections:
+		_reconstruct()
+	else:
+		_regenerate()
 
 
 func _regenerate() -> void:
 	var start_time := Time.get_ticks_msec()
-	_clear_children()
 	_generate_intersections()
-	_generate_roads()
-	_offset_roads_from_intersections()
-	_create_intersection_meshes()
+	_reconstruct()
 	var end_time := Time.get_ticks_msec()
 	print("[%s] regenerated road graph in %dms" % [name, end_time - start_time])
 
 
-func _generate_roads() -> void:
-	for y in grid_size.y - 1:
-		for x in grid_size.x - 1:
-			if x == 0:
-				_create_road_from_coordinates(Vector2i(x, y), Vector2i(x, y + 1))
-
-			_create_road_from_coordinates(Vector2i(x, y + 1), Vector2i(x + 1, y + 1))
-			_create_road_from_coordinates(Vector2i(x + 1, y), Vector2i(x + 1, y + 1))
-
-			if y == 0:
-				_create_road_from_coordinates(Vector2i(x, y), Vector2i(x + 1, y))
-
-
-func _create_road_from_coordinates(from : Vector2i, to : Vector2i) -> void:
-	var from_intersection := _get_intersection_at_coordinates(from)
-	var to_intersection := _get_intersection_at_coordinates(to)
-
-	var road := Road.new()
-	road.from = from_intersection
-	road.to = to_intersection
-	road.width = road_width
-	add_child(road)
-	road.owner = owner
-
-	from_intersection.roads.push_back(road)
-	to_intersection.roads.push_back(road)
-
-	if _cross_section:
-		var mesh : CSGPolygon3D = _cross_section.duplicate()
-		if mesh.mode != CSGPolygon3D.MODE_PATH:
-			mesh.mode = CSGPolygon3D.MODE_PATH
-			mesh.path_simplify_angle = deg_to_rad(1.0)
-		mesh.path_local = true
-		mesh.path_node = ^".."
-		road.add_child(mesh)
-		mesh.owner = owner
-
-
-func _get_intersection_at_coordinates(coordinates : Vector2i) -> RoadIntersection:
-	return get_child(coordinates.y * grid_size.x + coordinates.x)
+func _reconstruct() -> void:
+	_generate_blocks()
+	_generate_roads()
+	_create_intersection_meshes()
+	_generate_buildings()
 
 
 func _generate_intersections() -> void:
+	_remove(_intersections)
+	_intersections = Node3D.new()
+	_intersections.name = &"intersections"
+	add_child(_intersections)
+	_intersections.owner = owner
+
 	var randomness := 1.0 - uniformity
 	for y in grid_size.y:
 		for x in grid_size.x:
@@ -97,95 +78,162 @@ func _generate_intersections() -> void:
 			)
 			_create_intersection(point)
 
-	if get_child_count() > 0:
-		get_child(0).position = Vector3(0.5 * block_size.x, 0.0, 0.5 * block_size.y)
+	if _intersections.get_child_count() > 0:
+		_intersections.get_child(0).position = Vector3(0.5 * block_size.x, 0.0, 0.5 * block_size.y)
+
+
+func _generate_blocks() -> void:
+	_remove(_blocks)
+	_blocks = Node3D.new()
+	_blocks.name = &"blocks"
+	add_child(_blocks)
+
+	for y in grid_size.y - 1:
+		for x in grid_size.x - 1:
+			var polygon := PackedVector2Array()
+			polygon.resize(4)
+			polygon[0] = _vector3_to_2(_get_intersection_at_coordinates(Vector2i(x, y)).position)
+			polygon[1] = _vector3_to_2(_get_intersection_at_coordinates(Vector2i(x + 1, y)).position)
+			polygon[2] = _vector3_to_2(_get_intersection_at_coordinates(Vector2i(x + 1, y + 1)).position)
+			polygon[3] = _vector3_to_2(_get_intersection_at_coordinates(Vector2i(x, y + 1)).position)
+
+			var deflated_polygon := _deflate_polygon_stable(polygon, 0.5 * road_width)
+			var block := _create_mesh_from_polygon(deflated_polygon, pavement_height)
+			_blocks.add_child(block)
+
+
+func _generate_roads() -> void:
+	_remove(_roads)
+	_roads = Node3D.new()
+	_roads.name = &"roads"
+	add_child(_roads)
+
+	for y in grid_size.y - 1:
+		for x in grid_size.x - 2:
+			var left_block := _get_block_at_coordinates(Vector2i(x, y))
+			var right_block := _get_block_at_coordinates(Vector2i(x + 1, y))
+
+			var points := PackedVector2Array()
+			points.resize(4)
+			points[0] = right_block.polygon[0]
+			points[1] = right_block.polygon[3]
+			points[2] = left_block.polygon[2]
+			points[3] = left_block.polygon[1]
+
+			var road := _create_mesh_from_polygon(points, road_height)
+			road.material = road_material
+			_roads.add_child(road)
+
+	for y in grid_size.y - 2:
+		for x in grid_size.x - 1:
+			var top_block := _get_block_at_coordinates(Vector2i(x, y))
+			var bottom_block := _get_block_at_coordinates(Vector2i(x, y + 1))
+
+			var points := PackedVector2Array()
+			points.resize(4)
+			points[0] = top_block.polygon[3]
+			points[1] = top_block.polygon[2]
+			points[2] = bottom_block.polygon[1]
+			points[3] = bottom_block.polygon[0]
+
+			var road := _create_mesh_from_polygon(points, road_height)
+			road.material = road_material
+			_roads.add_child(road)
+
+
+func _get_block_at_coordinates(coordinates : Vector2i) -> CSGPolygon3D:
+	return _blocks.get_child(coordinates.y * (grid_size.x - 1) + coordinates.x)
+
+
+func _get_intersection_at_coordinates(coordinates : Vector2i) -> RoadIntersection:
+	return _intersections.get_child(coordinates.y * grid_size.x + coordinates.x)
+
+
+func _create_intersection_meshes() -> void:
+	for y in grid_size.y - 2:
+		for x in grid_size.x - 2:
+			var top_left_block := _get_block_at_coordinates(Vector2i(x, y))
+			var top_right_block := _get_block_at_coordinates(Vector2i(x + 1, y))
+			var bottom_right_block := _get_block_at_coordinates(Vector2i(x + 1, y + 1))
+			var bottom_left_block := _get_block_at_coordinates(Vector2i(x, y + 1))
+
+			var points := PackedVector2Array()
+			points.resize(4)
+			points[0] = top_left_block.polygon[2]
+			points[1] = top_right_block.polygon[3]
+			points[2] = bottom_right_block.polygon[0]
+			points[3] = bottom_left_block.polygon[1]
+
+			var mesh := _create_mesh_from_polygon(points, road_height)
+			mesh.material = road_material
+			_intersections.add_child(mesh)
+
+
+func _generate_buildings() -> void:
+	_remove(_buildings)
+	_buildings = Node3D.new()
+	_buildings.name = &"buildings"
+	add_child(_buildings)
+
+	for y in grid_size.y - 1:
+		for x in grid_size.x - 1:
+			var polygon := _get_block_at_coordinates(Vector2i(x, y)).polygon
+
+			var deflated_polygon := _deflate_polygon_stable(polygon, pavement_width)
+			var height := randf_range(building_height_min, building_height_max)
+			var building := _create_mesh_from_polygon(deflated_polygon, height)
+			_buildings.add_child(building)
 
 
 func _create_intersection(location : Vector3) -> void:
 	var intersection := RoadIntersection.new()
 	intersection.position = location
-	add_child(intersection)
+	_intersections.add_child(intersection)
 	intersection.owner = owner
 
 
-func _offset_roads_from_intersections() -> void:
-	var num_intersections := grid_size.y * grid_size.x
-	for i in num_intersections:
-		var intersection := get_child(i)
-		_offset_roads_from_intersection(intersection)
+func _deflate_polygon_stable(polygon : PackedVector2Array, radius : float) -> PackedVector2Array:
+	var deflated := Geometry2D.offset_polygon(polygon, -radius, Geometry2D.JOIN_MITER)[0]
 
-	for i in range(num_intersections, get_child_count()):
-		var road : Road = get_child(i)
-		road.update()
+	# assert(deflated.size() == polygon.size())
+	if deflated.size() != polygon.size():
+		push_error("deflation resulted in %d vertices (originally %d)" % [deflated.size(), polygon.size()])
 
+	var original_topmost_point := 0 if polygon[0].y < polygon[1].y else 1
+	var deflated_topmost_point := 0
+	for i in range(1, deflated.size()):
+		if deflated[i].y < deflated[deflated_topmost_point].y:
+			deflated_topmost_point = i
 
-func _offset_roads_from_intersection(intersection : RoadIntersection) -> void:
-	for i in intersection.roads.size():
-		var road : Road = intersection.roads[i]
-		var offset := _compute_road_offset_from_intersection(intersection, i)
-		if intersection == road.from:
-			road.from_offset = offset
-		else:
-			road.to_offset = offset
+	if deflated_topmost_point == original_topmost_point:
+		return deflated
 
-
-func _compute_road_offset_from_intersection(intersection : RoadIntersection, road_index : int) -> float:
-	var roads := intersection.roads
-	var center_road := roads[road_index]
-	var left_road := roads[(road_index - 1) % roads.size()]
-	var right_road := roads[(road_index + 1) % roads.size()]
-
-	var center_tangent := _vector3_to_2(center_road.get_tangent_at_intersection(intersection)).normalized()
-	var left_tangent := _vector3_to_2(left_road.get_tangent_at_intersection(intersection)).normalized()
-	var right_tangent := _vector3_to_2(right_road.get_tangent_at_intersection(intersection)).normalized()
-
-	var angle_left := absf(center_tangent.angle_to(left_tangent))
-	var angle_right := absf(center_tangent.angle_to(right_tangent))
-
-	var offset_left := 0.5 * road_width / tan(0.5 * angle_left)
-	var offset_right := 0.5 * road_width / tan(0.5 * angle_right)
-	return maxf(offset_left, offset_right)
+	var shift := deflated_topmost_point - original_topmost_point
+	var reordered := PackedVector2Array()
+	reordered.resize(deflated.size())
+	for i in reordered.size():
+		reordered[i] = deflated[(i + shift) % deflated.size()]
+	return reordered
 
 
-func _create_intersection_meshes() -> void:
-	for i in grid_size.y * grid_size.x:
-		var intersection := get_child(i)
-		_create_intersection_mesh(intersection)
-
-
-func _create_intersection_mesh(intersection : RoadIntersection) -> void:
+func _create_mesh_from_polygon(points : PackedVector2Array, height : float) -> CSGPolygon3D:
 	var polygon := CSGPolygon3D.new()
-	polygon.polygon = _compute_intersection_geometry(intersection)
+	polygon.polygon = points
 	polygon.use_collision = true
-	polygon.depth = road_height
+	polygon.depth = height
 	polygon.rotation.x = 0.5 * PI
-	intersection.add_child(polygon)
-	polygon.owner = owner
+	return polygon
 
 
-func _compute_intersection_geometry(intersection : RoadIntersection) -> PackedVector2Array:
-	var points := PackedVector2Array()
-
-	var intersection_position := _vector3_to_2(intersection.position)
-	var roads := intersection.roads
-	for i in roads.size():
-		var road := roads[i]
-		var center := _vector3_to_2(road.get_position_at_intersection(intersection))
-		var normal := _vector3_to_2(road.get_normal_at_intersection(intersection)).normalized()
-		var offset := 0.5 * road_width * normal
-		var left := center + offset - intersection_position
-		var right := center - offset - intersection_position
-
-		if i == 0 or not _vec_is_equal_approx(left, points[points.size() - 1]):
-			points.push_back(left)
-		if i < roads.size() - 1 or not _vec_is_equal_approx(right, points[0]):
-			points.push_back(right)
-
-	return points
-
-
-func _clear_children() -> void:
+func _clear_constructed_children() -> void:
 	for child in get_children():
+		if child != _intersections:
+			remove_child(child)
+			child.queue_free()
+
+
+func _remove(child : Node) -> void:
+	if child:
 		remove_child(child)
 		child.queue_free()
 
