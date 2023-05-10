@@ -3,6 +3,11 @@
 Changes to the game since submission to Ludum Dare 53.
 
 
+## 2023-05-10
+
+- Fixed camera zooming into vehicle due to loaded items
+
+
 ## 2023-05-08
 
 - Added two-player split-screen mode
