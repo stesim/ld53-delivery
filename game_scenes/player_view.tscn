@@ -47,3 +47,4 @@ configs = Array[ExtResource("15_3878b")]([SubResource("Resource_1t8dc"), SubReso
 
 [node name="hud" parent="ui_layer" instance=ExtResource("4_xsacs")]
 unique_name_in_owner = true
+visible = false

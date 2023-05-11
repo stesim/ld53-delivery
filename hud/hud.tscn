@@ -344,9 +344,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -94.0
-offset_top = 112.0
+offset_top = 144.0
 offset_right = 94.0
-offset_bottom = 184.0
+offset_bottom = 216.0
 grow_horizontal = 2
 
 [node name="margin" type="MarginContainer" parent="broke_panel"]

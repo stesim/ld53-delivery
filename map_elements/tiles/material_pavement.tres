@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://odf3a4fciy6l"]
+
+[resource]
+resource_name = "pavement"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.886275, 0.886275, 0.905882, 1)
+metallic = 1.0
