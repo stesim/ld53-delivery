@@ -8,7 +8,7 @@ data = PackedVector3Array(-0.566, 0, 0.6251, -0.596, 0, 0.6251, -0.596, 0, 0.655
 [node name="house_type02" type="Node3D"]
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, -4.625)
 mesh = ExtResource("1_25yhx")
 
 [node name="collision" type="StaticBody3D" parent="mesh"]
