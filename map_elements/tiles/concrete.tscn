@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnmxuwsiawowe"]
+
+[ext_resource type="Material" uid="uid://odf3a4fciy6l" path="res://map_elements/tiles/material_pavement.tres" id="1_wjylx"]
+[ext_resource type="Material" uid="uid://ij1shq0kkn4c" path="res://map_elements/tiles/material_concrete.tres" id="2_8d7ty"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mg6v6"]
+material = ExtResource("1_wjylx")
+size = Vector3(2, 0.12, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1ci2"]
+size = Vector3(2, 0.12, 2)
+
+[node name="pavement" type="Node3D"]
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+mesh = SubResource("BoxMesh_mg6v6")
+surface_material_override/0 = ExtResource("2_8d7ty")
+
+[node name="collision" type="StaticBody3D" parent="mesh"]
+
+[node name="shape" type="CollisionShape3D" parent="mesh/collision"]
+shape = SubResource("BoxShape3D_a1ci2")

@@ -50,25 +50,32 @@ func _ready() -> void:
 
 
 func _test_navigation() -> void:
-	var start_position := 0.5 * tile_size_regular
+	var navigation_path : Path3D = $navigation_path
+	var path_follower : PathFollow3D = navigation_path.get_child(0)
+
+	var start_position := path_follower.global_position
 	var start_id := _world_position_to_astar_cell_id(start_position)
 
 	var poi_cells := _tile_map_regular.get_used_cells(POI_LAYER)
-	var target_id := _tile_map_index_to_astar_cell_id(poi_cells.pick_random())
 
-	var id_path := _astar.get_id_path(start_id, target_id)
+	var attempts := 10
+	for _i in attempts:
+		var target_id := _tile_map_index_to_astar_cell_id(poi_cells.pick_random())
 
-	var navigation_path : Path3D = $navigation_path
-	for id in id_path:
-		navigation_path.curve.add_point(_astar_cell_id_to_world_position(id))
+		var id_path := _astar.get_id_path(start_id, target_id)
+		if id_path.is_empty():
+			continue
 
-	var path_follower : PathFollow3D = navigation_path.get_child(0)
-	create_tween().tween_property(
-		path_follower,
-		"progress",
-		navigation_path.curve.get_baked_length(),
-		0.5 * navigation_path.curve.get_baked_length(),
-	)
+		for id in id_path:
+			navigation_path.curve.add_point(_astar_cell_id_to_world_position(id))
+
+		create_tween().tween_property(
+			path_follower,
+			"progress",
+			navigation_path.curve.get_baked_length(),
+			0.25 * navigation_path.curve.get_baked_length(),
+		)
+		break
 
 
 func _update() -> void:
@@ -86,7 +93,8 @@ func _update() -> void:
 	_container_building_tiles.position = regular_tiles_offset + building_ground_height * Vector3.UP
 	_generate_scenes_from_tiles(_tile_map_regular, tile_size_regular, _container_building_tiles, BUILDING_LAYER)
 
-	_setup_navigation()
+	if not Engine.is_editor_hint():
+		_setup_navigation()
 
 
 func _generate_scenes_from_tiles(tile_map : TileMap, tile_size : Vector3, container : Node, layer : int) -> void:

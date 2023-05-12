@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b23pkdmggg0hf"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7yypp"]
+size = Vector2(2, 0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sjjct"]
+size = Vector2(2, 0.25)
+
+[node name="crosswalk" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.062, 0)
+mesh = SubResource("PlaneMesh_7yypp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.062, -0.875)
+mesh = SubResource("PlaneMesh_sjjct")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.062, 0.875)
+mesh = SubResource("PlaneMesh_sjjct")
