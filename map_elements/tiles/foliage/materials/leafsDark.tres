@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://br52tcpw31ytk"]
+
+[resource]
+resource_name = "leafsDark"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.447504, 0.827211, 0.836007, 1)
+metallic = 1.0

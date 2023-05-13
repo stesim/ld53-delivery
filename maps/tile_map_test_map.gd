@@ -5,6 +5,7 @@ extends Node3D
 const GROUND_LAYER := 0
 const BUILDING_LAYER := 1
 const POI_LAYER := 2
+const FOLIAGE_LAYER := 3
 
 const ROAD_TERRAIN_SET_INDEX := 0
 const ROAD_TERRAIN_INDEX := 0
@@ -18,6 +19,7 @@ const WALKABLE_LAYER_INDEX := 3
 @export var tile_size_coarse := 6.0 * Vector3.ONE
 @export var tile_size_regular := 2.0 * Vector3.ONE
 @export var building_ground_height := 0.12
+@export var foliage_ground_height := 0.12
 
 @export var num_characters := 16
 @export var character_speed_min := 0.5
@@ -31,6 +33,7 @@ const WALKABLE_LAYER_INDEX := 3
 var _container_coarse_tiles : Node3D = null
 var _container_regular_tiles : Node3D = null
 var _container_building_tiles : Node3D = null
+var _container_foliage_tiles : Node3D = null
 
 var _container_characters : Node3D = null
 
@@ -72,6 +75,10 @@ func _update() -> void:
 	_container_building_tiles = _recreate_container(&"_generated_tiles_buildings")
 	_container_building_tiles.position = regular_tiles_offset + building_ground_height * Vector3.UP
 	_generate_scenes_from_tiles(_tile_map_regular, tile_size_regular, _container_building_tiles, BUILDING_LAYER)
+
+	_container_foliage_tiles = _recreate_container(&"_generated_tiles_foliage")
+	_container_foliage_tiles.position = regular_tiles_offset + foliage_ground_height * Vector3.UP
+	_generate_scenes_from_tiles(_tile_map_regular, tile_size_regular, _container_foliage_tiles, FOLIAGE_LAYER)
 
 	if not Engine.is_editor_hint():
 		_setup_navigation()
