@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckf78t5r3jbfm"]
+
+[ext_resource type="Material" uid="uid://dgjbq74b5viwc" path="res://map_elements/tiles/fences/material_stone.tres" id="1_eh5n4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_amvki"]
+material = ExtResource("1_eh5n4")
+size = Vector3(2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4krbl"]
+material = ExtResource("1_eh5n4")
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eekx7"]
+size = Vector3(2, 0.2, 0.2)
+
+[node name="curb_stone_straight" type="Node3D"]
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.1, 0)
+mesh = SubResource("BoxMesh_amvki")
+
+[node name="mesh2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.1, -1)
+mesh = SubResource("BoxMesh_amvki")
+
+[node name="mesh3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.125, 0)
+mesh = SubResource("BoxMesh_4krbl")
+
+[node name="collision" type="StaticBody3D" parent="mesh3"]
+
+[node name="shape" type="CollisionShape3D" parent="mesh3/collision"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.37114e-08, -0.025, 1)
+shape = SubResource("BoxShape3D_eekx7")
+
+[node name="shape2" type="CollisionShape3D" parent="mesh3/collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.025, 0)
+shape = SubResource("BoxShape3D_eekx7")

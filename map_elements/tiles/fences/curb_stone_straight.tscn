@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cek500sgsa772"]
+
+[ext_resource type="Material" uid="uid://dgjbq74b5viwc" path="res://map_elements/tiles/fences/material_stone.tres" id="1_ayvkl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_amvki"]
+material = ExtResource("1_ayvkl")
+size = Vector3(2, 0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eekx7"]
+size = Vector3(2, 0.2, 0.2)
+
+[node name="curb_stone_straight" type="Node3D"]
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+mesh = SubResource("BoxMesh_amvki")
+
+[node name="collision" type="StaticBody3D" parent="mesh"]
+
+[node name="shape" type="CollisionShape3D" parent="mesh/collision"]
+shape = SubResource("BoxShape3D_eekx7")

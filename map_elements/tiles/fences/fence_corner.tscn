@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bik647uqpthc1"]
+
+[ext_resource type="Material" uid="uid://bqq134h3q6hvu" path="res://map_elements/tiles/fences/material_wood.tres" id="1_vt038"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6njj8"]
+material = ExtResource("1_vt038")
+size = Vector3(2, 1.5, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qwegn"]
+material = ExtResource("1_vt038")
+size = Vector3(0.2, 1.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dvwfd"]
+size = Vector3(2, 1.5, 0.1)
+
+[node name="fence_straight" type="Node3D"]
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.75, 0)
+mesh = SubResource("BoxMesh_6njj8")
+
+[node name="mesh2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.75, -1)
+mesh = SubResource("BoxMesh_6njj8")
+
+[node name="mesh3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.8, 0)
+mesh = SubResource("BoxMesh_qwegn")
+
+[node name="collision" type="StaticBody3D" parent="mesh3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.05, 0)
+
+[node name="shape" type="CollisionShape3D" parent="mesh3/collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+shape = SubResource("BoxShape3D_dvwfd")
+
+[node name="shape2" type="CollisionShape3D" parent="mesh3/collision"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1)
+shape = SubResource("BoxShape3D_dvwfd")
