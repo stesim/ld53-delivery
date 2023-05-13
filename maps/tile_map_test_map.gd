@@ -139,6 +139,7 @@ func _create_characters() -> void:
 	for _i in num_characters:
 		var character := CurveFollow3D.new()
 		_pick_random_path_for_character(character)
+		character.offset = randf() * character.path.get_baked_length()
 		character.speed = randf_range(character_speed_min, character_speed_max)
 		character.end_reached.connect(_pick_random_path_for_character.bind(character))
 
