@@ -40,6 +40,8 @@ script = ExtResource("1_wdbyq")
 
 [node name="camera" type="Camera3D" parent="."]
 unique_name_in_owner = true
+near = 0.2
+far = 1000.0
 script = ExtResource("2_7d3cl")
 configs = Array[ExtResource("15_3878b")]([SubResource("Resource_1t8dc"), SubResource("Resource_ypmue"), SubResource("Resource_6iaco"), SubResource("Resource_loulw"), SubResource("Resource_heuos")])
 
