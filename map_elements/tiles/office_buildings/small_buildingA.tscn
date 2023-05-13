@@ -8,7 +8,7 @@ data = PackedVector3Array(-0.1, 0.25, 0.38, -0.1, 0.05, 0.38, -0.13, 0.05, 0.38,
 [node name="small_buildingA" type="Node3D"]
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 1.6, 0, -3)
 mesh = ExtResource("1_accwu")
 
 [node name="collision" type="StaticBody3D" parent="mesh"]
