@@ -20,7 +20,7 @@ const WALKABLE_LAYER_INDEX := 2
 
 @export var num_characters := 16
 @export var character_speed_min := 0.5
-@export var character_speed_max := 2.5
+@export var character_speed_max := 2.0
 
 @export var update : bool :
 	get: return false
