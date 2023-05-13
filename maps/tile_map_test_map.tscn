@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://f02tlbmlt84k"]
+[gd_scene load_steps=73 format=3 uid="uid://f02tlbmlt84k"]
 
 [ext_resource type="Texture2D" uid="uid://3v43j4r0clwj" path="res://assets/roads/roads_tile_map_coarse.png" id="1_1a2jw"]
 [ext_resource type="Script" path="res://maps/tile_map_test_map.gd" id="1_7n4xg"]
@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://dlyenrete0tfm" path="res://map_elements/tiles/office_buildings/sign_hospital.tscn" id="32_eooij"]
 [ext_resource type="PackedScene" uid="uid://dhxg7hvycb6tk" path="res://map_elements/tiles/foliage/statue_obelisk.tscn" id="32_l23oj"]
 [ext_resource type="PackedScene" uid="uid://6otleh0ndjev" path="res://map_elements/tiles/office_buildings/detail_umbrella.tscn" id="33_cg5bg"]
+[ext_resource type="PackedScene" uid="uid://bg60kdyfq517f" path="res://vehicles/ambulance.tscn" id="44_od8ni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn5de"]
 resource_name = "Road"
@@ -1306,6 +1307,10 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.9016
 
 [node name="construction_vehicle" parent="vehicles" instance=ExtResource("30_ynvc0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.095, 0.12, -25.8444)
+
+[node name="ambulance" parent="vehicles" instance=ExtResource("44_od8ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.0267, 0.463486, 42.2636)
+max_speed = 20.0
 
 [node name="sign_hospital" parent="." instance=ExtResource("32_eooij")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.3083, 16.7423, 29.097)
