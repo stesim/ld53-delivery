@@ -11,7 +11,8 @@ const ROAD_TERRAIN_INDEX := 0
 
 const SCENE_LAYER_INDEX := 0
 const SCENE_ROTATION_LAYER_INDEX := 1
-const WALKABLE_LAYER_INDEX := 2
+const SCENE_OFFSET_LAYER_INDEX := 2
+const WALKABLE_LAYER_INDEX := 3
 
 
 @export var tile_size_coarse := 6.0 * Vector3.ONE
@@ -55,6 +56,9 @@ func _ready() -> void:
 
 
 func _update() -> void:
+	if not is_inside_tree():
+		return
+
 	var coarse_tiles_offset := Vector3(0.5 * tile_size_coarse.x, 0.0, 0.5 * tile_size_coarse.y)
 	_container_coarse_tiles = _recreate_container(&"_generated_tiles_coarse")
 	_container_coarse_tiles.position = coarse_tiles_offset
@@ -79,6 +83,7 @@ func _generate_scenes_from_tiles(tile_map : TileMap, tile_size : Vector3, contai
 	var tile_set := tile_map.tile_set
 	assert(tile_set.get_custom_data_layer_name(SCENE_LAYER_INDEX) == "Scene")
 	assert(tile_set.get_custom_data_layer_name(SCENE_ROTATION_LAYER_INDEX) == "Scene Rotation")
+	assert(tile_set.get_custom_data_layer_name(SCENE_OFFSET_LAYER_INDEX) == "Scene Offset")
 
 	var indices := tile_map.get_used_cells(layer)
 	for index in indices:
@@ -86,8 +91,15 @@ func _generate_scenes_from_tiles(tile_map : TileMap, tile_size : Vector3, contai
 		var tile_scene : PackedScene = tile_data.get_custom_data_by_layer_id(SCENE_LAYER_INDEX)
 		if tile_scene:
 			var tile_instance : Node3D = tile_scene.instantiate()
-			tile_instance.position = Vector3(index.x, 0.0, index.y) * tile_size
-			tile_instance.rotation.y = PI * tile_data.get_custom_data_by_layer_id(SCENE_ROTATION_LAYER_INDEX)
+			var tile_offset : Vector3 = tile_data.get_custom_data_by_layer_id(SCENE_OFFSET_LAYER_INDEX)
+			var tile_rotation : float = PI * tile_data.get_custom_data_by_layer_id(SCENE_ROTATION_LAYER_INDEX)
+			var tile_position := Vector3(index.x, 0.0, index.y) * tile_size
+			tile_instance.transform = (
+				tile_instance.transform
+				.translated(tile_offset)
+				.rotated(Vector3.UP, tile_rotation)
+				.translated(tile_position)
+			)
 			container.add_child(tile_instance)
 
 
