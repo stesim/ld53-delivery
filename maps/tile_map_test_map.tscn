@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://f02tlbmlt84k"]
+[gd_scene load_steps=75 format=3 uid="uid://f02tlbmlt84k"]
 
 [ext_resource type="Texture2D" uid="uid://3v43j4r0clwj" path="res://assets/roads/roads_tile_map_coarse.png" id="1_1a2jw"]
 [ext_resource type="Script" path="res://maps/tile_map_test_map.gd" id="1_7n4xg"]
@@ -46,6 +46,7 @@
 [ext_resource type="PackedScene" uid="uid://dhxg7hvycb6tk" path="res://map_elements/tiles/foliage/statue_obelisk.tscn" id="32_l23oj"]
 [ext_resource type="PackedScene" uid="uid://6otleh0ndjev" path="res://map_elements/tiles/office_buildings/detail_umbrella.tscn" id="33_cg5bg"]
 [ext_resource type="PackedScene" uid="uid://bg60kdyfq517f" path="res://vehicles/ambulance.tscn" id="44_od8ni"]
+[ext_resource type="PackedScene" uid="uid://dgqioyx8mt0ax" path="res://vehicles/race_car.tscn" id="45_lq30e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn5de"]
 resource_name = "Road"
@@ -1235,6 +1236,8 @@ radius = 0.25
 height = 1.5
 radial_segments = 32
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_plmiv"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dgfd3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1312,6 +1315,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.095
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.0267, 0.463486, 42.2636)
 max_speed = 20.0
 
+[node name="race_car" parent="vehicles" instance=ExtResource("45_lq30e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7411, 0.359927, -35.6399)
+
 [node name="sign_hospital" parent="." instance=ExtResource("32_eooij")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.3083, 16.7423, 29.097)
 
@@ -1322,6 +1328,11 @@ player_index = -1
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_1a47w")
+
+[node name="world_boundary" type="StaticBody3D" parent="."]
+
+[node name="shape" type="CollisionShape3D" parent="world_boundary"]
+shape = SubResource("WorldBoundaryShape3D_plmiv")
 
 [node name="sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 200, 0)
