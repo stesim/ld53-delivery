@@ -1,10 +1,16 @@
-[gd_scene load_steps=44 format=3 uid="uid://db8m8ii5ewx0l"]
+[gd_scene load_steps=53 format=3 uid="uid://db8m8ii5ewx0l"]
 
 [ext_resource type="PackedScene" uid="uid://bwjagmncfpjaa" path="res://map_elements/headquarters.tscn" id="1_08jjh"]
 [ext_resource type="PackedScene" uid="uid://ch5qsdonm1f7x" path="res://map_elements/road_element.tscn" id="1_cs4q5"]
+[ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="1_uoihy"]
 [ext_resource type="ArrayMesh" uid="uid://eu8da5bvvdtl" path="res://assets/roads/crossing.res" id="1_xdmke"]
 [ext_resource type="ArrayMesh" uid="uid://bcjvlr65ymct4" path="res://assets/roads/straight.res" id="2_cmy2o"]
+[ext_resource type="PackedScene" uid="uid://dm7hqkegkwcgm" path="res://vehicles/truck_flat.tscn" id="2_xnibg"]
+[ext_resource type="PackedScene" uid="uid://dbqpkukigstd7" path="res://vehicles/truck_delivery.tscn" id="3_2eb6i"]
+[ext_resource type="PackedScene" uid="uid://bcxgjudwii565" path="res://vehicles/construction_vehicle.tscn" id="4_ni24n"]
 [ext_resource type="ArrayMesh" uid="uid://dp2xroi70qepa" path="res://assets/roads/curve_pavement.res" id="5_0hful"]
+[ext_resource type="PackedScene" uid="uid://q6mx3brfwof7" path="res://vehicles/old_truck.tscn" id="5_d0crp"]
+[ext_resource type="PackedScene" uid="uid://46b6hisv66ky" path="res://vehicles/street_sweeper.tscn" id="6_b3m24"]
 [ext_resource type="ArrayMesh" uid="uid://dssn53gi7atru" path="res://assets/roads/curve_smalle_pavement.res" id="6_g58o8"]
 [ext_resource type="ArrayMesh" uid="uid://b7yqrpoimt2qm" path="res://assets/roads/t-intersect.res" id="7_qdgwl"]
 [ext_resource type="PackedScene" uid="uid://cdu7d15q2hbqp" path="res://map_elements/ice_station.tscn" id="8_wanx7"]
@@ -45,7 +51,37 @@
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fsdgu"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k2mwk"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_80r3o"]
+sky_material = SubResource("ProceduralSkyMaterial_k2mwk")
+
+[sub_resource type="Environment" id="Environment_fs5yx"]
+background_mode = 2
+sky = SubResource("Sky_80r3o")
+tonemap_mode = 2
+
 [node name="test_map" type="Node3D"]
+
+[node name="truck" parent="." instance=ExtResource("1_uoihy")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.246, 1.5, 25.804)
+
+[node name="truck_flat" parent="." instance=ExtResource("2_xnibg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="truck_delivery" parent="." instance=ExtResource("3_2eb6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 1, 3)
+
+[node name="construction_vehicle" parent="." instance=ExtResource("4_ni24n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.3826, 0.735576, 21.5943)
+
+[node name="old_truck" parent="." instance=ExtResource("5_d0crp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -66.9477, 0.154659, 28.3728)
+
+[node name="street_sweeper" parent="." instance=ExtResource("6_b3m24")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -43.8553, 1, 38.489)
 
 [node name="headquarters" parent="." instance=ExtResource("1_08jjh")]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -37, 0, 25)
@@ -1650,3 +1686,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 1, 37)
 billboard = 1
 modulate = Color(1, 0, 0, 1)
 text = "Press TAB for fun & profit!"
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fs5yx")
+
+[node name="sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 46.7709, 42, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://f02tlbmlt84k"]
+[gd_scene load_steps=74 format=3 uid="uid://f02tlbmlt84k"]
 
 [ext_resource type="Texture2D" uid="uid://3v43j4r0clwj" path="res://assets/roads/roads_tile_map_coarse.png" id="1_1a2jw"]
 [ext_resource type="Script" path="res://maps/tile_map_test_map.gd" id="1_7n4xg"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://df22loy4nru3l" path="res://vehicles/truck.tscn" id="11_he2w3"]
 [ext_resource type="PackedScene" path="res://map_elements/tiles/houses/house_type01.tscn" id="12_1yove"]
 [ext_resource type="PackedScene" uid="uid://bik647uqpthc1" path="res://map_elements/tiles/fences/fence_corner.tscn" id="12_prtn1"]
-[ext_resource type="PackedScene" uid="uid://cpfbvnh20vc8h" path="res://game_scenes/player_view.tscn" id="12_s27cd"]
 [ext_resource type="PackedScene" uid="uid://ckf78t5r3jbfm" path="res://map_elements/tiles/fences/curb_stone_corner.tscn" id="13_1pclv"]
 [ext_resource type="PackedScene" path="res://map_elements/tiles/houses/house_type02.tscn" id="13_wwtv6"]
 [ext_resource type="PackedScene" path="res://map_elements/tiles/houses/house_type03.tscn" id="14_36ljc"]
@@ -1320,9 +1319,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7411, 0.359927, -35.6399)
 
 [node name="sign_hospital" parent="." instance=ExtResource("32_eooij")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.3083, 16.7423, 29.097)
-
-[node name="player_view" parent="." instance=ExtResource("12_s27cd")]
-player_index = -1
 
 [node name="character_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
